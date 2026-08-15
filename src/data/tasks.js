@@ -1160,6 +1160,29 @@ export const tasks = [
       'Did any output resolve something that was still open or unconfirmed in the original notes?',
     ],
   },
+  {
+    id: 51,
+    chapterId: 6,
+    title: 'Draft a Weekly Status Report',
+    question: 'How can AI turn a rough list of bullet points into a clear, structured project report?',
+    whatToDo: 'Use the attached real weekly update bullets and prompt an AI tool to build a structured status report with Progress, Risks, Recommendations, and Next Steps.',
+    steps: [
+      'Open the attached weekly update bullets file.',
+      'Prompt: "Create a weekly project status report using these bullet points. Include: Progress, Risks, Recommendations, Next Steps."',
+      'Review the AI-generated report against the raw bullets for anything missed or invented.',
+      'Check whether the Risks and Recommendations sections are grounded in what the bullets actually said.',
+    ],
+    requiredFile: 'weekly_update_bullets_sample.txt',
+    downloadUrl: getTaskFileUrl('weekly_update_bullets_sample.txt'),
+    whatYouLearn: [
+      'How to turn raw status bullets into a structured, manager-ready report.',
+      'Why the Risks and Recommendations sections need the closest human review.',
+    ],
+    questions: [
+      'Did the AI invent a risk or recommendation not supported by the bullets?',
+      'How much editing did the report need before it was ready to share?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
