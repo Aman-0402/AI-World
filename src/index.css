@@ -43,30 +43,34 @@ body {
     opacity: 1;
     filter: drop-shadow(0 0 0 rgba(139, 92, 246, 0));
   }
-  10% {
+  6% {
     transform: scale(1.25) rotate(-9deg);
   }
-  20% {
+  12% {
     transform: scale(1.35) rotate(8deg);
   }
-  30% {
+  18% {
     transform: scale(1.25) rotate(-6deg);
   }
-  40% {
+  24% {
     transform: scale(1.45) rotate(4deg);
     filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.85));
   }
-  50% {
+  30% {
     transform: scale(1.85) rotate(0deg);
     opacity: 1;
     filter: drop-shadow(0 0 28px rgba(34, 211, 238, 0.9));
   }
-  58% {
+  35% {
     transform: scale(2.2) rotate(0deg);
     opacity: 0;
     filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   }
-  59% {
+  38% {
+    transform: scale(0.15) rotate(0deg);
+    opacity: 0;
+  }
+  46% {
     transform: scale(0.15) rotate(0deg);
     opacity: 0;
   }

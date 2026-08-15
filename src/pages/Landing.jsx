@@ -76,7 +76,7 @@ export default function Landing() {
                 key={`${i}-${playCounts[i]}`}
                 onMouseEnter={(e) => handleLetterEnter(i, e)}
                 className="letter-pop inline-block"
-                style={playCounts[i] ? { animation: 'letterPop 1.3s cubic-bezier(0.22, 1, 0.36, 1)' } : undefined}
+                style={playCounts[i] ? { animation: 'letterPop 2.4s cubic-bezier(0.16, 1, 0.3, 1)' } : undefined}
               >
                 {ch === ' ' ? NBSP : ch}
               </span>
