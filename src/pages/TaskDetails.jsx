@@ -33,7 +33,7 @@ export default function TaskDetails() {
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
-      <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+      <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to={`/chapter/${task.chapterId}`}
           className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900"
