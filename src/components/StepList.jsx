@@ -1,11 +1,11 @@
 function renderStepText(step) {
   const parts = step.split(/"([^"]+)"/g)
   return parts.map((part, i) => {
-    if (i % 2 === 0) return part
+    if (i % 2 === 0) return part ? <span key={i}>{part}</span> : null
     return (
       <span
         key={i}
-        className="prompt-text mx-1 inline-block select-none rounded-lg bg-violet-50 px-2 py-0.5 font-mono text-[0.85em] italic text-violet-800"
+        className="prompt-text mt-2 block select-none rounded-xl border-l-4 border-violet-500 bg-violet-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-violet-900"
         onCopy={(e) => e.preventDefault()}
         onContextMenu={(e) => e.preventDefault()}
       >
@@ -23,7 +23,7 @@ export default function StepList({ steps }) {
           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700">
             {String(i + 1).padStart(2, '0')}
           </span>
-          <span className="text-sm text-slate-700">{renderStepText(step)}</span>
+          <span className="flex-1 text-sm text-slate-700">{renderStepText(step)}</span>
         </li>
       ))}
     </ol>
