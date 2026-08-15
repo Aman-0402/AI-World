@@ -16,10 +16,12 @@ Frontend-only React app. No backend, no auth, no DB. All content is static JS da
 
 ## Conventions
 
-- Components in `src/components/` are presentational/reusable (`ChapterCard`, `TaskCard`, `StepList`, `ResourceCard`, `LearningOutcome`, `QuestionCard`, `Navbar`, `AIShortcuts`).
+- Components in `src/components/` are presentational/reusable (`ChapterCard`, `TaskCard`, `StepList`, `ResourceCard`, `LearningOutcome`, `QuestionCard`, `Navbar`, `AIShortcuts`, `ParticleField`).
 - Pages in `src/pages/` compose components + read from `src/data/` via route params.
-- Downloadable resources go in `src/assets/resources/`, referenced by filename in task data.
-- AI tool shortcuts (ChatGPT, Gemini, Claude, Google Drive) open in new tab (`target="_blank" rel="noopener noreferrer"`).
+- Task-level downloadable resources go in `public/resources/`, referenced by absolute path (`/resources/<filename>`) in task data.
+- Chapter-level notes PDFs go in `src/assets/pdf/`, named `S<chapterId>.pdf` (e.g. `S1.pdf` for chapter 1). Resolved via `getChapterNotesUrl()` in `src/data/notes.js` (uses `import.meta.glob`) — a chapter with no matching PDF just shows "No notes available yet," no manual wiring needed per chapter.
+- AI tool shortcuts (ChatGPT, Gemini, Claude, Google Drive) open in new tab (`target="_blank" rel="noopener noreferrer"`), collapsed behind a toggle FAB (`AIShortcuts`) to avoid overlapping page content.
+- Keep chapter page section order fixed: chapter header → Notes → Tasks.
 - Keep task page section order fixed: Question → What to Do → Steps → Required File/Download → What You Learn → Questions About It.
 
 ## What NOT to Build
