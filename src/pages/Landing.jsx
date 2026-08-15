@@ -4,12 +4,15 @@ import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ParticleField from '../components/ParticleField.jsx'
 
+const HEADLINE = 'AI in Business'
+const NBSP = ' '
+
 export default function Landing() {
   const heroRef = useRef(null)
   const tiltRef = useRef(null)
   const particleRef = useRef(null)
   const rafRef = useRef(null)
-  const [hot, setHot] = useState(false)
+  const [playCounts, setPlayCounts] = useState(() => new Array(HEADLINE.length).fill(0))
 
   function handleMouseMove(e) {
     if (rafRef.current) return
@@ -25,17 +28,21 @@ export default function Landing() {
     })
   }
 
-  function handleEnter(e) {
-    setHot(true)
-    const rect = heroRef.current.getBoundingClientRect()
-    particleRef.current?.burst(e.clientX - rect.left, e.clientY - rect.top)
-  }
-
   function handleLeave() {
-    setHot(false)
     if (tiltRef.current) {
       tiltRef.current.style.transform = 'rotateX(0deg) rotateY(0deg)'
     }
+  }
+
+  function handleLetterEnter(index, e) {
+    if (HEADLINE[index] === ' ') return
+    const rect = heroRef.current.getBoundingClientRect()
+    particleRef.current?.burst(e.clientX - rect.left, e.clientY - rect.top)
+    setPlayCounts((prev) => {
+      const next = [...prev]
+      next[index] += 1
+      return next
+    })
   }
 
   return (
@@ -63,18 +70,17 @@ export default function Landing() {
           className="relative z-10 will-change-transform"
           style={{ transformStyle: 'preserve-3d', transition: 'transform 150ms ease-out' }}
         >
-          <h1
-            onMouseEnter={handleEnter}
-            className={`font-display cursor-default text-5xl font-bold tracking-tight text-white transition-[transform,text-shadow] duration-500 ease-out sm:text-7xl md:text-8xl ${
-              hot ? 'scale-110' : 'scale-100'
-            }`}
-            style={{
-              textShadow: hot
-                ? '0 0 50px rgba(139,92,246,0.85), 0 0 110px rgba(34,211,238,0.5)'
-                : '0 0 0 rgba(0,0,0,0)',
-            }}
-          >
-            AI in Business
+          <h1 className="font-display cursor-default text-5xl font-bold tracking-tight text-white sm:text-7xl md:text-8xl">
+            {HEADLINE.split('').map((ch, i) => (
+              <span
+                key={`${i}-${playCounts[i]}`}
+                onMouseEnter={(e) => handleLetterEnter(i, e)}
+                className="letter-pop inline-block"
+                style={playCounts[i] ? { animation: 'letterPop 1.3s cubic-bezier(0.22, 1, 0.36, 1)' } : undefined}
+              >
+                {ch === ' ' ? NBSP : ch}
+              </span>
+            ))}
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base text-slate-300 sm:text-lg">
             Explore, learn, and practice how Artificial Intelligence is transforming business.
