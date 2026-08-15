@@ -1183,6 +1183,33 @@ export const tasks = [
       'How much editing did the report need before it was ready to share?',
     ],
   },
+  {
+    id: 52,
+    chapterId: 6,
+    title: 'Create an AI-Powered Presentation',
+    question: 'How does the audience and purpose of a presentation change the outline an AI tool generates?',
+    whatToDo: 'Run six different presentation prompts through ChatGPT, Microsoft Copilot, or Gamma AI and compare how the outlines differ by audience, length, and content.',
+    steps: [
+      'Open ChatGPT, Microsoft Copilot, or Gamma AI.',
+      'Prompt 1: "Create a 10-slide presentation for senior management summarizing this quarter\'s sales performance. Include speaker notes."',
+      'Prompt 2: "Create a 5-slide pitch deck for investors introducing our new AI-powered accounting software."',
+      'Prompt 3: "Build an 8-slide onboarding presentation for new employees explaining our company\'s mission, values, and team structure."',
+      'Prompt 4: "Design a 6-slide client proposal presentation for a digital marketing campaign, including timeline and budget."',
+      'Prompt 5: "Create a 10-slide training presentation on cybersecurity best practices for non-technical staff."',
+      'Prompt 6: "Build a 7-slide project status presentation for stakeholders covering progress, risks, and next steps."',
+      'Compare all six outlines: which slide counts, tones, and structures matched their audience best.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How audience and purpose should shape a presentation\'s length, tone, and structure.',
+      'How to prompt AI for a presentation outline instead of full slide content.',
+    ],
+    questions: [
+      'Which prompt produced the outline best matched to its audience?',
+      'What changed most across the six outlines: structure, tone, or level of detail?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
