@@ -41,24 +41,30 @@ body {
   0% {
     transform: scale(1) rotate(0deg);
     opacity: 1;
+    color: #ffffff;
     filter: drop-shadow(0 0 0 rgba(139, 92, 246, 0));
   }
   6% {
     transform: scale(1.25) rotate(-9deg);
+    color: #a78bfa;
   }
   12% {
     transform: scale(1.35) rotate(8deg);
+    color: #22d3ee;
   }
   18% {
     transform: scale(1.25) rotate(-6deg);
+    color: #f472b6;
   }
   24% {
     transform: scale(1.45) rotate(4deg);
+    color: #facc15;
     filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.85));
   }
   30% {
     transform: scale(1.85) rotate(0deg);
     opacity: 1;
+    color: #ffffff;
     filter: drop-shadow(0 0 28px rgba(34, 211, 238, 0.9));
   }
   35% {
@@ -69,14 +75,17 @@ body {
   38% {
     transform: scale(0.15) rotate(0deg);
     opacity: 0;
+    color: #ffffff;
   }
   46% {
     transform: scale(0.15) rotate(0deg);
     opacity: 0;
+    color: #ffffff;
   }
   100% {
     transform: scale(1) rotate(0deg);
     opacity: 1;
+    color: #ffffff;
   }
 }
 
