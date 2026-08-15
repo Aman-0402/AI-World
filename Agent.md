@@ -18,7 +18,8 @@ Frontend-only React app. No backend, no auth, no DB. All content is static JS da
 
 - Components in `src/components/` are presentational/reusable (`ChapterCard`, `TaskCard`, `StepList`, `ResourceCard`, `LearningOutcome`, `QuestionCard`, `Navbar`, `AIShortcuts`, `ParticleField`).
 - Pages in `src/pages/` compose components + read from `src/data/` via route params.
-- Task-level downloadable resources go in `public/resources/`, referenced by absolute path (`/resources/<filename>`) in task data.
+- Task-level downloadable resources go in `src/assets/task/`, resolved via `getTaskFileUrl()` in `src/data/taskFiles.js` (uses `import.meta.glob`). Older entries pointing to `/resources/<filename>` in `public/resources/` still work but new task files should use `src/assets/task/`.
+- `vite.config.js` sets `build.assetsInlineLimit: 0` so every asset (PDF, txt, etc.) always emits as a real file instead of being base64-inlined into the JS bundle.
 - Chapter-level notes PDFs go in `src/assets/pdf/`, named `S<chapterId>.pdf` (e.g. `S1.pdf` for chapter 1). Resolved via `getChapterNotesUrl()` in `src/data/notes.js` (uses `import.meta.glob`) — a chapter with no matching PDF just shows "No notes available yet," no manual wiring needed per chapter.
 - AI tool shortcuts (ChatGPT, Gemini, Claude, Google Drive) open in new tab (`target="_blank" rel="noopener noreferrer"`), collapsed behind a toggle FAB (`AIShortcuts`) to avoid overlapping page content.
 - Keep chapter page section order fixed: chapter header → Notes → Tasks.

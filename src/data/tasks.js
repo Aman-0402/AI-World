@@ -1,3 +1,5 @@
+import { getTaskFileUrl } from './taskFiles.js'
+
 export const tasks = [
   {
     id: 1,
@@ -1132,6 +1134,30 @@ export const tasks = [
     questions: [
       'Did the AI miscategorize any email, and why?',
       'How much time did this save compared to reading every email yourself?',
+    ],
+  },
+  {
+    id: 50,
+    chapterId: 6,
+    title: 'Run a Full AI Meeting Workflow',
+    question: 'How can AI support you before, during, and after a meeting — not just one part of it?',
+    whatToDo: 'Use the attached real meeting notes to run all three AI-assisted meeting prompts: build next week\'s agenda from last week\'s notes, convert the notes into structured minutes, and draft a follow-up email.',
+    steps: [
+      'Open the attached meeting notes file.',
+      'Before: prompt "Create a meeting agenda using last week\'s meeting notes. Highlight unresolved issues and suggest discussion points."',
+      'During: prompt "Convert these meeting notes into: Summary, Decisions, Action Items, Owners, Deadlines."',
+      'After: prompt "Write a follow-up email summarizing today\'s meeting and include all action items with deadlines."',
+      'Compare all three AI outputs against the original notes for anything invented or missed.',
+    ],
+    requiredFile: 'meeting_notes_sample.txt',
+    downloadUrl: getTaskFileUrl('meeting_notes_sample.txt'),
+    whatYouLearn: [
+      'How AI can support every stage of a meeting: before (agenda), during (structured minutes), and after (follow-up communication).',
+      'Why every AI-generated meeting output still needs a check against the original notes.',
+    ],
+    questions: [
+      'Which of the three outputs (agenda, minutes, or follow-up email) saved you the most time?',
+      'Did any output resolve something that was still open or unconfirmed in the original notes?',
     ],
   },
 ]

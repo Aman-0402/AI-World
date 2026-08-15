@@ -6,4 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/AI-World/',
   plugins: [react(), tailwindcss()],
+  build: {
+    assetsInlineLimit: 0,
+  },
 })
