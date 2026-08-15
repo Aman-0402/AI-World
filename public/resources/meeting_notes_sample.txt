@@ -1,0 +1,49 @@
+Meeting Notes – Company Ops & Marketing Sync – Aug 7, 2026
+Attendees: Aman (Team Lead), Priya (Marketing), Rohit (Design), Sara (Marketing),
+Karan (IT), Meena (Finance), Dev (Sales), Ritu (HR)
+Absent: Vikram (Product) — sent written update via email
+
+1. Website redesign
+   - Rohit: homepage mockup 80% done, waiting on final logo files from design team
+   - Karan: staging server ready, but SSL cert renewal pending from vendor
+   - Action: Priya to follow up with design team by Aug 10
+   - Note: launch date still "TBD" — was supposed to be Aug 20, now uncertain
+
+2. Q3 campaign budget
+   - Meena flagged budget is currently 12% over projection
+   - Sara pushed back, says overage is due to one-time influencer contract, not recurring
+   - No decision made on where to cut; discussion tabled, revisit next meeting
+   - Dev asked if sales commissions are counted in this budget — nobody confirmed
+
+3. Social media calendar
+   - Rohit finished August calendar, approved by Aman
+   - Priya mentioned September calendar not started yet
+
+4. New CRM tool
+   - Priya still evaluating 2 vendors (SalesHub vs Pipedrive), demo scheduled for next week
+   - Open question: does IT need to sign off before purchase?
+   - Karan said "probably, depends on data residency" — no clear answer given
+   - Dev wants CRM decision made before end of month, sales team is waiting
+
+5. Client X complaint
+   - Sara handling directly, resolved as of Aug 6
+   - Ritu asked if this needs to be logged in the incident tracker — Sara unsure, will check
+
+6. Hiring — Marketing Coordinator role
+   - Ritu: 3 candidates shortlisted, interviews to be scheduled
+   - Sara wants to be on the interview panel, waiting for confirmation from Ritu
+   - Action: Ritu to send interview slots by Aug 9
+
+7. Vikram's written update (Product, absent)
+   - New feature flag system delayed by 1 week due to a bug in staging
+   - Requests someone from marketing to review updated in-app messaging copy before release
+
+8. Office move (side discussion, not on original agenda)
+   - Karan mentioned facilities team asked about desk count for new floor
+   - Aman said he'd loop back with facilities separately — not a team decision item
+
+9. Team offsite planning
+   - Ritu proposed Sept 15 for team offsite, asked for a headcount by Friday
+   - No responses yet in the room
+
+Next meeting: Aug 14
