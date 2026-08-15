@@ -16,6 +16,10 @@ export const tasks = [
     ],
     requiredFile: null,
     downloadUrl: null,
+    comparisonTable: {
+      tools: ['ChatGPT', 'Gemini'],
+      criteria: ['Tone', 'Clarity', 'Professionalism', 'Personalization', 'Length'],
+    },
     whatYouLearn: [
       'Different AI tools can produce different results from the same prompt.',
       'Why prompt quality and critical evaluation matter before using AI output.',

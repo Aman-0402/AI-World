@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react'
 import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import StepList from '../components/StepList.jsx'
+import ComparisonTable from '../components/ComparisonTable.jsx'
 import ResourceCard from '../components/ResourceCard.jsx'
 import LearningOutcome from '../components/LearningOutcome.jsx'
 import QuestionCard from '../components/QuestionCard.jsx'
@@ -56,6 +57,12 @@ export default function TaskDetails() {
           <Section title="Steps">
             <StepList steps={task.steps} />
           </Section>
+
+          {task.comparisonTable && (
+            <Section title="Comparison Criteria">
+              <ComparisonTable {...task.comparisonTable} />
+            </Section>
+          )}
 
           <Section title="Required File / Download Resource">
             <ResourceCard resources={resources} />
