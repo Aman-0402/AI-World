@@ -6,15 +6,23 @@ import ParticleField from '../components/ParticleField.jsx'
 
 export default function Landing() {
   const heroRef = useRef(null)
+  const tiltRef = useRef(null)
   const particleRef = useRef(null)
-  const [tilt, setTilt] = useState({ rx: 0, ry: 0 })
+  const rafRef = useRef(null)
   const [hot, setHot] = useState(false)
 
   function handleMouseMove(e) {
-    const rect = heroRef.current.getBoundingClientRect()
-    const px = (e.clientX - rect.left) / rect.width - 0.5
-    const py = (e.clientY - rect.top) / rect.height - 0.5
-    setTilt({ rx: py * -12, ry: px * 14 })
+    if (rafRef.current) return
+    const { clientX, clientY } = e
+    rafRef.current = requestAnimationFrame(() => {
+      rafRef.current = null
+      const rect = heroRef.current.getBoundingClientRect()
+      const px = (clientX - rect.left) / rect.width - 0.5
+      const py = (clientY - rect.top) / rect.height - 0.5
+      if (tiltRef.current) {
+        tiltRef.current.style.transform = `rotateX(${py * -12}deg) rotateY(${px * 14}deg)`
+      }
+    })
   }
 
   function handleEnter(e) {
@@ -25,7 +33,9 @@ export default function Landing() {
 
   function handleLeave() {
     setHot(false)
-    setTilt({ rx: 0, ry: 0 })
+    if (tiltRef.current) {
+      tiltRef.current.style.transform = 'rotateX(0deg) rotateY(0deg)'
+    }
   }
 
   return (
@@ -49,8 +59,9 @@ export default function Landing() {
         <ParticleField ref={particleRef} />
 
         <div
-          className="relative z-10 transition-transform duration-150 ease-out"
-          style={{ transform: `rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`, transformStyle: 'preserve-3d' }}
+          ref={tiltRef}
+          className="relative z-10 will-change-transform"
+          style={{ transformStyle: 'preserve-3d', transition: 'transform 150ms ease-out' }}
         >
           <h1
             onMouseEnter={handleEnter}

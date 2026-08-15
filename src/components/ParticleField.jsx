@@ -1,6 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react'
 
-const NODE_COUNT = 70
+const NODE_COUNT = 50
 const LINK_DIST = 130
 const PARALLAX = 26
 
@@ -41,7 +41,7 @@ const ParticleField = forwardRef(function ParticleField(_, ref) {
     let frame
 
     function resize() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
       const { clientWidth: w, clientHeight: h } = canvas.parentElement
       sizeRef.current = { w, h }
       canvas.width = w * dpr
@@ -123,13 +123,15 @@ const ParticleField = forwardRef(function ParticleField(_, ref) {
           bursts.splice(i, 1)
           continue
         }
+        const r = p.r * p.life * 2
         ctx.beginPath()
-        ctx.arc(p.x, p.y, p.r * p.life * 2, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(${p.color}, ${p.life})`
-        ctx.shadowBlur = 8
-        ctx.shadowColor = `rgba(${p.color}, ${p.life})`
+        ctx.arc(p.x, p.y, r * 2.2, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(${p.color}, ${p.life * 0.18})`
         ctx.fill()
-        ctx.shadowBlur = 0
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, r, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(${p.color}, ${p.life})`
+        ctx.fill()
       }
 
       frame = requestAnimationFrame(draw)
