@@ -1,0 +1,24 @@
+Product: "SecureDesk" — an enterprise helpdesk and ticketing platform
+with built-in compliance auditing for mid-size companies (200-2000
+employees).
+
+Company: An established software company (120 employees) launching a
+new product line alongside its existing CRM product.
+
+Target audience: IT managers and compliance officers at mid-size
+enterprises in finance and healthcare.
+
+Launch goal: Sign 10 pilot customers in the first quarter, convert 5
+to paid annual contracts (avg. $15,000/year each) within 2 quarters.
+
+Budget: $150,000 for launch (sales enablement, trade shows, case
+study production, targeted LinkedIn ads).
+
+Team available: 1 Product Director, 3 Engineers, 1 Compliance
+consultant, 2 Enterprise Sales reps, 1 Customer Success Manager,
+1 Content/PR person.
+
+Constraints: Must pass SOC 2 compliance review before any enterprise
+pilot can begin. Legal review of contracts typically takes 3 weeks.
+Target launch window is Q3, and a major industry trade show falls in
+week 9 that the team wants to launch around.

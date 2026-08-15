@@ -1,0 +1,22 @@
+Product: "TaskFlow AI" — a browser extension that auto-organizes a
+user's daily to-do list using AI, integrating with Gmail and Google
+Calendar.
+
+Company: A 6-person SaaS startup, pre-revenue, backed by a small
+seed round.
+
+Target audience: Freelancers and small business owners who manage
+their own schedules.
+
+Launch goal: 1,000 signups and 100 paid subscribers ($9/month) within
+6 weeks of public launch.
+
+Budget: $8,000 for the launch phase (ads, influencer outreach,
+Product Hunt promotion).
+
+Team available: 2 Developers, 1 Designer, 1 Marketing/Growth lead,
+1 Founder handling operations and support.
+
+Constraints: The team wants to launch on Product Hunt on a specific
+Tuesday 8 weeks from today. Beta testing with 50 users must be
+completed and issues fixed before that date.

@@ -1210,6 +1210,44 @@ export const tasks = [
       'What changed most across the six outlines: structure, tone, or level of detail?',
     ],
   },
+  {
+    id: 53,
+    chapterId: 6,
+    title: 'Stress-Test an AI Project Plan',
+    question: 'Does an AI-generated project plan actually adapt to a scenario\'s real constraints, or does it default to a generic template regardless of complexity?',
+    whatToDo: 'Run the same project-planning prompt against three product scenarios of increasing complexity, and audit whether each AI-generated plan actually uses the specific budget, deadlines, team, and constraints given.',
+    steps: [
+      'Scenario 1 - Beginner (Physical Product): open the attached HydroTrack context file.',
+      'Prompt: "Create a project plan for launching a new product. Include: Timeline, Milestones, Risks, Responsibilities" — paste this together with the Scenario 1 context.',
+      'Check whether the output actually uses the budget, timeline, and team details given, or produces something generic.',
+      'Check whether milestones account for the 4-week manufacturing lead time and the 10-week hard deadline.',
+      'Check whether responsibilities are assigned using the real team roles listed in Scenario 1.',
+      'Scenario 2 - Intermediate (Software Product): open the attached TaskFlow AI context file.',
+      'Prompt: "Create a project plan for launching a new product. Include: Timeline, Milestones, Risks, Responsibilities" — paste this together with the Scenario 2 context.',
+      'Check whether the output builds a realistic path to the Product Hunt launch date, including time for beta testing and fixes.',
+      'Check whether the 6-week post-launch goal (1,000 signups, 100 paid subscribers) is reflected in the milestones.',
+      'Check whether responsibilities are assigned using the real team roles listed in Scenario 2 (only 4 people total).',
+      'Scenario 3 - Advanced (B2B / Enterprise Product): open the attached SecureDesk context file.',
+      'Prompt: "Create a project plan for launching a new product. Include: Timeline, Milestones, Risks, Responsibilities" — paste this together with the Scenario 3 context.',
+      'Check whether the output sequences the SOC 2 compliance review and the 3-week legal review correctly before any pilot begins.',
+      'Check whether the timeline is built around the week 9 trade show.',
+      'Check whether the plan distinguishes between the Q1 pilot goal (10 customers) and the 2-quarter conversion goal (5 paid contracts).',
+      'Check whether responsibilities are assigned using the real team roles listed in Scenario 3.',
+    ],
+    resources: [
+      { name: 'scenario-1-beginner-hydrotrack.txt', downloadUrl: getTaskFileUrl('scenario-1-beginner-hydrotrack.txt') },
+      { name: 'scenario-2-intermediate-taskflow.txt', downloadUrl: getTaskFileUrl('scenario-2-intermediate-taskflow.txt') },
+      { name: 'scenario-3-advanced-securedesk.txt', downloadUrl: getTaskFileUrl('scenario-3-advanced-securedesk.txt') },
+    ],
+    whatYouLearn: [
+      'How to stress-test an AI-generated plan against specific real-world constraints instead of accepting a plausible-looking answer.',
+      'How project complexity (compliance sequencing, team size, hard deadlines) should change what a good project plan looks like.',
+    ],
+    questions: [
+      'Which scenario\'s plan was most generic, and what specific detail did it miss?',
+      'At which complexity level did the AI plan start missing real constraints?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {

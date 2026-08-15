@@ -27,6 +27,8 @@ export default function TaskDetails() {
   }
 
   const chapter = getChapterById(task.chapterId)
+  const resources =
+    task.resources ?? (task.requiredFile ? [{ name: task.requiredFile, downloadUrl: task.downloadUrl }] : [])
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -56,7 +58,7 @@ export default function TaskDetails() {
           </Section>
 
           <Section title="Required File / Download Resource">
-            <ResourceCard fileName={task.requiredFile} downloadUrl={task.downloadUrl} />
+            <ResourceCard resources={resources} />
           </Section>
 
           <Section title="What You Learn">
