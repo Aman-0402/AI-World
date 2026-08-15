@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useRef, useState } from 'react'
-import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ParticleField from '../components/ParticleField.jsx'
 
@@ -47,7 +46,6 @@ export default function Landing() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#0a0a12]">
-      <Navbar />
       <main
         ref={heroRef}
         onMouseMove={handleMouseMove}
