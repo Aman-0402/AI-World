@@ -5,7 +5,11 @@ const tools = [
   { name: 'ChatGPT', href: 'https://chat.openai.com', icon: MessageCircleMore },
   { name: 'Google Gemini', href: 'https://gemini.google.com', icon: Sparkles },
   { name: 'Claude', href: 'https://claude.ai', icon: Bot },
-  { name: 'Google Drive', href: 'https://drive.google.com', icon: FolderOpenDot },
+  {
+    name: 'Google Drive',
+    href: 'https://drive.google.com/drive/u/2/folders/10BkVkBvrbZATsUh5czV_mQxoV8iVkLGL',
+    icon: FolderOpenDot,
+  },
 ]
 
 export default function AIShortcuts() {
