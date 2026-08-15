@@ -1110,6 +1110,30 @@ export const tasks = [
       'Where do you agree or disagree with the AI\'s predictions about the future of AI?',
     ],
   },
+  {
+    id: 49,
+    chapterId: 6,
+    title: 'Triage Your Morning Inbox',
+    question: 'How can AI turn a full inbox into a clear, prioritized list in minutes instead of an hour?',
+    whatToDo: 'Use ChatGPT or Microsoft Copilot to sort a batch of emails into Urgent, Important, and Informational, with the ones needing your response flagged.',
+    steps: [
+      'Open your inbox, or use a sample set of 10-15 emails.',
+      'Prompt: "Summarize today\'s emails into: Urgent, Important, Informational. Highlight emails requiring my response."',
+      'Review the AI\'s categorization against the actual emails for anything miscategorized.',
+      'Reply to or flag the emails the AI marked as requiring your response.',
+      'Note how long this took compared to reading every email individually.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to prompt AI to triage a full inbox into clear priority tiers.',
+      'How much time AI-assisted email triage can save each morning.',
+    ],
+    questions: [
+      'Did the AI miscategorize any email, and why?',
+      'How much time did this save compared to reading every email yourself?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
