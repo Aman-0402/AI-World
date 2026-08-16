@@ -19,7 +19,7 @@ export default function ComparisonTable({ tools, criteria }) {
         </thead>
         <tbody>
           {criteria.map((criterion) => (
-            <tr key={criterion} className="odd:bg-white even:bg-slate-50/60">
+            <tr key={criterion} className="odd:bg-[#FFFCF5] even:bg-slate-50/60">
               <td className="border-b border-slate-100 px-4 py-3 font-medium text-slate-700">{criterion}</td>
               {tools.map((tool) => (
                 <td key={tool} className="border-b border-slate-100 px-4 py-3 text-slate-400">

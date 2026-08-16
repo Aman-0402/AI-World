@@ -15,7 +15,7 @@ import { getChapterById } from '../data/chapters.js'
 
 function Section({ title, children }) {
   return (
-    <section className="rounded-2xl border border-slate-200/70 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_28px_-18px_rgba(109,40,217,0.16)]">
+    <section className="rounded-2xl border border-slate-200/70 bg-[#FFFCF5] p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_28px_-18px_rgba(109,40,217,0.16)]">
       <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{title}</h2>
       <div className="mt-3">{children}</div>
     </section>

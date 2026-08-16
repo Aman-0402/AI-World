@@ -5,7 +5,7 @@ export default function TaskCard({ task, index }) {
   return (
     <Link
       to={`/task/${task.id}`}
-      className="group flex items-center justify-between rounded-xl border border-slate-200/70 bg-white px-4 py-3 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:border-violet-200 hover:shadow-[0_8px_20px_-12px_rgba(109,40,217,0.3)]"
+      className="group flex items-center justify-between rounded-xl border border-slate-200/70 bg-[#FFFCF5] px-4 py-3 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-[#F6F0FF] hover:shadow-[0_8px_20px_-12px_rgba(109,40,217,0.3)]"
     >
       <div>
         <p className="text-xs font-medium uppercase tracking-wide text-slate-400">

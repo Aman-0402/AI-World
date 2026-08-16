@@ -22,7 +22,7 @@ export default function ChapterCard({ chapter, taskCount }) {
   return (
     <div
       className={`flex flex-col justify-between rounded-2xl border p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_28px_-16px_rgba(109,40,217,0.18)] transition hover:-translate-y-0.5 hover:border-violet-200 hover:shadow-[0_4px_10px_rgba(15,23,42,0.06),0_20px_36px_-16px_rgba(109,40,217,0.28)] ${
-        status ? status.card : 'border-slate-200/70 bg-white'
+        status ? status.card : 'border-slate-200/70 bg-[#FFFCF5] hover:bg-[#F6F0FF]'
       }`}
     >
       <div>
