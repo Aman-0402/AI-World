@@ -1,8 +1,9 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft, FileText, ExternalLink } from 'lucide-react'
+import { ArrowLeft, FileText, ExternalLink, Circle, Diamond, Heart } from 'lucide-react'
 import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import TaskCard from '../components/TaskCard.jsx'
+import HiddenSpot from '../components/HiddenSpot.jsx'
 import { getChapterById } from '../data/chapters.js'
 import { getTasksByChapter } from '../data/tasks.js'
 import { getChapterNotesUrl } from '../data/notes.js'
@@ -19,8 +20,11 @@ export default function ChapterDetails() {
   const notesUrl = getChapterNotesUrl(chapter.id)
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="relative min-h-screen bg-slate-50">
       <Navbar />
+      <HiddenSpot icon={Circle} className="right-6 top-20 text-slate-300/40 hover:text-violet-500/70" />
+      <HiddenSpot icon={Diamond} className="left-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
+      <HiddenSpot icon={Heart} className="bottom-4 right-4 text-slate-300/40 hover:text-violet-500/70" />
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to="/explore"

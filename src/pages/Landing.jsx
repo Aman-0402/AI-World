@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useRef, useState } from 'react'
+import { Star } from 'lucide-react'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ParticleField from '../components/ParticleField.jsx'
+import HiddenSpot from '../components/HiddenSpot.jsx'
 
 const HEADLINE = 'AI in Business'
 const NBSP = ' '
@@ -66,8 +68,10 @@ export default function Landing() {
         <Link
           to="/psst"
           aria-label="???"
+          tabIndex={-1}
           className="absolute bottom-6 left-6 z-10 h-3 w-3 rounded-full bg-white/5 transition hover:bg-white/40"
         />
+        <HiddenSpot icon={Star} className="right-6 top-6 text-white/10 hover:text-cyan-300/70" />
 
         <div
           ref={tiltRef}

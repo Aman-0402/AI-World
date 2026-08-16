@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Hexagon, Plus, Minus } from 'lucide-react'
 import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import StepList from '../components/StepList.jsx'
@@ -8,6 +8,7 @@ import ResourceCard from '../components/ResourceCard.jsx'
 import LearningOutcome from '../components/LearningOutcome.jsx'
 import QuestionCard from '../components/QuestionCard.jsx'
 import CompleteButton from '../components/CompleteButton.jsx'
+import HiddenSpot from '../components/HiddenSpot.jsx'
 import { getTaskById } from '../data/tasks.js'
 import { getChapterById } from '../data/chapters.js'
 
@@ -33,8 +34,11 @@ export default function TaskDetails() {
     task.resources ?? (task.requiredFile ? [{ name: task.requiredFile, downloadUrl: task.downloadUrl }] : [])
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="relative min-h-screen bg-slate-50">
       <Navbar />
+      <HiddenSpot icon={Hexagon} className="left-4 top-20 text-slate-300/40 hover:text-violet-500/70" />
+      <HiddenSpot icon={Plus} className="right-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
+      <HiddenSpot icon={Minus} className="bottom-6 right-6 text-slate-300/40 hover:text-violet-500/70" />
       <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to={`/chapter/${task.chapterId}`}
