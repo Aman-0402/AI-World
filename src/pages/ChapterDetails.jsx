@@ -21,7 +21,7 @@ export default function ChapterDetails() {
   const notesUrl = getChapterNotesUrl(chapter.id)
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-slate-50 via-white to-violet-50/40">
+    <div className="relative min-h-screen bg-[#FAF6EC]">
       <Navbar />
       <HiddenSpot icon={Circle} className="right-6 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Diamond} className="left-6 top-40 text-slate-300/40 hover:text-violet-500/70" />

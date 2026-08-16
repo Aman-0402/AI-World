@@ -9,7 +9,7 @@ import { getTasksByChapter } from '../data/tasks.js'
 
 export default function Explore() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-slate-50 via-white to-violet-50/40">
+    <div className="relative min-h-screen bg-[#FAF6EC]">
       <Navbar />
       <HiddenSpot icon={Square} className="right-4 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Triangle} className="bottom-4 left-4 text-slate-300/40 hover:text-violet-500/70" />
