@@ -7,6 +7,7 @@ import ComparisonTable from '../components/ComparisonTable.jsx'
 import ResourceCard from '../components/ResourceCard.jsx'
 import LearningOutcome from '../components/LearningOutcome.jsx'
 import QuestionCard from '../components/QuestionCard.jsx'
+import CompleteButton from '../components/CompleteButton.jsx'
 import { getTaskById } from '../data/tasks.js'
 import { getChapterById } from '../data/chapters.js'
 
@@ -43,7 +44,10 @@ export default function TaskDetails() {
           Back to {chapter?.title ?? 'Chapter'}
         </Link>
 
-        <h1 className="mt-4 text-3xl font-bold text-slate-900">{task.title}</h1>
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+          <h1 className="text-3xl font-bold text-slate-900">{task.title}</h1>
+          <CompleteButton taskId={task.id} />
+        </div>
 
         <div className="mt-6 flex flex-col gap-4">
           <Section title="Question">

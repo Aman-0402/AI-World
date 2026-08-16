@@ -94,3 +94,44 @@ body {
     animation: none !important;
   }
 }
+
+@keyframes confettiFall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--drift), 105vh, 0) rotate(540deg);
+    opacity: 0.9;
+  }
+}
+
+.confetti-piece {
+  animation: confettiFall linear forwards;
+}
+
+@keyframes celebrationPop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.celebration-pop {
+  animation: celebrationPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti-piece,
+  .celebration-pop {
+    animation: none !important;
+  }
+}
