@@ -9,6 +9,7 @@ import LearningOutcome from '../components/LearningOutcome.jsx'
 import QuestionCard from '../components/QuestionCard.jsx'
 import CompleteButton from '../components/CompleteButton.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
+import Footer from '../components/Footer.jsx'
 import { getTaskById } from '../data/tasks.js'
 import { getChapterById } from '../data/chapters.js'
 
@@ -85,6 +86,7 @@ export default function TaskDetails() {
           </Section>
         </div>
       </main>
+      <Footer />
       <AIShortcuts />
     </div>
   )

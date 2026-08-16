@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import TaskCard from '../components/TaskCard.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
+import Footer from '../components/Footer.jsx'
 import { getChapterById } from '../data/chapters.js'
 import { getTasksByChapter } from '../data/tasks.js'
 import { getChapterNotesUrl } from '../data/notes.js'
@@ -67,6 +68,7 @@ export default function ChapterDetails() {
           ))}
         </div>
       </main>
+      <Footer />
       <AIShortcuts />
     </div>
   )

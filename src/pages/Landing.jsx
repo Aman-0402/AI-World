@@ -4,6 +4,7 @@ import { Star } from 'lucide-react'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ParticleField from '../components/ParticleField.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
+import Footer from '../components/Footer.jsx'
 
 const HEADLINE = 'AI in Business'
 const NBSP = ' '
@@ -101,6 +102,7 @@ export default function Landing() {
           </Link>
         </div>
       </main>
+      <Footer dark />
       <AIShortcuts />
     </div>
   )

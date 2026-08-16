@@ -45,6 +45,13 @@ These are Phase 10 / future-scope items — do not scaffold placeholders for the
 - Responsive design is required for every page (desktop/tablet/mobile) — don't defer it to a later pass per-component.
 - No test suite defined yet; if adding one, prefer Vitest + React Testing Library (matches Vite stack).
 
+## SEO
+
+- `index.html` head carries meta description/keywords/author, canonical URL, Open Graph + Twitter card tags, and a `Course` JSON-LD block — all static so crawlers/link-unfurlers see them without running JS (this is a client-rendered SPA, so per-route meta isn't feasible without SSR/prerendering, which is out of scope).
+- `public/robots.txt` and `public/sitemap.xml` exist. The sitemap is hand-generated from `src/data/chapters.js`/`tasks.js` (currently 48 chapters + 53 tasks + `/` + `/explore` = 103 URLs) — regenerate it if chapter/task ids change significantly (see the one-off Node script used to build it, not checked in as a script).
+- Canonical domain assumed: `https://aman-0402.github.io/AI-World/` (GitHub Pages default for this repo). Update every absolute URL in `index.html`/`robots.txt`/`sitemap.xml` together if a custom domain is ever added.
+- `Footer` component ("Built by Aman0402", links to `https://github.com/Aman-0402`) renders on every page — real visible content, not just meta tags, for author attribution/search association.
+
 ## Git Workflow Rule
 
 Every change gets committed and pushed to GitHub (`origin main`) immediately — no batching, no co-author line in commit messages (do not add `Co-Authored-By`).

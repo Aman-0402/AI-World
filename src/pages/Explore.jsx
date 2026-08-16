@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ChapterCard from '../components/ChapterCard.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
+import Footer from '../components/Footer.jsx'
 import { chapters } from '../data/chapters.js'
 import { getTasksByChapter } from '../data/tasks.js'
 
@@ -27,6 +28,7 @@ export default function Explore() {
           ))}
         </div>
       </main>
+      <Footer />
       <AIShortcuts />
     </div>
   )
