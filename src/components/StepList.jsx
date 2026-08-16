@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { FileDown, FileText } from 'lucide-react'
 
-const COPY_WARNING = 'Copy krni buri bat khud se likho smjhaa??'
+const COPY_WARNING = 'Copy krni buri baat hai, khud se likho, smjhaa?? aase toh nhi sikhoge firr'
 
 function renderStepText(step) {
   const parts = step.split(/"([^"]+)"/g)
