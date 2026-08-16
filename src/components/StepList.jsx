@@ -1,4 +1,7 @@
+import { useRef, useState } from 'react'
 import { FileDown, FileText } from 'lucide-react'
+
+const COPY_WARNING = 'Copy krni buri bat khud se likho smjhaa??'
 
 function renderStepText(step) {
   const parts = step.split(/"([^"]+)"/g)
@@ -7,9 +10,7 @@ function renderStepText(step) {
     return (
       <span
         key={i}
-        className="prompt-text mt-2 block select-none rounded-xl border-l-4 border-violet-500 bg-violet-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-violet-900"
-        onCopy={(e) => e.preventDefault()}
-        onContextMenu={(e) => e.preventDefault()}
+        className="prompt-text mt-2 block rounded-xl border-l-4 border-violet-500 bg-violet-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-violet-900"
       >
         &ldquo;{part}&rdquo;
       </span>
@@ -37,21 +38,43 @@ function FileStep({ file }) {
 }
 
 export default function StepList({ steps }) {
+  const [toast, setToast] = useState(false)
+  const timeoutRef = useRef(null)
+
+  function handleCopy(e) {
+    const target = window.getSelection()?.anchorNode?.parentElement?.closest('.prompt-text')
+    if (!target) return
+    e.preventDefault()
+    e.clipboardData.setData('text/plain', COPY_WARNING)
+    setToast(true)
+    clearTimeout(timeoutRef.current)
+    timeoutRef.current = setTimeout(() => setToast(false), 2500)
+  }
+
   return (
-    <ol className="space-y-3">
-      {steps.map((step, i) => {
-        const isFile = typeof step === 'object' && step !== null && step.file
-        return (
-          <li key={i} className="flex gap-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700">
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <span className="flex-1 text-sm text-slate-700">
-              {isFile ? <FileStep file={{ name: step.file, downloadUrl: step.downloadUrl }} /> : renderStepText(step)}
-            </span>
-          </li>
-        )
-      })}
-    </ol>
+    <div className="relative">
+      <ol className="space-y-3" onCopy={handleCopy}>
+        {steps.map((step, i) => {
+          const isFile = typeof step === 'object' && step !== null && step.file
+          return (
+            <li key={i} className="flex gap-3">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span className="flex-1 text-sm text-slate-700">
+                {isFile ? <FileStep file={{ name: step.file, downloadUrl: step.downloadUrl }} /> : renderStepText(step)}
+              </span>
+            </li>
+          )
+        })}
+      </ol>
+      {toast && (
+        <div className="fixed inset-x-0 bottom-6 z-50 flex justify-center px-4">
+          <div className="rounded-full bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-lg">
+            {COPY_WARNING}
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
