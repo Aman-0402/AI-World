@@ -21,7 +21,7 @@ export default function ChapterDetails() {
   const notesUrl = getChapterNotesUrl(chapter.id)
 
   return (
-    <div className="relative min-h-screen bg-slate-50">
+    <div className="relative min-h-screen bg-gradient-to-b from-slate-50 via-white to-violet-50/40">
       <Navbar />
       <HiddenSpot icon={Circle} className="right-6 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Diamond} className="left-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
@@ -29,7 +29,7 @@ export default function ChapterDetails() {
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to="/explore"
-          className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900"
+          className="inline-flex items-center gap-1 rounded-full px-1 text-sm font-medium text-slate-500 transition hover:text-violet-700"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           Back to Explore
@@ -38,30 +38,32 @@ export default function ChapterDetails() {
         <p className="mt-4 text-sm font-medium text-violet-600">
           Chapter {String(chapter.id).padStart(2, '0')}
         </p>
-        <h1 className="mt-1 text-3xl font-bold text-slate-900">{chapter.title}</h1>
+        <h1 className="font-display mt-1 text-3xl font-bold text-slate-900">{chapter.title}</h1>
         <p className="mt-2 text-slate-600">{chapter.description}</p>
 
-        <h2 className="mt-8 text-lg font-semibold text-slate-900">Notes</h2>
+        <h2 className="font-display mt-8 text-lg font-semibold text-slate-900">Notes</h2>
         <div className="mt-4">
           {notesUrl ? (
             <a
               href={notesUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-violet-300 hover:shadow-sm"
+              className="group flex items-center justify-between rounded-xl border border-slate-200/70 bg-white px-4 py-3 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:border-violet-200 hover:shadow-[0_8px_20px_-12px_rgba(109,40,217,0.3)]"
             >
               <div className="flex items-center gap-3">
                 <FileText className="h-5 w-5 text-violet-600" aria-hidden="true" />
                 <span className="font-medium text-slate-900">Chapter {String(chapter.id).padStart(2, '0')} Notes (PDF)</span>
               </div>
-              <ExternalLink className="h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-cyan-400 group-hover:text-white">
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+              </span>
             </a>
           ) : (
             <p className="text-sm text-slate-500">No notes available for this chapter yet.</p>
           )}
         </div>
 
-        <h2 className="mt-8 text-lg font-semibold text-slate-900">Tasks</h2>
+        <h2 className="font-display mt-8 text-lg font-semibold text-slate-900">Tasks</h2>
         <div className="mt-4 flex flex-col gap-3">
           {tasks.map((task, i) => (
             <TaskCard key={task.id} task={task} index={i + 1} />

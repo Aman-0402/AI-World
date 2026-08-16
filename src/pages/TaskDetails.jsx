@@ -15,7 +15,7 @@ import { getChapterById } from '../data/chapters.js'
 
 function Section({ title, children }) {
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-5">
+    <section className="rounded-2xl border border-slate-200/70 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_28px_-18px_rgba(109,40,217,0.16)]">
       <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{title}</h2>
       <div className="mt-3">{children}</div>
     </section>
@@ -35,7 +35,7 @@ export default function TaskDetails() {
     task.resources ?? (task.requiredFile ? [{ name: task.requiredFile, downloadUrl: task.downloadUrl }] : [])
 
   return (
-    <div className="relative min-h-screen bg-slate-50">
+    <div className="relative min-h-screen bg-gradient-to-b from-slate-50 via-white to-violet-50/40">
       <Navbar />
       <HiddenSpot icon={Hexagon} className="left-4 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Plus} className="right-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
@@ -43,14 +43,14 @@ export default function TaskDetails() {
       <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to={`/chapter/${task.chapterId}`}
-          className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900"
+          className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 transition hover:text-violet-700"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           Back to {chapter?.title ?? 'Chapter'}
         </Link>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-          <h1 className="text-3xl font-bold text-slate-900">{task.title}</h1>
+          <h1 className="font-display text-3xl font-bold text-slate-900">{task.title}</h1>
           <CompleteButton taskId={task.id} />
         </div>
 

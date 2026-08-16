@@ -9,12 +9,12 @@ import { getTasksByChapter } from '../data/tasks.js'
 
 export default function Explore() {
   return (
-    <div className="relative min-h-screen bg-slate-50">
+    <div className="relative min-h-screen bg-gradient-to-b from-slate-50 via-white to-violet-50/40">
       <Navbar />
       <HiddenSpot icon={Square} className="right-4 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Triangle} className="bottom-4 left-4 text-slate-300/40 hover:text-violet-500/70" />
       <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-        <h1 className="text-3xl font-bold text-slate-900">Explore Chapters</h1>
+        <h1 className="font-display text-3xl font-bold text-slate-900">Explore Chapters</h1>
         <p className="mt-2 text-slate-600">
           Pick a chapter to start learning about AI in Business.
         </p>
