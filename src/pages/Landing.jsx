@@ -63,6 +63,12 @@ export default function Landing() {
         />
         <ParticleField ref={particleRef} />
 
+        <Link
+          to="/psst"
+          aria-label="???"
+          className="absolute bottom-6 left-6 z-10 h-3 w-3 rounded-full bg-white/5 transition hover:bg-white/40"
+        />
+
         <div
           ref={tiltRef}
           className="relative z-10 will-change-transform"
