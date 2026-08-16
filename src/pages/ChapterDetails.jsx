@@ -21,12 +21,12 @@ export default function ChapterDetails() {
   const notesUrl = getChapterNotesUrl(chapter.id)
 
   return (
-    <div className="relative min-h-screen bg-[#FAF6EC]">
+    <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
       <HiddenSpot icon={Circle} className="right-6 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Diamond} className="left-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Heart} className="bottom-4 right-4 text-slate-300/40 hover:text-violet-500/70" />
-      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to="/explore"
           className="inline-flex items-center gap-1 rounded-full px-1 text-sm font-medium text-slate-500 transition hover:text-violet-700"

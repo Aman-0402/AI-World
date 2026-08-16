@@ -35,12 +35,12 @@ export default function TaskDetails() {
     task.resources ?? (task.requiredFile ? [{ name: task.requiredFile, downloadUrl: task.downloadUrl }] : [])
 
   return (
-    <div className="relative min-h-screen bg-[#FAF6EC]">
+    <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
       <HiddenSpot icon={Hexagon} className="left-4 top-20 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Plus} className="right-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
       <HiddenSpot icon={Minus} className="bottom-6 right-6 text-slate-300/40 hover:text-violet-500/70" />
-      <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to={`/chapter/${task.chapterId}`}
           className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 transition hover:text-violet-700"
