@@ -31,6 +31,14 @@ Frontend-only React app. No backend, no auth, no DB. All content is static JS da
 - Keep chapter page section order fixed: chapter header → Notes → Tasks.
 - Keep task page section order fixed: Question → What to Do → Steps → Required File/Download → What You Learn → Questions About It.
 
+## Visual System
+
+- Brand accent is a violet→cyan gradient (`from-violet-600 to-cyan-500`, sometimes `to-fuchsia-500` for badges) — used for primary CTAs, download buttons, and numbered step/question badges on light pages. Keep new primary actions consistent with this rather than flat `bg-slate-900`.
+- `font-display` (Space Grotesk, defined in `index.css`) is used on all page H1s and the Navbar wordmark; body/paragraph text stays on the default Inter stack.
+- Light-page cards (`ChapterCard`, `TaskCard`, `Section` in `TaskDetails.jsx`, Notes link in `ChapterDetails.jsx`) share one shadow/hover language: `border-slate-200/70`, layered shadow (`shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_28px_-16px_rgba(109,40,217,0.18)]`), `hover:-translate-y-0.5` with a stronger violet-tinted shadow and `hover:border-violet-200`. Reuse this instead of plain `shadow-sm`/`shadow-md` when adding new cards.
+- Light-page backgrounds use `bg-gradient-to-b from-slate-50 via-white to-violet-50/40` (not flat `bg-slate-50`) — the Landing page keeps its own dark `#0a0a12` hero treatment, unrelated to this.
+- Row/card "go" affordances (arrow on `ChapterCard`/`TaskCard`, external-link icon on the Notes link) are circular chips (`bg-slate-100` → gradient fill on hover via a `group`/`group-hover` pair), not bare icons.
+
 ## What NOT to Build
 
 - Login/auth, accounts, dashboards, admin/instructor panels.
