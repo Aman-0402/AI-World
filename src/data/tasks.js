@@ -1280,6 +1280,29 @@ export const tasks = [
       'What business factor outside the data might change your decision?',
     ],
   },
+  {
+    id: 55,
+    chapterId: 7,
+    title: 'Write an Effective AI Email Prompt',
+    question: 'How much does prompt quality actually change the usefulness of an AI-drafted email?',
+    whatToDo: 'Compare a bare, one-line email prompt against a detailed one with role, context, tone, and constraints, and see how differently AI responds.',
+    steps: [
+      'Prompt ChatGPT with just: "Write an email." and read the result.',
+      'Now prompt: "You are a professional business communication specialist. Write an email to my manager requesting approval for a two-day training program. Context: The training is scheduled for next week and requires a budget of ₹15,000. Tone: Professional and respectful. Keep it under 150 words. Include a clear request for approval."',
+      'Compare both outputs side by side.',
+      'Identify which elements — role, context, tone, word limit, or the clear ask — made the biggest difference.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Why a bare prompt produces a generic, unusable email while a detailed one produces something close to ready-to-send.',
+      'The key elements a good AI email prompt needs: context, purpose, tone, and constraints.',
+    ],
+    questions: [
+      'Which single addition — role, context, tone, or word limit — improved the email most?',
+      'How would you write a strong prompt for your own next work email, without a template to copy?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
