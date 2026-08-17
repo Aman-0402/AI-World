@@ -669,7 +669,7 @@ export const tasks = [
       'Note any factor the AI overlooked that a finance manager should also weigh.',
     ],
     requiredFile: 'Product_A_vs_Product_B_Simplified_Business_Analysis.xlsx',
-    downloadUrl: '/resources/Product_A_vs_Product_B_Simplified_Business_Analysis.xlsx',
+    downloadUrl: getTaskFileUrl('Product_A_vs_Product_B_Simplified_Business_Analysis.xlsx'),
     whatYouLearn: [
       'How to use AI to structure a financial comparison across multiple factors.',
       'Why the final budget or forecasting decision still needs human sign-off.',
@@ -738,7 +738,7 @@ export const tasks = [
       'Decide, as the manager, whether you agree with the AI\'s final recommendation.',
     ],
     requiredFile: 'vendor_comparison_raw_data.pdf',
-    downloadUrl: '/resources/vendor_comparison_raw_data.pdf',
+    downloadUrl: getTaskFileUrl('vendor_comparison_raw_data.pdf'),
     whatYouLearn: [
       'How to use AI to structure a multi-factor vendor comparison.',
       'Why AI should assist a decision, not make it — the final call stays with the manager.',
