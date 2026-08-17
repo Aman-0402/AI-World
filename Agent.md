@@ -28,6 +28,7 @@ Frontend-only React app. No backend, no auth, no DB. All content is static JS da
 - `vite.config.js` sets `build.assetsInlineLimit: 0` so every asset (PDF, txt, etc.) always emits as a real file instead of being base64-inlined into the JS bundle.
 - Chapter-level notes PDFs go in `src/assets/pdf/`, named `S<chapterId>.pdf` (e.g. `S1.pdf` for chapter 1). Resolved via `getChapterNotesUrl()` in `src/data/notes.js` (uses `import.meta.glob`) — a chapter with no matching PDF just shows "No notes available yet," no manual wiring needed per chapter.
 - AI tool shortcuts (ChatGPT, Gemini, Claude, Google Drive) open in new tab (`target="_blank" rel="noopener noreferrer"`), collapsed behind a toggle FAB (`AIShortcuts`) to avoid overlapping page content.
+- The "Back" link on `ChapterDetails`/`TaskDetails` is `fixed left-4 top-20` (a pill button, not sticky-in-flow) — sticky positioning inside the centered `max-w-*` column overlapped page content when scrolling, since sticky only pins vertically and stays at its horizontal spot in that narrow column. Fixed positioning in the page's left margin avoids that. Label is just "Back", not "Back to X".
 - Keep chapter page section order fixed: chapter header → Notes → Tasks.
 - Keep task page section order fixed: Question → What to Do → Steps → Required File/Download → What You Learn → Questions About It.
 

@@ -1255,6 +1255,30 @@ export const tasks = [
       'At which complexity level did the AI plan start missing real constraints?',
     ],
   },
+  {
+    id: 54,
+    chapterId: 6,
+    title: 'Get AI Decision Support, Not a Decision',
+    question: 'Can AI compare two options and give you a recommendation without making the final call for you?',
+    whatToDo: 'Use the attached real Product A vs Product B business analysis and prompt an AI tool to compare them across cost, delivery time, quality, and customer reviews, then weigh the recommendation yourself.',
+    steps: [
+      'Open the attached Product A vs Product B business analysis file.',
+      'Prompt: "Compare these two vendors based on: Cost, Delivery Time, Quality, Customer Reviews. Provide a recommendation with advantages and risks."',
+      'Review the AI\'s comparison against the raw numbers in the file for accuracy.',
+      'Note the AI\'s recommendation along with the advantages and risks it listed for each option.',
+      'Decide, as the manager, whether you agree with the AI\'s final recommendation or would choose differently.',
+    ],
+    requiredFile: 'Product_A_vs_Product_B_Simplified_Business_Analysis.xlsx',
+    downloadUrl: getTaskFileUrl('Product_A_vs_Product_B_Simplified_Business_Analysis.xlsx'),
+    whatYouLearn: [
+      'How to prompt AI for a structured multi-criteria comparison with a clear recommendation.',
+      'Why AI should assist a business decision, not replace the manager\'s final judgment.',
+    ],
+    questions: [
+      'Did you agree with the AI\'s final recommendation? Why or why not?',
+      'What business factor outside the data might change your decision?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {

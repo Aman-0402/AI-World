@@ -43,10 +43,10 @@ export default function TaskDetails() {
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
         <Link
           to={`/chapter/${task.chapterId}`}
-          className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 transition hover:text-violet-700"
+          className="fixed left-4 top-20 z-30 inline-flex items-center gap-1.5 rounded-full border border-slate-200/70 bg-[#FFFCF5] px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_16px_-10px_rgba(109,40,217,0.2)] backdrop-blur transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-[#F6F0FF] hover:text-violet-700 hover:shadow-[0_8px_18px_-8px_rgba(109,40,217,0.3)]"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          Back to {chapter?.title ?? 'Chapter'}
+          Back
         </Link>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
