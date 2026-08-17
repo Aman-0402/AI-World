@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
-import { FileDown, FileText } from 'lucide-react'
+import { FileText } from 'lucide-react'
+import DownloadButton from './DownloadButton.jsx'
 
 const COPY_WARNING = 'Copy krni buri baat hai, khud se likho, smjhaa?? aase toh nhi sikhoge firr'
 
@@ -25,14 +26,7 @@ function FileStep({ file }) {
         <FileText className="h-5 w-5 text-violet-600" aria-hidden="true" />
         <span className="text-sm font-medium text-slate-800">{file.name}</span>
       </div>
-      <a
-        href={file.downloadUrl}
-        download
-        className="flex items-center gap-1 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-3 py-1.5 text-xs font-semibold text-white shadow-[0_4px_12px_-4px_rgba(139,92,246,0.55)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_-4px_rgba(139,92,246,0.6)]"
-      >
-        <FileDown className="h-3.5 w-3.5" aria-hidden="true" />
-        Download
-      </a>
+      <DownloadButton href={file.downloadUrl} />
     </div>
   )
 }
