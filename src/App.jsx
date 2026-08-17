@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Explore = lazy(() => import('./pages/Explore.jsx'))
@@ -18,6 +19,7 @@ function PageFallback() {
 function App() {
   return (
     <Suspense fallback={<PageFallback />}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />
