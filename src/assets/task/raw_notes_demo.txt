@@ -1,0 +1,11 @@
+Wednesday meeting
+
+Karan - server migration on track
+Meena says budget approval still pending from finance head
+QA team finished testing module 2
+Bug found in payment module, dev team looking into it
+Go live maybe next Monday
+Karan will send server report by Friday
+Meena to get budget approval by Thursday
+Dev team fix payment bug by Monday
+Need sign off from client before final launch

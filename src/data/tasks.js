@@ -1448,6 +1448,29 @@ export const tasks = [
       'Which of the six sections did the AI handle best without inventing anything?',
     ],
   },
+  {
+    id: 62,
+    chapterId: 8,
+    title: 'Turn Raw Notes into Professional Meeting Minutes',
+    question: 'Can AI turn messy, shorthand meeting notes into clear, organized, actionable minutes?',
+    whatToDo: 'Use the attached raw meeting notes and prompt AI to generate professional meeting minutes with an agenda, summary, decisions, and an action items table.',
+    steps: [
+      'Open the attached raw meeting notes file.',
+      'Prompt: "Convert these raw meeting notes into professional meeting minutes. Include: Meeting Title, Date, Prepared By, Attendees, Agenda, Summary of Discussion, Decisions, and an Action Items table with Responsible Person and Deadline."',
+      'Review the AI-generated minutes against the raw notes — did it correctly attribute each point to the right person?',
+      'Check the Action Items table: does every deadline and responsible person match what was actually said in the raw notes?',
+    ],
+    requiredFile: 'raw_notes_demo.txt',
+    downloadUrl: getTaskFileUrl('raw_notes_demo.txt'),
+    whatYouLearn: [
+      'How AI structures messy, shorthand notes into clear sections a manager doesn\'t have to interpret.',
+      'Why the Action Items table (owner + deadline) is the part that most needs a human accuracy check.',
+    ],
+    questions: [
+      'Did the AI attribute any action item to the wrong person or deadline?',
+      'Would you send these AI-generated minutes to your team as-is, or what would you edit first?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
