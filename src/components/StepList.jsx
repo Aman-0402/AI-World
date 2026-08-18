@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { FileText } from 'lucide-react'
 import DownloadButton from './DownloadButton.jsx'
 
-const COPY_WARNING = 'Copy krni buri baat hai, khud se likho, smjhaa?? aase toh nhi sikhoge firr'
+const COPY_WARNING = 'aab se Copy krna bnd, typing suru'
 
 function renderStepText(step) {
   const parts = step.split(/"([^"]+)"/g)
