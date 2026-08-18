@@ -13,10 +13,10 @@ export default function ResourceCard({ resources }) {
       {resources.map(({ name, downloadUrl }) => (
         <div
           key={name}
-          className="flex items-center justify-between rounded-xl border border-slate-200/70 bg-slate-50 px-4 py-3"
+          className="flex items-center justify-between rounded-xl border border-blue-100 bg-blue-50 px-4 py-3"
         >
           <div className="flex items-center gap-3">
-            <FileText className="h-5 w-5 text-violet-600" aria-hidden="true" />
+            <FileText className="h-5 w-5 text-blue-600" aria-hidden="true" />
             <span className="text-sm font-medium text-slate-800">{name}</span>
           </div>
           <DownloadButton href={downloadUrl} />

@@ -11,7 +11,7 @@ function renderStepText(step) {
     return (
       <span
         key={i}
-        className="prompt-text mt-2 block rounded-xl border-l-4 border-violet-500 bg-violet-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-violet-900 shadow-[0_1px_2px_rgba(109,40,217,0.08)]"
+        className="prompt-text mt-2 block rounded-xl border-l-4 border-blue-600 bg-blue-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-blue-950 shadow-[0_1px_2px_rgba(30,64,175,0.1)]"
       >
         &ldquo;{part}&rdquo;
       </span>
@@ -21,9 +21,9 @@ function renderStepText(step) {
 
 function FileStep({ file }) {
   return (
-    <div className="flex items-center justify-between rounded-xl border border-slate-200/70 bg-slate-50 px-4 py-3">
+    <div className="flex items-center justify-between rounded-xl border border-blue-100 bg-blue-50 px-4 py-3">
       <div className="flex items-center gap-3">
-        <FileText className="h-5 w-5 text-violet-600" aria-hidden="true" />
+        <FileText className="h-5 w-5 text-blue-600" aria-hidden="true" />
         <span className="text-sm font-medium text-slate-800">{file.name}</span>
       </div>
       <DownloadButton href={file.downloadUrl} />
@@ -52,7 +52,7 @@ export default function StepList({ steps }) {
           const isFile = typeof step === 'object' && step !== null && step.file
           return (
             <li key={i} className="flex gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xs font-semibold text-white shadow-sm">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-xs font-semibold text-white shadow-sm">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <span className="flex-1 text-sm text-slate-700">
