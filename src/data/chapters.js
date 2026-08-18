@@ -4,7 +4,7 @@ export const chapters = [
   { id: 3, title: 'Prompt Engineering Basics', description: 'Prompt Engineering Basics, Prompt Anatomy, Best Practices.', status: 'complete' },
   { id: 4, title: 'Advanced Prompting', description: 'Advanced Prompting, Role Prompting, Prompt Refinement.', status: 'complete' },
   { id: 5, title: 'AI Ethics & Responsible Use', description: 'AI Ethics, Hallucinations, Privacy & Bias.', status: 'complete' },
-  { id: 6, title: 'AI Productivity for Managers', description: 'AI Productivity for Managers, Daily AI Workflow, Case Study.', status: 'ongoing' },
+  { id: 6, title: 'AI Productivity for Managers', description: 'AI Productivity for Managers, Daily AI Workflow, Case Study.', status: 'complete' },
   { id: 7, title: 'Business Email Writing', description: 'Business Email Writing, Professional Communication, Tone Adjustment.', status: 'ongoing' },
   { id: 8, title: 'Report Writing & Meeting Minutes', description: 'Report Writing, Meeting Minutes, Executive Summaries.' },
   { id: 9, title: 'Proposal Writing & SOP Creation', description: 'Proposal Writing, SOP Creation, Policy Documentation.' },
