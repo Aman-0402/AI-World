@@ -1,0 +1,11 @@
+SCENARIO
+
+Your company wants to introduce an AI-powered employee helpdesk.
+
+CURRENT PROBLEM
+
+Employees frequently ask HR and IT repetitive questions such as:
+- How do I reset my password?
+- How do I apply for leave?
+- Where can I find company policies?
+- How do I request equipment?
