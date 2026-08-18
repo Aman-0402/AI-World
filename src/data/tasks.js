@@ -1471,6 +1471,30 @@ export const tasks = [
       'Would you send these AI-generated minutes to your team as-is, or what would you edit first?',
     ],
   },
+  {
+    id: 63,
+    chapterId: 8,
+    title: 'Write a Prompt for an Executive Summary',
+    question: 'Can AI compress a full report into a short, decision-ready summary for senior management without adding anything new?',
+    whatToDo: 'Use the attached monthly report and prompt AI to produce a 5-bullet executive summary focused only on results, risks, impact, and recommendations.',
+    steps: [
+      'Open the attached monthly report file.',
+      'Prompt: "You are an executive business analyst. Summarize the following report for a senior management audience. Focus only on: key results, important risks, business impact, and major recommendations. Limit the summary to 5 bullet points. Do not introduce information that is not present in the original report."',
+      'Paste the report content in after the prompt and run it.',
+      'Check each of the 5 bullets against the original report — is every claim actually in the source?',
+      'Check whether anything important (a major risk or result) got left out of the 5 bullets.',
+    ],
+    requiredFile: 'monthly_report_sample.txt',
+    downloadUrl: getTaskFileUrl('monthly_report_sample.txt'),
+    whatYouLearn: [
+      'How to constrain an AI summary to a fixed length and a fixed set of focus areas.',
+      'Why "do not introduce new information" is essential for summaries that go to senior management.',
+    ],
+    questions: [
+      'Did any of the 5 bullets include something not actually in the report?',
+      'What important detail, if any, got dropped by compressing to just 5 bullets?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {

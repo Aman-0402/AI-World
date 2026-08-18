@@ -1,0 +1,66 @@
+Monthly Project Report – Project Atlas – July 2026
+Prepared by: Aman Raj, Project Lead
+
+1. Overview
+Project Atlas is on track for its Q3 milestones, with core development
+progressing across backend, frontend, and QA workstreams. This report
+covers progress, risks, and financials for the month of July.
+
+2. Key Results
+- Backend authentication module completed and passed QA testing
+- Database migration to the new cloud infrastructure completed successfully,
+  with zero downtime during the cutover
+- Frontend dashboard redesign is 70% complete, slightly behind the original
+  schedule due to a two-week delay in design handoff
+- Automated deployment pipeline for staging environment is now fully
+  operational, reducing manual deployment time from 2 hours to 15 minutes
+- Client satisfaction survey (mid-project checkpoint) returned a score of
+  8.2/10, up from 7.4/10 in the previous quarter
+
+3. Risks
+- Third-party payment gateway vendor has not delivered updated API
+  documentation for six weeks, delaying payment integration work
+- One senior QA engineer was on medical leave for two weeks in July,
+  creating a testing backlog of approximately 40 test cases
+- Load testing has not yet started; originally scheduled for early July,
+  now at risk of slipping into August
+- Team velocity dropped from an average of 40 story points per sprint to
+  34 points in the last two sprints, attributed to the QA staffing gap
+- Client requested two additional fields on the signup form mid-sprint,
+  representing a minor scope change not accounted for in the original
+  project budget
+
+4. Financials
+- Total spend for July: within 3% of planned monthly budget
+- Overall project budget tracking 5% under plan year-to-date, primarily
+  due to lower-than-expected infrastructure costs after the cloud migration
+- No additional budget requests submitted this month
+
+5. Team Updates
+- Two new engineers onboarded to the frontend team, ramp-up expected to
+  take 3-4 weeks before full productivity
+- Design team completed all wireframes for Phase 2 of the project ahead
+  of schedule
+- Internal retrospective identified communication gaps between design and
+  frontend teams as a contributing factor to the dashboard delay
+
+6. Recommendations
+- Escalate the payment gateway vendor delay through procurement, as the
+  six-week gap now threatens the planned September launch date
+- Temporarily reassign one backend engineer to support QA testing until
+  the affected engineer returns, to prevent further backlog growth
+- Formally log the signup form field change as a scope addition and route
+  it through the standard change-request process before further work
+  continues
+- Begin load testing in the first week of August at the latest, even with
+  partial feature completeness, to avoid compressing the testing window
+  before launch
+- Introduce a shared design-to-frontend handoff checklist to reduce future
+  delays similar to the dashboard redesign slip
+
+7. Next Steps
+- Finance to review and respond to the vendor escalation by August 5
+- QA lead to reassess testing timeline once backlog is reduced
+- Project lead to schedule a scope-change discussion with the client by
+  August 3
+- Next monthly report due September 1
