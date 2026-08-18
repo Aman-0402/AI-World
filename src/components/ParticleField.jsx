@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react'
 
-const NODE_COUNT = 50
-const LINK_DIST = 130
+const NODE_COUNT = 130
+const LINK_DIST = 120
 const PARALLAX = 26
 
 function rand(min, max) {
@@ -54,8 +54,8 @@ const ParticleField = forwardRef(function ParticleField(_, ref) {
         x: rand(0, w),
         y: rand(0, h),
         z: rand(0.2, 1),
-        vx: rand(-0.15, 0.15),
-        vy: rand(-0.15, 0.15),
+        vx: rand(-0.9, 0.9),
+        vy: rand(-0.9, 0.9),
       }))
     }
 

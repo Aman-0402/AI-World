@@ -79,7 +79,7 @@ export default function Landing() {
           className="relative z-10 will-change-transform"
           style={{ transformStyle: 'preserve-3d', transition: 'transform 150ms ease-out' }}
         >
-          <h1 className="font-display cursor-default text-5xl font-bold tracking-tight text-white sm:text-7xl md:text-8xl">
+          <h1 className="font-display cursor-default text-6xl font-bold tracking-tight text-white sm:text-8xl md:text-9xl lg:text-[9.5rem]">
             {HEADLINE.split('').map((ch, i) => (
               <span
                 key={`${i}-${playCounts[i]}`}
