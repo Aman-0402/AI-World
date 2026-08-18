@@ -37,9 +37,9 @@ export default function TaskDetails() {
   return (
     <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
-      <HiddenSpot icon={Hexagon} className="left-4 top-20 text-slate-300/40 hover:text-violet-500/70" />
-      <HiddenSpot icon={Plus} className="right-6 top-40 text-slate-300/40 hover:text-violet-500/70" />
-      <HiddenSpot icon={Minus} className="bottom-6 right-6 text-slate-300/40 hover:text-violet-500/70" />
+      <HiddenSpot icon={Hexagon} className="left-4 top-20 text-slate-500 hover:text-violet-600" />
+      <HiddenSpot icon={Plus} className="right-6 top-40 text-slate-500 hover:text-violet-600" />
+      <HiddenSpot icon={Minus} className="bottom-6 right-6 text-slate-500 hover:text-violet-600" />
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-violet-100 bg-gradient-to-br from-white via-white to-violet-50 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_20px_40px_-24px_rgba(109,40,217,0.25)] sm:p-8">
           <span

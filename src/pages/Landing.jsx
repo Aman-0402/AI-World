@@ -70,9 +70,9 @@ export default function Landing() {
           to="/psst"
           aria-label="???"
           tabIndex={-1}
-          className="absolute bottom-6 left-6 z-10 h-3 w-3 rounded-full bg-white/5 transition hover:bg-white/40"
+          className="absolute bottom-6 left-6 z-10 h-3 w-3 cursor-default rounded-full bg-white opacity-[0.03] transition-opacity duration-300 hover:opacity-70"
         />
-        <HiddenSpot icon={Star} className="right-6 top-6 text-white/10 hover:text-cyan-300/70" />
+        <HiddenSpot icon={Star} className="right-6 top-6 text-white hover:text-cyan-300" />
 
         <div
           ref={tiltRef}

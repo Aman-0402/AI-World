@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom'
 
 const STORAGE_KEY = 'secret-page-found'
 
+const TREATS = ['Kurkure', 'Lays', 'Chocolate', 'Uncle Chipps', 'Khatta Meetha']
+
+function randomTreat() {
+  return TREATS[Math.floor(Math.random() * TREATS.length)]
+}
+
 export default function SecretPage() {
   const [alreadyFound, setAlreadyFound] = useState(false)
+  const [treat] = useState(randomTreat)
 
   useEffect(() => {
     const wasFound = localStorage.getItem(STORAGE_KEY) === 'true'
@@ -29,8 +36,8 @@ export default function SecretPage() {
         <>
           <h1 className="font-display mt-4 text-3xl font-bold text-white sm:text-4xl">Shhh... You Found It!</h1>
           <p className="mt-3 max-w-md text-white/90">
-            You found the hidden secret page! Take a screenshot of this page and send it to me to get your treat.
-            🍬
+            You found the hidden secret page! Take a screenshot of this page and send it to me to get your treat —{' '}
+            <span className="font-semibold">{treat}</span>! 🍬
           </p>
         </>
       )}
