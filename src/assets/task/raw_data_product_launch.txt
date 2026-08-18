@@ -1,0 +1,37 @@
+Meeting Notes – Product Launch Readiness Meeting – Aug 12, 2026
+Attendees: Neha (Product), Arjun (Engineering), Simran (Marketing),
+Farhan (Support), Vivek (Finance)
+
+1. App backend
+   - Arjun: core API stable, load testing completed yesterday, passed
+   - One minor bug found in checkout flow, fix expected by Aug 14
+
+2. Marketing launch plan
+   - Simran: launch email campaign ready, scheduled for Aug 20
+   - Social media assets still with design team, expected Aug 15
+   - Simran asked if launch date is still Aug 22 — Neha said "most likely"
+     but waiting on final QA sign-off
+
+3. Support readiness
+   - Farhan: support team trained on new features
+   - FAQ document still being written, 60% done
+   - Farhan flagged support team is short-staffed for launch week,
+     two people on planned leave
+
+4. Budget
+   - Vivek: marketing budget spend so far is within plan
+   - Additional ad spend requested by Simran for launch week, not yet approved
+   - Vivek needs finance head approval before confirming extra budget
+
+5. Open risk raised by Neha
+   - If checkout bug fix slips past Aug 14, QA sign-off timeline is at risk,
+     which could push the Aug 22 launch date
+
+6. Action items mentioned during discussion
+   - Arjun to confirm checkout bug fix by Aug 14
+   - Design team to deliver social assets by Aug 15
+   - Farhan to finish FAQ doc by Aug 18
+   - Vivek to get finance approval on ad spend by Aug 16
+   - Neha to confirm final launch date once QA sign-off is complete
+
+Next meeting: Aug 15

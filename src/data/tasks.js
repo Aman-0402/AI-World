@@ -1495,6 +1495,32 @@ export const tasks = [
       'What important detail, if any, got dropped by compressing to just 5 bullets?',
     ],
   },
+  {
+    id: 64,
+    chapterId: 8,
+    title: 'AI-Assisted Meeting & Reporting Workflow (Capstone)',
+    question: 'Can you write your own prompts — not copy the class examples — to take one messy raw-notes file through a full meeting-to-report workflow?',
+    whatToDo: 'Use the attached raw product-launch notes and write your own prompts for five parts: a next-meeting agenda, structured notes, a follow-up email, an executive summary, and three levels of summarization — checking each AI output against the raw notes.',
+    steps: [
+      'Open the attached raw notes file. Imagine it is from last week\'s meeting.',
+      'Part 1 — Meeting Agenda: write your own prompt that generates an agenda for the next meeting (Aug 15), highlighting unresolved issues and suggested discussion points. Check yourself: did the agenda correctly leave out anything already fully resolved? Name one item it should NOT include.',
+      'Part 2 — Structured Notes: write your own prompt that converts the raw notes into Summary, Decisions, Action Items, Owners, Deadlines. Check yourself: find one action item with no stated owner or deadline — did the AI correctly mark it as unassigned, or did it guess one?',
+      'Part 3 — Follow-up Email: write your own prompt for a follow-up email summarizing the meeting, including all action items with deadlines. Check yourself: does the email separate action items (someone owns it) from open risks/decisions still needed? Why does that separation matter?',
+      'Part 4 — Executive Summary: write a prompt in this shape, filling in your own role, audience, focus areas, and bullet limit: "You are a [role]. Summarize the following for a [audience]. Focus only on: [your focus areas]. Limit to [number] bullet points. Do not introduce information not present in the original." Check yourself: did the AI stay within your bullet limit? Did it include anything you can\'t trace back to the raw notes?',
+      'Part 5 — Three Levels of Summarization: write a prompt asking AI to summarize the same raw notes at three levels — Level 1 Detailed (for the project team), Level 2 Executive (for senior management), Level 3 One-line (for a dashboard headline). Check yourself: pick one fact that appears in Level 1 but is dropped by Level 3 — is it okay that it was dropped? Why or why not?',
+      'Reflection: which of the 5 parts required AI to just extract information, and which required it to interpret or judge something (like deciding what counts as a risk)? Give one example from today where you would not fully trust an AI output without checking it against the raw notes. Rewrite one of your prompts to be more specific (add a role, a format constraint, or a do-not-invent-info instruction) and explain what you expect to change in the output.',
+    ],
+    requiredFile: 'raw_data_product_launch.txt',
+    downloadUrl: getTaskFileUrl('raw_data_product_launch.txt'),
+    whatYouLearn: [
+      'How to write your own prompts for a full meeting-to-report workflow instead of copying templates word-for-word.',
+      'The difference between AI extracting information versus interpreting or judging it.',
+    ],
+    questions: [
+      'Which part of the workflow needed the most editing of your own prompt before the output was usable?',
+      'What is one thing you will always double-check in an AI output before trusting it, based on this exercise?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
