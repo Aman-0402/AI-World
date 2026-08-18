@@ -1553,6 +1553,33 @@ export const tasks = [
       'What would you change about your prompt if you ran this again?',
     ],
   },
+  {
+    id: 66,
+    chapterId: 9,
+    title: 'Convert a Raw Process into a Professional SOP',
+    question: 'Does an AI-generated SOP faithfully preserve every step of the original process, or does it merge, drop, invent, or leave things vague?',
+    whatToDo: 'Use the attached 7-step process and ask AI to convert it into a professional SOP, then audit it against the original for accuracy, added detail, unclear ownership, and invented exception handling.',
+    steps: [
+      'Open the attached process flow file.',
+      'Write your own prompt asking AI to convert this process into a professional Standard Operating Procedure (SOP).',
+      'Check: did AI preserve all 7 steps? List any step that was merged, renamed, split, or dropped.',
+      'Check: did it add unnecessary steps? List any step in the SOP that was not in the original process, and decide if it is a reasonable addition or unnecessary detail.',
+      'Check: are responsibilities clear? For each step, does the SOP say who is responsible (e.g. warehouse staff, system, customer), or does it leave this vague?',
+      'Check: are exceptions addressed? The original 7-step process does not mention any exceptions, so anything about payment failing, items out of stock, or wrong addresses was added by AI — is it useful, or invented detail you would need to verify with the actual team?',
+      'Reflection: rewrite your prompt to explicitly ask AI to assign a responsible role to every step and list common exceptions separately. Run it again — what changed compared to your first attempt?',
+      'Reflection: if this SOP were going to be used by real warehouse staff tomorrow, what is one thing you would verify with them before trusting it as-is?',
+    ],
+    requiredFile: 'sop_raw_data.txt',
+    downloadUrl: getTaskFileUrl('sop_raw_data.txt'),
+    whatYouLearn: [
+      'How to check an AI-generated SOP against the original process for dropped, merged, or invented steps.',
+      'Why role assignment and exception handling are the parts of an SOP most likely to be AI-invented rather than sourced from the real process.',
+    ],
+    questions: [
+      'Which step, if any, did AI merge, rename, split, or drop from the original 7?',
+      'Did the added exception-handling detail feel realistic, or like something you would need to verify with the warehouse team?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {

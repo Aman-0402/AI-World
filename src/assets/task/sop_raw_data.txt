@@ -1,0 +1,9 @@
+PROCESS: ORDER FULFILLMENT FLOW
+
+1. Customer places an order
+2. Payment confirmed
+3. Warehouse receives order
+4. Product packed
+5. Shipping label created
+6. Product dispatched
+7. Customer receives tracking information
