@@ -1424,6 +1424,30 @@ export const tasks = [
       'Did the AI response actually communicate the impact of the delay, or just state the facts?',
     ],
   },
+  {
+    id: 61,
+    chapterId: 8,
+    title: 'Write a Structured AI Report Prompt',
+    question: 'How much does adding a role, structure, and explicit instructions change an AI-generated business report?',
+    whatToDo: 'Compare a vague report prompt against a detailed one with role, structure, and a no-invented-data instruction, using some sales figures of your own.',
+    steps: [
+      'Prompt ChatGPT with just: "Write a report about sales." and read the result.',
+      'Now prompt: "You are a business analyst. Create a quarterly sales performance report using the information below. Include: 1. Executive Summary, 2. Key Findings, 3. Sales Trends, 4. Possible Reasons for Changes, 5. Recommendations, 6. Conclusion. Use professional business language. Do not invent statistics that are not provided. Data: [insert your sales information]."',
+      'Fill in [insert your sales information] with a few real or made-up sales numbers before running it.',
+      'Compare both reports side by side.',
+      'Check specifically whether the detailed-prompt report avoided inventing any statistics not in your data.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Providing role, structure, instructions, and data helps AI generate more accurate, relevant, and useful reports.',
+      'Why an explicit "do not invent data" instruction matters — AI will otherwise fabricate plausible-looking numbers.',
+    ],
+    questions: [
+      'Did the vague-prompt report make up any numbers?',
+      'Which of the six sections did the AI handle best without inventing anything?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
