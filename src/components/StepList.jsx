@@ -47,15 +47,18 @@ export default function StepList({ steps }) {
 
   return (
     <div className="relative">
-      <ol className="space-y-3" onCopy={handleCopy}>
+      <ol
+        className="overflow-hidden rounded-xl border border-blue-100 divide-y divide-blue-100"
+        onCopy={handleCopy}
+      >
         {steps.map((step, i) => {
           const isFile = typeof step === 'object' && step !== null && step.file
           return (
-            <li key={i} className="flex gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-xs font-semibold text-white shadow-sm">
+            <li key={i} className="flex gap-4 bg-white px-4 py-3 even:bg-blue-50/50">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center self-start rounded-md bg-blue-600 text-xs font-semibold text-white">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <span className="flex-1 text-sm text-slate-700">
+              <span className="flex-1 py-0.5 text-sm text-slate-700">
                 {isFile ? <FileStep file={{ name: step.file, downloadUrl: step.downloadUrl }} /> : renderStepText(step)}
               </span>
             </li>
