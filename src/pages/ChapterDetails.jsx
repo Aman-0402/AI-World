@@ -27,9 +27,24 @@ export default function ChapterDetails() {
       <HiddenSpot icon={Diamond} className="left-6 top-40 text-slate-500 hover:text-violet-600" />
       <HiddenSpot icon={Heart} className="bottom-4 right-4 text-slate-500 hover:text-violet-600" />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-violet-100 bg-gradient-to-br from-white via-white to-violet-50 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_20px_40px_-24px_rgba(109,40,217,0.25)] sm:p-8">
+        <div className="relative overflow-hidden rounded-3xl border border-red-200 bg-gradient-to-br from-red-300 via-rose-200 to-orange-100 p-6 shadow-[0_1px_2px_rgba(153,27,27,0.06),0_20px_40px_-24px_rgba(153,27,27,0.35)] sm:p-8">
+          <div
+            className="hero-orb pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-red-400/40 blur-3xl"
+            aria-hidden="true"
+          />
+          <div
+            className="hero-orb pointer-events-none absolute bottom-[-3rem] left-1/3 h-32 w-32 rounded-full bg-rose-300/40 blur-3xl"
+            style={{ animationDelay: '-4s' }}
+            aria-hidden="true"
+          />
+          <div
+            className="hero-orb pointer-events-none absolute -bottom-8 right-10 h-24 w-24 rounded-full bg-orange-300/50 blur-2xl"
+            style={{ animationDelay: '-9s' }}
+            aria-hidden="true"
+          />
+
           <span
-            className="font-display pointer-events-none absolute -right-4 -top-8 select-none text-[9rem] font-bold leading-none text-violet-100/70 sm:text-[11rem]"
+            className="font-display pointer-events-none absolute -right-4 -top-8 select-none text-[9rem] font-bold leading-none text-white/30 sm:text-[11rem]"
             aria-hidden="true"
           >
             {String(chapter.id).padStart(2, '0')}
@@ -37,19 +52,19 @@ export default function ChapterDetails() {
 
           <Link
             to="/explore"
-            className="relative inline-flex items-center gap-1.5 rounded-full border border-slate-200/70 bg-[#FFFCF5] px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-[#F6F0FF] hover:text-violet-700"
+            className="relative inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/90 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_1px_2px_rgba(153,27,27,0.06)] backdrop-blur transition hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-red-700"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back
           </Link>
 
-          <p className="relative mt-6 text-sm font-semibold uppercase tracking-wide text-violet-600">
+          <p className="relative mt-6 text-sm font-semibold uppercase tracking-wide text-red-900">
             Chapter {String(chapter.id).padStart(2, '0')}
           </p>
-          <h1 className="font-display relative mt-1 max-w-xl text-3xl font-bold text-slate-900 sm:text-4xl">
+          <h1 className="font-display relative mt-1 max-w-xl text-3xl font-bold text-red-950 sm:text-4xl">
             {chapter.title}
           </h1>
-          <p className="relative mt-3 max-w-xl text-slate-600">{chapter.description}</p>
+          <p className="relative mt-3 max-w-xl text-red-950/80">{chapter.description}</p>
         </div>
 
         <h2 className="font-display mt-10 text-lg font-semibold text-slate-900">Notes</h2>

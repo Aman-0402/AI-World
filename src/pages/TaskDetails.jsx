@@ -41,9 +41,24 @@ export default function TaskDetails() {
       <HiddenSpot icon={Plus} className="right-6 top-40 text-blue-400 hover:text-blue-700" />
       <HiddenSpot icon={Minus} className="bottom-6 right-6 text-blue-400 hover:text-blue-700" />
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50 p-6 shadow-[0_1px_2px_rgba(30,64,175,0.04),0_20px_40px_-24px_rgba(30,64,175,0.3)] sm:p-8">
+        <div className="relative overflow-hidden rounded-3xl border border-purple-200 bg-gradient-to-br from-purple-300 via-fuchsia-200 to-violet-200 p-6 shadow-[0_1px_2px_rgba(107,33,168,0.06),0_20px_40px_-24px_rgba(107,33,168,0.35)] sm:p-8">
+          <div
+            className="hero-orb pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-purple-400/40 blur-3xl"
+            aria-hidden="true"
+          />
+          <div
+            className="hero-orb pointer-events-none absolute bottom-[-3rem] left-1/3 h-32 w-32 rounded-full bg-fuchsia-300/40 blur-3xl"
+            style={{ animationDelay: '-4s' }}
+            aria-hidden="true"
+          />
+          <div
+            className="hero-orb pointer-events-none absolute -bottom-8 right-10 h-24 w-24 rounded-full bg-violet-300/50 blur-2xl"
+            style={{ animationDelay: '-9s' }}
+            aria-hidden="true"
+          />
+
           <span
-            className="font-display pointer-events-none absolute -right-4 -top-10 select-none text-[8rem] font-bold leading-none text-blue-100 sm:text-[10rem]"
+            className="font-display pointer-events-none absolute -right-4 -top-10 select-none text-[8rem] font-bold leading-none text-white/30 sm:text-[10rem]"
             aria-hidden="true"
           >
             {String(task.id).padStart(2, '0')}
@@ -51,14 +66,14 @@ export default function TaskDetails() {
 
           <Link
             to={`/chapter/${task.chapterId}`}
-            className="relative inline-flex items-center gap-1.5 rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_1px_2px_rgba(30,64,175,0.04)] transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+            className="relative inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/90 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_1px_2px_rgba(107,33,168,0.06)] backdrop-blur transition hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-purple-700"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back
           </Link>
 
           <div className="relative mt-6 flex flex-wrap items-center justify-between gap-4">
-            <h1 className="font-display max-w-xl text-3xl font-bold text-blue-950 sm:text-4xl">{task.title}</h1>
+            <h1 className="font-display max-w-xl text-3xl font-bold text-purple-950 sm:text-4xl">{task.title}</h1>
             <CompleteButton taskId={task.id} />
           </div>
         </div>
