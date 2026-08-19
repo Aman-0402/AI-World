@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import DisableRightClick from './components/DisableRightClick.jsx'
 
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Explore = lazy(() => import('./pages/Explore.jsx'))
@@ -20,6 +21,7 @@ function App() {
   return (
     <Suspense fallback={<PageFallback />}>
       <ScrollToTop />
+      <DisableRightClick />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />

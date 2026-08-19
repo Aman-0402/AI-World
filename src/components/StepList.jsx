@@ -11,7 +11,7 @@ function renderStepText(step) {
     return (
       <span
         key={i}
-        className="prompt-text mt-2 block rounded-xl border-l-4 border-blue-600 bg-blue-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-blue-950 shadow-[0_1px_2px_rgba(30,64,175,0.1)]"
+        className="prompt-text mt-2 block select-none rounded-xl border-l-4 border-blue-600 bg-blue-100 px-4 py-3 font-mono text-base font-semibold leading-snug text-blue-950 shadow-[0_1px_2px_rgba(30,64,175,0.1)]"
       >
         &ldquo;{part}&rdquo;
       </span>
