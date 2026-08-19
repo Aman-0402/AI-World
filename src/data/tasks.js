@@ -187,7 +187,7 @@ export const tasks = [
       'Flag any open questions from the notes that the AI should not have resolved on its own (e.g. unconfirmed decisions).',
     ],
     requiredFile: 'meeting_notes_sample.txt',
-    downloadUrl: '/resources/meeting_notes_sample.txt',
+    downloadUrl: getTaskFileUrl('meeting_notes_sample.txt'),
     whatYouLearn: [
       'How to turn unstructured meeting notes into a clear, actionable summary.',
       'Why AI-generated minutes still need a human check against the source notes.',
@@ -326,7 +326,7 @@ export const tasks = [
       'Sketch how you would visualize two of those KPIs as a chart.',
     ],
     requiredFile: 'weekly_update_bullets_sample.txt',
-    downloadUrl: '/resources/weekly_update_bullets_sample.txt',
+    downloadUrl: getTaskFileUrl('weekly_update_bullets_sample.txt'),
     whatYouLearn: [
       'How to convert unstructured status updates into dashboard-ready categories.',
       'How to pick which raw updates are actually measurable KPIs.',
