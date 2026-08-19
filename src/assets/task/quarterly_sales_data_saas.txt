@@ -1,0 +1,61 @@
+SALES DATA – Q1 2026 (January - March)
+Company: NimbusCloud Solutions Pvt Ltd (B2B SaaS)
+Prepared for: Quarterly Sales Performance Report
+
+1. OVERALL SALES
+- Total new subscription revenue Q1 2026: ₹92,00,000
+- Total new subscription revenue Q4 2025: ₹78,00,000
+- Total new subscription revenue Q1 2025 (same quarter last year): ₹65,00,000
+- New customers signed Q1 2026: 140
+- New customers signed Q4 2025: 118
+
+2. SALES BY PLAN TYPE
+- Starter Plan: ₹18,00,000 (58 customers)
+- Growth Plan: ₹41,00,000 (61 customers)
+- Enterprise Plan: ₹33,00,000 (21 customers)
+
+3. SALES BY INDUSTRY VERTICAL
+- Retail & E-commerce clients: ₹29,00,000
+- Healthcare clients: ₹24,00,000
+- Education clients: ₹19,00,000
+- Manufacturing clients: ₹20,00,000
+
+4. MONTHLY BREAKDOWN
+- January 2026: ₹27,00,000
+- February 2026: ₹29,00,000
+- March 2026: ₹36,00,000
+
+5. SALES CHANNEL
+- Inbound (website/organic signups): ₹54,00,000
+- Outbound (sales team outreach): ₹38,00,000
+- Inbound revenue grew compared to Q4 2025, when it was ₹44,00,000
+- Outbound revenue grew compared to Q4 2025, when it was ₹34,00,000
+
+6. CUSTOMER RETENTION DATA
+- Customer churn rate Q1 2026: 3.8%
+- Customer churn rate Q4 2025: 5.2%
+- Customers who upgraded their plan during Q1: 34
+- Customers who downgraded their plan during Q1: 9
+- Average contract value: ₹65,700 (up from ₹58,900 in Q4 2025)
+
+7. SALES TEAM ACTIVITY
+- Sales team size: 8 (unchanged from Q4 2025)
+- Two new outbound sales reps completed onboarding in February
+- A referral incentive program for existing customers launched in
+  January 2026
+- Sales team began using a new CRM tool starting mid-February
+
+8. PRODUCT AND MARKETING NOTES
+- A major product update (dashboard redesign + new reporting features)
+  shipped in early March
+- A free 14-day trial extension (from 7 days to 14 days) was introduced
+  in February for all new signups
+- A webinar series targeting healthcare clients ran through January
+  and February
+- No major discounting or price changes occurred during the quarter
+
+9. SUPPORT AND ONBOARDING
+- Average customer onboarding time: 6 days (down from 9 days in Q4 2025)
+- Support ticket volume per 100 customers: 14 (down from 19 in Q4 2025)
+- Customer satisfaction survey (post-onboarding): average score 4.3
+  out of 5, based on 210 responses
