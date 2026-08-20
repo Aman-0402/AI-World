@@ -32,6 +32,59 @@ body {
   }
 }
 
+@keyframes bubbleFloat {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.85;
+  }
+  92% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(var(--drift), -115vh);
+    opacity: 0;
+  }
+}
+
+.hero-bubble {
+  animation-name: bubbleFloat;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hero-bubble:hover {
+  filter: brightness(1.2);
+}
+
+@keyframes bubbleShard {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--dist)) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.bubble-shard {
+  left: 0;
+  top: 0;
+  animation: bubbleShard 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
 .letter-pop {
   transform-origin: 50% 65%;
   will-change: transform, opacity, filter;

@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { Star } from 'lucide-react'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ParticleField from '../components/ParticleField.jsx'
+import FloatingBubbles from '../components/FloatingBubbles.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
 import Footer from '../components/Footer.jsx'
 
@@ -65,6 +66,7 @@ export default function Landing() {
           aria-hidden="true"
         />
         <ParticleField ref={particleRef} />
+        <FloatingBubbles />
 
         <Link
           to="/psst"
