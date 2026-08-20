@@ -38,27 +38,47 @@ body {
     opacity: 0;
   }
   8% {
-    opacity: 0.85;
+    opacity: 0.9;
+  }
+  25% {
+    transform: translate(calc(var(--drift) * 0.25), -25vh);
+  }
+  50% {
+    transform: translate(calc(var(--drift) * -0.35), -55vh);
+  }
+  75% {
+    transform: translate(calc(var(--drift) * 0.7), -85vh);
   }
   92% {
-    opacity: 0.85;
+    opacity: 0.9;
   }
   100% {
-    transform: translate(var(--drift), -115vh);
+    transform: translate(var(--drift), -118vh);
     opacity: 0;
   }
 }
 
 .hero-bubble {
   animation-name: bubbleFloat;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   cursor: pointer;
   padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background:
+    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.6) 6%, transparent 16%),
+    radial-gradient(circle at 65% 70%, var(--tint) 0%, transparent 62%),
+    radial-gradient(circle at 50% 50%, transparent 55%, rgba(255, 255, 255, 0.25) 85%, rgba(255, 255, 255, 0.55) 100%);
+  box-shadow:
+    inset -6px -6px 14px rgba(0, 0, 0, 0.06),
+    inset 5px 5px 12px rgba(255, 255, 255, 0.55),
+    0 10px 26px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
 }
 
 .hero-bubble:hover {
-  filter: brightness(1.2);
+  filter: brightness(1.15);
 }
 
 @keyframes bubbleShard {

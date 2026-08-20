@@ -1,18 +1,18 @@
 import { useCallback, useRef, useState } from 'react'
 
-const BUBBLE_COUNT = 10
-const COLORS = ['bg-violet-400/30', 'bg-cyan-400/30', 'bg-fuchsia-400/30', 'bg-sky-400/30']
+const BUBBLE_COUNT = 8
+const TINTS = ['rgba(167,139,250,0.85)', 'rgba(34,211,238,0.85)', 'rgba(232,121,249,0.85)', 'rgba(56,189,248,0.85)']
 const SHARD_COUNT = 8
 
 function randomBubble(id) {
   return {
     id,
-    left: Math.random() * 90 + 5,
-    size: Math.random() * 30 + 18,
-    duration: Math.random() * 8 + 11,
+    left: Math.random() * 88 + 6,
+    size: Math.random() * 60 + 46,
+    duration: Math.random() * 8 + 12,
     delay: Math.random() * 10,
-    drift: Math.random() * 60 - 30,
-    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    drift: Math.random() * 90 - 45,
+    tint: TINTS[Math.floor(Math.random() * TINTS.length)],
   }
 }
 
@@ -34,7 +34,7 @@ export default function FloatingBubbles() {
       distance: Math.random() * 34 + 26,
     }))
 
-    setBursts((prev) => [...prev, { id: burstId, x: cx, y: cy, size: bubble.size, color: bubble.color, shards }])
+    setBursts((prev) => [...prev, { id: burstId, x: cx, y: cy, size: bubble.size, tint: bubble.tint, shards }])
     setTimeout(() => {
       setBursts((prev) => prev.filter((b) => b.id !== burstId))
     }, 650)
@@ -53,15 +53,16 @@ export default function FloatingBubbles() {
           type="button"
           onClick={(e) => popBubble(b, e)}
           aria-label="Pop bubble"
-          className={`hero-bubble pointer-events-auto absolute rounded-full border border-white/20 ${b.color} backdrop-blur-sm`}
+          className="hero-bubble pointer-events-auto absolute rounded-full"
           style={{
             left: `${b.left}%`,
             width: b.size,
             height: b.size,
-            bottom: '-10%',
+            bottom: '-14%',
             animationDuration: `${b.duration}s`,
             animationDelay: `${b.delay}s`,
             '--drift': `${b.drift}px`,
+            '--tint': b.tint,
           }}
         />
       ))}
@@ -75,10 +76,12 @@ export default function FloatingBubbles() {
           {burst.shards.map((s, i) => (
             <span
               key={i}
-              className={`bubble-shard absolute rounded-full ${burst.color}`}
+              className="bubble-shard absolute rounded-full"
               style={{
                 width: burst.size / 5,
                 height: burst.size / 5,
+                background: burst.tint,
+                border: '1px solid rgba(255,255,255,0.5)',
                 '--angle': `${s.angle}deg`,
                 '--dist': `${s.distance}px`,
               }}
