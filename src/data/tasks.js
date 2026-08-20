@@ -224,24 +224,26 @@ export const tasks = [
   {
     id: 10,
     chapterId: 10,
-    title: 'Build a Professional Profile',
-    question: 'How can AI tools help you strengthen a resume and LinkedIn profile?',
-    whatToDo: 'Use ChatGPT and Canva AI to improve a resume summary and design a matching LinkedIn banner.',
+    title: 'Two Resumes, One Job — Why Clarity Wins',
+    question: 'Two students applied for the same Marketing Intern role with the same underlying ability. Why would a recruiter interview one over the other?',
+    whatToDo:
+      'Read the job posting and both sample resumes below, then rewrite your own resume bullets so they speak directly to a specific job posting instead of listing generic traits. The job posting: Marketing Intern — looking for a BBA student interested in digital marketing, social media, market research, and content creation, with good communication skills and basic Excel knowledge. Out of 200 students applying for this one role, a recruiter has seconds to decide who gets an interview call. Resume 1 lists: BBA Student, Hardworking, Good communication skills, Quick learner, Interested in business, Basic computer knowledge. Resume 2 lists: BBA Student interested in Digital Marketing. Skills — Social Media, Market Research, Excel, Content Creation, Communication. Project — Conducted a consumer preference survey as part of a college marketing project. Before deciding which one you would call for an interview, think about why, not just which — Resume 2 is not necessarily from a smarter student, it just communicates relevant information more clearly.',
     steps: [
-      'Paste a current resume summary or write one from scratch.',
-      'Ask ChatGPT to improve it for clarity, impact, and keyword relevance.',
-      'Ask ChatGPT to draft a short, professional LinkedIn headline and About section.',
-      'Use Canva AI to design a simple LinkedIn banner that matches your professional focus.',
+      'Compare Resume 1 and Resume 2 against the job posting line by line. Resume 1 uses generic self-praise (hardworking, quick learner, basic computer knowledge) that could belong to almost any job applicant. Resume 2 mirrors the exact skills the posting asks for (social media, market research, Excel, content creation) and backs one of them up with a real project.',
+      'Decide which resume you, as the recruiter, would call for an interview — then write one sentence explaining why, in terms of relevance to the job posting, not general impressiveness.',
+      'List 5-6 real or hypothetical skills, experiences, or college projects you have (they can be as ordinary as a group assignment or a college event you helped organize).',
+      'Open ChatGPT and use this prompt, pasting in your own list from the step above and the job posting text: "Turn these skills and experiences into 4 concise resume bullet points targeted at this job description: [paste the Marketing Intern job posting]. Replace generic traits like hardworking or quick learner with specific, relevant keywords from the job posting instead."',
+      'Compare your original list against the AI-rewritten bullet points. Identify which specific generic word got replaced with which specific relevant keyword.',
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How to use AI to sharpen a resume summary without losing your voice.',
-      'How to keep a LinkedIn profile consistent across text and visuals.',
+      'A recruiter skimming 200 resumes rewards specific, job-relevant information over generic personality traits, even when both candidates are equally capable.',
+      'How to use AI to convert a plain list of skills and experiences into resume bullets that speak the same language as a specific job posting.',
     ],
     questions: [
-      'What changed most between your original and AI-improved resume summary?',
-      'Would you trust the AI version as-is, or does it still need your edits?',
+      'Which word or phrase in your original list was too generic, and what specific detail replaced it after using AI?',
+      'Name one keyword from the job posting that you made sure your final bullet points included.',
     ],
   },
   {
