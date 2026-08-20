@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Bot, Sparkles, MessageCircleMore, FolderOpenDot, X } from 'lucide-react'
+import { Bot, Sparkles, MessageCircleMore, FolderOpenDot, Keyboard, X } from 'lucide-react'
 
 const tools = [
   { name: 'ChatGPT', href: 'https://chat.openai.com', icon: MessageCircleMore },
@@ -10,6 +10,7 @@ const tools = [
     href: 'https://drive.google.com/drive/u/2/folders/10BkVkBvrbZATsUh5czV_mQxoV8iVkLGL',
     icon: FolderOpenDot,
   },
+  { name: 'Typing Practice', href: 'https://www.typing.com', icon: Keyboard },
 ]
 
 export default function AIShortcuts() {
