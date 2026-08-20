@@ -214,6 +214,10 @@ body {
   overflow: hidden;
 }
 
+.prompt-text::before {
+  content: '\201C' attr(data-text) '\201D';
+}
+
 .prompt-text::after {
   content: '';
   position: absolute;
