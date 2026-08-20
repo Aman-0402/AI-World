@@ -8,6 +8,7 @@ import ComparisonTable from '../components/ComparisonTable.jsx'
 import ResourceCard from '../components/ResourceCard.jsx'
 import LearningOutcome from '../components/LearningOutcome.jsx'
 import QuestionCard from '../components/QuestionCard.jsx'
+import ScenarioCards from '../components/ScenarioCards.jsx'
 import CompleteButton from '../components/CompleteButton.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
 import Footer from '../components/Footer.jsx'
@@ -142,6 +143,12 @@ export default function TaskDetails() {
           <Section title="Question">
             <p className="text-slate-800">{task.question}</p>
           </Section>
+
+          {task.scenario && (
+            <Section title="Scenario">
+              <ScenarioCards {...task.scenario} />
+            </Section>
+          )}
 
           <Section title="What to Do">
             <p className="text-slate-700">{task.whatToDo}</p>

@@ -227,9 +227,40 @@ export const tasks = [
     title: 'Two Resumes, One Job — Why Clarity Wins',
     question: 'Two students applied for the same Marketing Intern role with the same underlying ability. Why would a recruiter interview one over the other?',
     whatToDo:
-      'Read the job posting and both sample resumes below, then rewrite your own resume bullets so they speak directly to a specific job posting instead of listing generic traits. The job posting: Marketing Intern — looking for a BBA student interested in digital marketing, social media, market research, and content creation, with good communication skills and basic Excel knowledge. Out of 200 students applying for this one role, a recruiter has seconds to decide who gets an interview call. Resume 1 lists: BBA Student, Hardworking, Good communication skills, Quick learner, Interested in business, Basic computer knowledge. Resume 2 lists: BBA Student interested in Digital Marketing. Skills — Social Media, Market Research, Excel, Content Creation, Communication. Project — Conducted a consumer preference survey as part of a college marketing project. Before deciding which one you would call for an interview, think about why, not just which — Resume 2 is not necessarily from a smarter student, it just communicates relevant information more clearly.',
+      'Read the job posting and both sample resumes below, then rewrite your own resume bullets so they speak directly to a specific job posting instead of listing generic traits.',
+    scenario: {
+      jobPosting: {
+        title: 'Marketing Intern',
+        lines: [
+          'Looking for a BBA student interested in digital marketing, social media, market research, and content creation.',
+          'Requires good communication skills and basic knowledge of Excel.',
+        ],
+      },
+      resumes: [
+        {
+          label: 'Resume 1',
+          lines: [
+            'BBA Student',
+            'Hardworking',
+            'Good communication skills',
+            'Quick learner',
+            'Interested in business',
+            'Basic computer knowledge',
+          ],
+        },
+        {
+          label: 'Resume 2',
+          lines: [
+            'BBA Student interested in Digital Marketing',
+            'Skills: Social Media, Market Research, Excel, Content Creation, Communication',
+            'Project: Conducted a consumer preference survey as part of a college marketing project',
+          ],
+        },
+      ],
+      note: 'Out of 200 students applying for this one role, a recruiter has seconds to decide who gets an interview call. Before deciding which resume you would call for an interview, think about why, not just which — Resume 2 is not necessarily from a smarter student, it just communicates relevant information more clearly.',
+    },
     steps: [
-      'Compare Resume 1 and Resume 2 against the job posting line by line. Resume 1 uses generic self-praise (hardworking, quick learner, basic computer knowledge) that could belong to almost any job applicant. Resume 2 mirrors the exact skills the posting asks for (social media, market research, Excel, content creation) and backs one of them up with a real project.',
+      'Compare Resume 1 and Resume 2 against the job posting line by line. Resume 1 uses generic self-praise that could belong to almost any job applicant. Resume 2 mirrors the exact skills the posting asks for and backs one of them up with a real project.',
       'Decide which resume you, as the recruiter, would call for an interview — then write one sentence explaining why, in terms of relevance to the job posting, not general impressiveness.',
       'List 5-6 real or hypothetical skills, experiences, or college projects you have (they can be as ordinary as a group assignment or a college event you helped organize).',
       'Open ChatGPT and use this prompt, pasting in your own list from the step above and the job posting text: "Turn these skills and experiences into 4 concise resume bullet points targeted at this job description: [paste the Marketing Intern job posting]. Replace generic traits like hardworking or quick learner with specific, relevant keywords from the job posting instead."',
