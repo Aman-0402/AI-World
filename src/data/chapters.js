@@ -6,7 +6,7 @@ export const chapters = [
   { id: 5, title: 'AI Ethics & Responsible Use', description: 'AI Ethics, Hallucinations, Privacy & Bias.', status: 'complete' },
   { id: 6, title: 'AI Productivity for Managers', description: 'AI Productivity for Managers, Daily AI Workflow, Case Study.', status: 'complete' },
   { id: 7, title: 'Business Email Writing', description: 'Business Email Writing, Professional Communication, Tone Adjustment.', status: 'complete' },
-  { id: 8, title: 'Report Writing & Meeting Minutes', description: 'Report Writing, Meeting Minutes, Executive Summaries.', status: 'ongoing' },
+  { id: 8, title: 'Report Writing & Meeting Minutes', description: 'Report Writing, Meeting Minutes, Executive Summaries.', status: 'complete' },
   { id: 9, title: 'Proposal Writing & SOP Creation', description: 'Proposal Writing, SOP Creation, Policy Documentation.', status: 'ongoing' },
   { id: 10, title: 'Resume Writing & LinkedIn Optimization', description: 'Resume Writing, LinkedIn Optimization, Cover Letters.' },
   { id: 11, title: 'AI Research & Fact Verification', description: 'AI Research, Citation, Fact Verification.' },
