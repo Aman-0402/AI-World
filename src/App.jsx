@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import DisableRightClick from './components/DisableRightClick.jsx'
 import DisableShortcuts from './components/DisableShortcuts.jsx'
+import NotificationPopup from './components/NotificationPopup.jsx'
 
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Explore = lazy(() => import('./pages/Explore.jsx'))
@@ -24,6 +25,7 @@ function App() {
       <ScrollToTop />
       <DisableRightClick />
       <DisableShortcuts />
+      <NotificationPopup />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />
