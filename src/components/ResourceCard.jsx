@@ -1,5 +1,6 @@
 import { FileText } from 'lucide-react'
 import DownloadButton from './DownloadButton.jsx'
+import ViewButton from './ViewButton.jsx'
 
 export default function ResourceCard({ resources }) {
   if (!resources || resources.length === 0) {
@@ -13,13 +14,16 @@ export default function ResourceCard({ resources }) {
       {resources.map(({ name, downloadUrl }) => (
         <div
           key={name}
-          className="flex items-center justify-between rounded-xl border border-blue-100 bg-blue-50 px-4 py-3"
+          className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3"
         >
           <div className="flex items-center gap-3">
             <FileText className="h-5 w-5 text-blue-600" aria-hidden="true" />
             <span className="text-sm font-medium text-slate-800">{name}</span>
           </div>
-          <DownloadButton href={downloadUrl} />
+          <div className="flex items-center gap-2">
+            <ViewButton href={downloadUrl} />
+            <DownloadButton href={downloadUrl} />
+          </div>
         </div>
       ))}
     </div>
