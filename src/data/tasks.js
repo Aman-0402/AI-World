@@ -1708,8 +1708,8 @@ export const tasks = [
       'Cover Letter: using the boundaries prompt style from the previous task (natural tone, no exaggeration, no invented achievements, under 180 words), generate a cover letter customized to this specific job.',
       'Before you consider the package done, re-read every sentence AI produced across all four pieces and ask yourself Rule 4: did I actually do this?',
     ],
-    requiredFile: null,
-    downloadUrl: null,
+    requiredFile: 'sample_job_descriptions.txt',
+    downloadUrl: getTaskFileUrl('sample_job_descriptions.txt'),
     whatYouLearn: [
       'Never invent experience — no fake internships, no fake companies, no fake projects.',
       'Never exaggerate your skills — basic Excel is not the same as advanced Excel expert.',
