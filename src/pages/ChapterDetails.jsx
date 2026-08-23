@@ -83,7 +83,7 @@ export default function ChapterDetails() {
   const chapter = getChapterById(chapterId)
   const [hero] = useState(() => HERO_PALETTES[Math.floor(Math.random() * HERO_PALETTES.length)])
 
-  if (!chapter) {
+  if (!chapter || chapter.locked) {
     return <Navigate to="/explore" replace />
   }
 

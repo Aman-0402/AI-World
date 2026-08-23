@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import { Square, Triangle } from 'lucide-react'
 import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
@@ -8,6 +9,15 @@ import { chapters } from '../data/chapters.js'
 import { getTasksByChapter } from '../data/tasks.js'
 
 export default function Explore() {
+  const [toast, setToast] = useState(false)
+  const timeoutRef = useRef(null)
+
+  function handleLockedClick() {
+    setToast(true)
+    clearTimeout(timeoutRef.current)
+    timeoutRef.current = setTimeout(() => setToast(false), 1000)
+  }
+
   return (
     <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
@@ -24,12 +34,20 @@ export default function Explore() {
               key={chapter.id}
               chapter={chapter}
               taskCount={getTasksByChapter(chapter.id).length}
+              onLockedClick={handleLockedClick}
             />
           ))}
         </div>
       </main>
       <Footer />
       <AIShortcuts />
+      {toast && (
+        <div className="fixed inset-x-0 bottom-6 z-50 flex justify-center px-4">
+          <div className="rounded-full bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-lg">
+            Coming soon, be patient — will update soon.
+          </div>
+        </div>
+      )}
     </div>
   )
 }
