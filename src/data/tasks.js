@@ -1619,6 +1619,114 @@ export const tasks = [
       'Did the added exception-handling detail feel realistic, or like something you would need to verify with the warehouse team?',
     ],
   },
+  {
+    id: 67,
+    chapterId: 10,
+    title: 'Understand the Job Before You Write the Resume',
+    question: 'Why analyze a job description with AI before asking AI to write your resume?',
+    whatToDo:
+      'Find a real job posting you are genuinely interested in, then use AI to break down what it actually requires — before writing a single line of your resume.',
+    steps: [
+      'Find a real job posting for a role you are interested in (LinkedIn, Naukri, Indeed, or any job site) and copy its full description.',
+      'Notice the instinct to jump straight to asking AI to write your resume — this task deliberately delays that step so you understand the job first.',
+      'Use this prompt, pasting in the job description: "Analyze the following job description. Identify: required technical skills, required soft skills, important keywords, main responsibilities, educational requirements, and skills that appear most important. Do not invent any information. Job description: [paste the job description]."',
+      'Read the six-part breakdown AI gives you and check it against the original posting — confirm every skill or keyword it listed actually appears in the text, since a do-not-invent instruction is a request, not a guarantee.',
+      'Decide which 3-4 items from the breakdown you would prioritize when you eventually write your resume bullets — keep this list, you will use it in the next task.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Analyzing a job description before writing anything gives you a structured understanding of what actually matters in the posting, instead of guessing.',
+      'Even with an explicit "do not invent information" instruction, AI-generated analysis still needs to be checked against the source text line by line.',
+    ],
+    questions: [
+      'Which of the six categories (skills, keywords, responsibilities, etc.) surfaced something you would have missed if you had skipped straight to "write my resume"?',
+      'Did AI list anything under required skills or keywords that you could not actually find in the job description text?',
+    ],
+  },
+  {
+    id: 68,
+    chapterId: 10,
+    title: 'Compare Your Profile Against the Job',
+    question: 'Once you know what a job requires, how do you find out where you actually stand against it?',
+    whatToDo:
+      'Give AI your own real background, then ask it to compare that profile against the job description from the previous task — sorted into three honest categories, not one vague verdict.',
+    steps: [
+      'Write out your own real profile in plain sentences: your education, tools or software you know, projects you have done, extracurriculars, and what you are currently learning — including real gaps, like no internship experience yet.',
+      'Use this prompt, pasting in your own profile and the same job description from the previous task: "Compare my profile with this job description. Create three categories: Strong Match, Partial Match, and Skills I need to develop. Do not claim that I have any skill or experience that I have not provided."',
+      'Check the Strong Match list first — for each item, confirm it is actually something you listed, not something AI is being generous about.',
+      'Look closely at the Skills I need to develop list — this is the real value of the exercise, since it tells you what to work on before applying, not just what to feel good about.',
+      'Reflection: compare this to just asking AI whether you are a good fit for the job — why does forcing AI into three categories produce more useful output than a single yes/no verdict?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Sorting your profile into Strong Match, Partial Match, and Gaps produces a usable action plan, while asking "am I a good fit" only produces a vague verdict.',
+      'Why explicitly instructing AI not to invent skills you did not list matters — without it, AI tends to be generous and assume you are more qualified than you actually said.',
+    ],
+    questions: [
+      'What ended up in your "Skills I need to develop" list, and is that something you could realistically learn before applying?',
+      'Did AI ever list something in Strong Match or Partial Match that you had not actually mentioned in your profile?',
+    ],
+  },
+  {
+    id: 69,
+    chapterId: 10,
+    title: 'A Cover Letter With Boundaries, Not Buzzwords',
+    question: 'Why does adding explicit boundaries to an AI prompt produce a cover letter that sounds like an actual person, not a template?',
+    whatToDo:
+      'Compare a generic AI-generated opening line against a boundary-constrained prompt, then generate your own cover letter using the constrained version.',
+    steps: [
+      'Read this typical AI-generated cover letter opening: "I am extremely passionate about joining your prestigious organization and would be honored to contribute my valuable skills to your esteemed company." It is grammatically perfect, but says nothing specific about you or the job, and sounds like every other AI-generated application.',
+      'Now use this prompt instead, pasting in your own profile from the previous task and the job description from two tasks ago: "Write a short cover letter for this internship. Use only the information I provide. Connect my genuine experience and skills with the job requirements. Keep the language natural and appropriate for a BBA student. Do not exaggerate my experience. Do not invent achievements. Keep it under 180 words."',
+      'Count the words in the result — did AI stay under the 180-word limit you set?',
+      'Check every claim in the cover letter against your own profile — is there anything AI added that you did not actually provide, like an achievement, skill, or experience?',
+      'Compare the tone: does it still sound natural and specific to you, or has it drifted back toward generic phrases like passionate and esteemed?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Why giving AI explicit boundaries (length, tone, no exaggeration, no invented achievements) produces a more genuine, specific result than an open-ended request.',
+      'How to fact-check an AI-written cover letter against your own real profile before using it, since even a well-constrained prompt can still drift.',
+    ],
+    questions: [
+      'Did your AI-generated cover letter stay within the 180-word limit and your own real experience, or did you have to edit something out?',
+      'What is one boundary from this prompt (word limit, no exaggeration, no invented achievements) you would keep for every future AI-written document?',
+    ],
+  },
+  {
+    id: 70,
+    chapterId: 10,
+    title: 'Build Your AI-Assisted Professional Profile Package',
+    question: 'Can you use AI to build a complete, honest job-application package — resume, job match, LinkedIn, and cover letter — using only what you actually bring to the table?',
+    whatToDo:
+      'Combine everything from the last four tasks into one complete package: an improved resume, a job-match analysis, a LinkedIn headline and About section, and a customized cover letter — all built with AI you direct, not AI you blindly trust. Follow the 10 rules listed under What You Learn the whole way through.',
+    steps: [
+      'Resume: use AI to improve your professional summary, skills, projects, education, certifications, and achievements sections — grounded in the real skills and project you listed earlier, not generic self-praise.',
+      'Job Match: pick one real internship or job description you actually want. Use AI to identify its important keywords, required skills, which of your skills match, and which skills you are missing.',
+      'LinkedIn: ask AI to draft a professional headline and an About section based on the same real profile and job match — not a separate, exaggerated version of you.',
+      'Cover Letter: using the boundaries prompt style from the previous task (natural tone, no exaggeration, no invented achievements, under 180 words), generate a cover letter customized to this specific job.',
+      'Before you consider the package done, re-read every sentence AI produced across all four pieces and ask yourself Rule 4: did I actually do this?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Never invent experience — no fake internships, no fake companies, no fake projects.',
+      'Never exaggerate your skills — basic Excel is not the same as advanced Excel expert.',
+      'Never change your real numbers — 50 survey responses cannot become 500.',
+      'Do not blindly copy AI output — read every sentence and ask yourself: did I actually do this?',
+      'Do not reuse the same resume for every job — customize the relevant sections each time.',
+      'Keywords must be truthful — do not add a skill like Power BI just because the job posting mentioned it.',
+      'Do not let AI make you sound like a robot — your profile should still sound like you.',
+      'Do not hide every weakness — a skill gap can become a stated learning goal instead.',
+      'Do not let AI create your professional identity — it can only help you communicate the one you already have.',
+      'You are responsible for everything you submit — if AI writes it and you submit it, you own the information.',
+    ],
+    questions: [
+      'Which of the 10 rules did you almost break without noticing, and what did AI write that tempted you?',
+      'What is one skill gap your Job Match analysis surfaced that you are turning into an actual learning goal, per Rule 8?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
