@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { HelpCircle, X } from 'lucide-react'
+import { HelpCircle } from 'lucide-react'
 
 const DODGE_RADIUS = 110
 const STILL_RESET_MS = 2000
@@ -79,14 +79,6 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
   return (
     <div className="fixed inset-0 z-[110] flex items-center justify-center bg-slate-950/60 px-4 backdrop-blur-sm">
       <div className="relative w-full max-w-sm rounded-2xl border border-violet-100 bg-[#FFFCF5] p-6 shadow-2xl sm:p-7">
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
-        >
-          <X className="h-4 w-4" aria-hidden="true" />
-        </button>
         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-cyan-500 text-white shadow-sm">
           <HelpCircle className="h-5 w-5" aria-hidden="true" />
         </div>
