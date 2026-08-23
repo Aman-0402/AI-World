@@ -1627,14 +1627,14 @@ export const tasks = [
     whatToDo:
       'Find a real job posting you are genuinely interested in, then use AI to break down what it actually requires — before writing a single line of your resume.',
     steps: [
-      'Find a real job posting for a role you are interested in (LinkedIn, Naukri, Indeed, or any job site) and copy its full description.',
+      'Find a real job posting for a role you are interested in (LinkedIn, Naukri, Indeed, or any job site) and copy its full description. If you cannot access a job site right now, use one of the five sample postings in the attached file instead.',
       'Notice the instinct to jump straight to asking AI to write your resume — this task deliberately delays that step so you understand the job first.',
       'Use this prompt, pasting in the job description: "Analyze the following job description. Identify: required technical skills, required soft skills, important keywords, main responsibilities, educational requirements, and skills that appear most important. Do not invent any information. Job description: [paste the job description]."',
       'Read the six-part breakdown AI gives you and check it against the original posting — confirm every skill or keyword it listed actually appears in the text, since a do-not-invent instruction is a request, not a guarantee.',
       'Decide which 3-4 items from the breakdown you would prioritize when you eventually write your resume bullets — keep this list, you will use it in the next task.',
     ],
-    requiredFile: null,
-    downloadUrl: null,
+    requiredFile: 'sample_job_descriptions.txt',
+    downloadUrl: getTaskFileUrl('sample_job_descriptions.txt'),
     whatYouLearn: [
       'Analyzing a job description before writing anything gives you a structured understanding of what actually matters in the posting, instead of guessing.',
       'Even with an explicit "do not invent information" instruction, AI-generated analysis still needs to be checked against the source text line by line.',
