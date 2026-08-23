@@ -1,6 +1,6 @@
 # AI in Business Learning Portal
 
-##Link : https://aman-0402.github.io/AI-World/
+## Link : https://aman-0402.github.io/AI-World/
 
 Frontend-only React learning portal for teaching AI-in-business concepts through chapters and hands-on tasks. No backend, no auth, no database — all content is static/mock data shipped with the app.
 
