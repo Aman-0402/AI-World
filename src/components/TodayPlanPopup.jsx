@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ArrowRight, CalendarDays, X } from 'lucide-react'
 import { todayPlan } from '../data/todayPlan.js'
 import { getChapterById } from '../data/chapters.js'
+import ConfirmStartChapter from './ConfirmStartChapter.jsx'
 
 export default function TodayPlanPopup() {
   const [dismissed, setDismissed] = useState(false)
+  const [confirmChapter, setConfirmChapter] = useState(null)
 
   if (!todayPlan || !todayPlan.chapterIds?.length || dismissed) return null
 
@@ -35,21 +36,31 @@ export default function TodayPlanPopup() {
         </p>
         <div className={`mt-5 grid gap-3 ${chapters.length > 1 ? 'sm:grid-cols-2' : ''}`}>
           {chapters.map((chapter) => (
-            <Link
+            <button
+              type="button"
               key={chapter.id}
-              to={`/chapter/${chapter.id}`}
-              onClick={() => setDismissed(true)}
-              className="group flex flex-col justify-between rounded-xl border border-violet-100 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-violet-300 hover:shadow-md"
+              onClick={() => setConfirmChapter(chapter)}
+              className="group flex flex-col justify-between rounded-xl border border-violet-100 bg-white p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-violet-300 hover:shadow-md"
             >
               <span className="font-display text-base font-bold text-slate-900">{chapter.title}</span>
               <span className="mt-3 flex items-center gap-1.5 text-sm font-semibold text-violet-600">
                 Start chapter
                 <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" aria-hidden="true" />
               </span>
-            </Link>
+            </button>
           ))}
         </div>
       </div>
+
+      {confirmChapter && (
+        <ConfirmStartChapter
+          chapter={confirmChapter}
+          onClose={() => {
+            setConfirmChapter(null)
+            setDismissed(true)
+          }}
+        />
+      )}
     </div>
   )
 }
