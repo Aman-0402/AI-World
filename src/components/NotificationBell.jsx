@@ -1,15 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Bell } from 'lucide-react'
 import { notifications, getSeenIds, markAllSeen } from '../data/notifications.js'
 
 export default function NotificationBell() {
   const [open, setOpen] = useState(false)
   const [unreadCount, setUnreadCount] = useState(0)
+  const containerRef = useRef(null)
 
   useEffect(() => {
     const seenIds = getSeenIds()
     setUnreadCount(notifications.filter((n) => !seenIds.includes(n.id)).length)
   }, [])
+
+  useEffect(() => {
+    if (!open) return
+    function handleClickOutside(e) {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [open])
 
   function handleToggle() {
     setOpen((v) => !v)
@@ -20,7 +32,7 @@ export default function NotificationBell() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative" ref={containerRef}>
       <button
         type="button"
         onClick={handleToggle}
