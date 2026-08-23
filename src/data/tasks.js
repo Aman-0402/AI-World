@@ -1658,8 +1658,8 @@ export const tasks = [
       'Look closely at the Skills I need to develop list — this is the real value of the exercise, since it tells you what to work on before applying, not just what to feel good about.',
       'Reflection: compare this to just asking AI whether you are a good fit for the job — why does forcing AI into three categories produce more useful output than a single yes/no verdict?',
     ],
-    requiredFile: null,
-    downloadUrl: null,
+    requiredFile: 'sample_job_descriptions.txt',
+    downloadUrl: getTaskFileUrl('sample_job_descriptions.txt'),
     whatYouLearn: [
       'Sorting your profile into Strong Match, Partial Match, and Gaps produces a usable action plan, while asking "am I a good fit" only produces a vague verdict.',
       'Why explicitly instructing AI not to invent skills you did not list matters — without it, AI tends to be generous and assume you are more qualified than you actually said.',
