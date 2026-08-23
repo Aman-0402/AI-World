@@ -4,7 +4,11 @@ import { HelpCircle } from 'lucide-react'
 
 const DODGE_RADIUS = 110
 const STILL_RESET_MS = 2000
-const TAUNT_AFTER_DODGES = 7
+const TAUNTS = [
+  { after: 7, text: "😂 You can't catch me!" },
+  { after: 13, text: "😏 I told you, you can't touch me!" },
+  { after: 19, text: '🙄 Stop trying, just click Yes.' },
+]
 
 export default function ConfirmStartChapter({ chapter, onClose }) {
   const navigate = useNavigate()
@@ -14,7 +18,7 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
   const defaultPosRef = useRef(null)
   const dodgeCountRef = useRef(0)
   const [noPos, setNoPos] = useState(null)
-  const [showTaunt, setShowTaunt] = useState(false)
+  const [taunt, setTaunt] = useState(null)
 
   useLayoutEffect(() => {
     const yesBtn = yesBtnRef.current
@@ -42,8 +46,9 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
     })
 
     dodgeCountRef.current += 1
-    if (dodgeCountRef.current >= TAUNT_AFTER_DODGES) {
-      setShowTaunt(true)
+    const reached = TAUNTS.filter((t) => dodgeCountRef.current >= t.after)
+    if (reached.length > 0) {
+      setTaunt(reached[reached.length - 1].text)
     }
   }
 
@@ -53,7 +58,7 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
       stillTimerRef.current = setTimeout(() => {
         if (defaultPosRef.current) setNoPos(defaultPosRef.current)
         dodgeCountRef.current = 0
-        setShowTaunt(false)
+        setTaunt(null)
       }, STILL_RESET_MS)
 
       const btn = noBtnRef.current
@@ -113,12 +118,12 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
         No
       </button>
 
-      {showTaunt && noPos && (
+      {taunt && noPos && (
         <div
           style={{ position: 'fixed', left: noPos.left, top: Math.max(8, noPos.top - 52) }}
           className="z-[130] whitespace-nowrap rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-lg"
         >
-          😂 You can't catch me!
+          {taunt}
         </div>
       )}
     </div>
