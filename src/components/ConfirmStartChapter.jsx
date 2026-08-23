@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { X } from 'lucide-react'
 
@@ -7,9 +7,25 @@ const STILL_RESET_MS = 2000
 
 export default function ConfirmStartChapter({ chapter, onClose }) {
   const navigate = useNavigate()
+  const yesBtnRef = useRef(null)
   const noBtnRef = useRef(null)
   const stillTimerRef = useRef(null)
+  const defaultPosRef = useRef(null)
   const [noPos, setNoPos] = useState(null)
+
+  useLayoutEffect(() => {
+    const yesBtn = yesBtnRef.current
+    const noBtn = noBtnRef.current
+    if (!yesBtn || !noBtn) return
+    const yRect = yesBtn.getBoundingClientRect()
+    const nRect = noBtn.getBoundingClientRect()
+    const pos = {
+      left: yRect.right + 12,
+      top: yRect.top + (yRect.height - nRect.height) / 2,
+    }
+    defaultPosRef.current = pos
+    setNoPos(pos)
+  }, [])
 
   function dodgeNo() {
     const btn = noBtnRef.current
@@ -26,7 +42,9 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
   useEffect(() => {
     function handleMouseMove(e) {
       clearTimeout(stillTimerRef.current)
-      stillTimerRef.current = setTimeout(() => setNoPos(null), STILL_RESET_MS)
+      stillTimerRef.current = setTimeout(() => {
+        if (defaultPosRef.current) setNoPos(defaultPosRef.current)
+      }, STILL_RESET_MS)
 
       const btn = noBtnRef.current
       if (!btn) return
@@ -64,7 +82,12 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
           Start <span className="font-semibold text-slate-800">{chapter.title}</span> now?
         </p>
         <div className="relative mt-5 h-14">
-          <button type="button" onClick={handleYes} className="rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md">
+          <button
+            ref={yesBtnRef}
+            type="button"
+            onClick={handleYes}
+            className="rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+          >
             Yes
           </button>
         </div>
@@ -77,8 +100,8 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
         onClick={dodgeNo}
         style={
           noPos
-            ? { position: 'fixed', left: noPos.left, top: noPos.top }
-            : { position: 'fixed', left: '58%', top: '58%' }
+            ? { position: 'fixed', left: noPos.left, top: noPos.top, opacity: 1 }
+            : { position: 'fixed', left: 0, top: 0, opacity: 0 }
         }
         className="z-[120] rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-700 shadow-md"
       >
