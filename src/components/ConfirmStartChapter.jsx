@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import { X } from 'lucide-react'
 
 const DODGE_RADIUS = 110
+const STILL_RESET_MS = 2000
 
 export default function ConfirmStartChapter({ chapter, onClose }) {
   const navigate = useNavigate()
   const noBtnRef = useRef(null)
+  const stillTimerRef = useRef(null)
   const [noPos, setNoPos] = useState(null)
 
   function dodgeNo() {
@@ -23,6 +25,9 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
 
   useEffect(() => {
     function handleMouseMove(e) {
+      clearTimeout(stillTimerRef.current)
+      stillTimerRef.current = setTimeout(() => setNoPos(null), STILL_RESET_MS)
+
       const btn = noBtnRef.current
       if (!btn) return
       const bRect = btn.getBoundingClientRect()
@@ -32,7 +37,10 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
       if (dist < DODGE_RADIUS) dodgeNo()
     }
     window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      clearTimeout(stillTimerRef.current)
+    }
   }, [])
 
   function handleYes() {
