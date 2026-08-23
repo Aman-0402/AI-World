@@ -1683,8 +1683,8 @@ export const tasks = [
       'Check every claim in the cover letter against your own profile — is there anything AI added that you did not actually provide, like an achievement, skill, or experience?',
       'Compare the tone: does it still sound natural and specific to you, or has it drifted back toward generic phrases like passionate and esteemed?',
     ],
-    requiredFile: null,
-    downloadUrl: null,
+    requiredFile: 'sample_job_descriptions.txt',
+    downloadUrl: getTaskFileUrl('sample_job_descriptions.txt'),
     whatYouLearn: [
       'Why giving AI explicit boundaries (length, tone, no exaggeration, no invented achievements) produces a more genuine, specific result than an open-ended request.',
       'How to fact-check an AI-written cover letter against your own real profile before using it, since even a well-constrained prompt can still drift.',
