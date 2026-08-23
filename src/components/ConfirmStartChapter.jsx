@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { X } from 'lucide-react'
+import { HelpCircle, X } from 'lucide-react'
 
 const DODGE_RADIUS = 110
 const STILL_RESET_MS = 2000
@@ -68,7 +68,7 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
 
   return (
     <div className="fixed inset-0 z-[110] flex items-center justify-center bg-slate-950/60 px-4 backdrop-blur-sm">
-      <div className="relative w-full max-w-xs rounded-2xl border border-violet-100 bg-[#FFFCF5] p-6 shadow-2xl">
+      <div className="relative w-full max-w-sm rounded-2xl border border-violet-100 bg-[#FFFCF5] p-6 shadow-2xl sm:p-7">
         <button
           type="button"
           onClick={onClose}
@@ -77,18 +77,21 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
         >
           <X className="h-4 w-4" aria-hidden="true" />
         </button>
-        <h3 className="font-display text-base font-bold text-slate-900">Are you sure?</h3>
-        <p className="mt-2 text-sm text-slate-600">
-          Start <span className="font-semibold text-slate-800">{chapter.title}</span> now?
+        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-cyan-500 text-white shadow-sm">
+          <HelpCircle className="h-5 w-5" aria-hidden="true" />
+        </div>
+        <h3 className="font-display mt-4 text-lg font-bold text-slate-900">Are you sure?</h3>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          You're about to start <span className="font-semibold text-slate-800">{chapter.title}</span>.
         </p>
-        <div className="relative mt-5 h-14">
+        <div className="relative mt-6 flex h-11 items-center gap-3 border-t border-slate-100 pt-5">
           <button
             ref={yesBtnRef}
             type="button"
             onClick={handleYes}
-            className="rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+            className="rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_4px_12px_-4px_rgba(109,40,217,0.5)] transition hover:shadow-[0_6px_16px_-4px_rgba(109,40,217,0.6)]"
           >
-            Yes
+            Yes, let's go
           </button>
         </div>
       </div>
@@ -103,7 +106,7 @@ export default function ConfirmStartChapter({ chapter, onClose }) {
             ? { position: 'fixed', left: noPos.left, top: noPos.top, opacity: 1 }
             : { position: 'fixed', left: 0, top: 0, opacity: 0 }
         }
-        className="z-[120] rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-700 shadow-md"
+        className="z-[120] rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 shadow-[0_4px_12px_-4px_rgba(15,23,42,0.15)]"
       >
         No
       </button>
