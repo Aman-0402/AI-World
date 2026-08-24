@@ -182,7 +182,7 @@ export default function TaskDetails() {
                 to={`/task/${task.id}/answer`}
                 aria-label="???"
                 tabIndex={-1}
-                className="h-3 w-3 cursor-default rounded-full bg-red-500 opacity-60 transition-opacity duration-300 hover:opacity-100"
+                className="h-3 w-3 cursor-default rounded-full bg-red-500 opacity-[0.05] transition-opacity duration-300 hover:opacity-100"
               />
             </div>
           )}
