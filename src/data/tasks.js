@@ -1672,6 +1672,52 @@ export const tasks = [
       'Which step, if any, did AI merge, rename, split, or drop from the original 7?',
       'Did the added exception-handling detail feel realistic, or like something you would need to verify with the warehouse team?',
     ],
+    answer: {
+      prompt:
+        'Convert this 7-step order fulfillment process into a professional Standard Operating Procedure (SOP). Preserve every original step exactly — do not merge, rename, split, or drop any of them. For each step, assign a responsible role/party (e.g., customer, system, warehouse staff, shipping carrier). Do not add exception-handling detail (e.g., failed payments, stockouts, wrong addresses) unless clearly labeled as "Suggested — verify with team," since the original process doesn\'t cover exceptions.',
+      sections: [
+        {
+          heading: 'The AI-Generated SOP',
+          table: {
+            columns: ['Step', 'Action', 'Responsible'],
+            rows: [
+              ['1', 'Customer places an order', 'Customer'],
+              ['2', 'Payment is confirmed', 'Payment system'],
+              ['3', 'Order is received by the warehouse', 'Warehouse system'],
+              ['4', 'Product is packed', 'Warehouse staff'],
+              ['5', 'Shipping label is created', 'Warehouse staff / shipping system'],
+              ['6', 'Product is dispatched', 'Warehouse staff / courier'],
+              ['7', 'Customer receives tracking information', 'System (automated notification)'],
+            ],
+          },
+          note: 'Suggested — verify with team: consider adding exception handling for failed payments, stock shortages, or address errors, none of which appear in the source process.',
+        },
+        {
+          heading: 'Step 03 — Did It Preserve All 7 Steps?',
+          body: "Yes, all 7 are intact and in the same order, 1:1 with no merging or splitting. This is a good sign — the source process is short and unambiguous enough that there's little room for the model to drift.",
+        },
+        {
+          heading: 'Step 04 — Added Steps?',
+          body: "None added as core steps. The only addition is the exception-handling note, and it's clearly flagged as a suggestion rather than folded into the numbered flow — which is the correct way to handle it.",
+        },
+        {
+          heading: 'Step 05 — Clear Responsibilities?',
+          body: 'Mostly yes, but two are soft calls worth flagging: Step 3 ("warehouse receives order") is credited to "Warehouse system," and Step 7 to "System" — these are reasonable but not explicitly stated anywhere in the raw data, so they\'re inferred, not sourced. Everything else (customer, warehouse staff) is unambiguous.',
+        },
+        {
+          heading: 'Step 06 — Exceptions?',
+          body: 'The only exception content is the single flagged suggestion line — it wasn\'t invented and smuggled into the main flow, so this passes the check. If a version of the SOP did insert "if payment fails, notify customer" as Step 2b without a flag, that would be the invented-detail trap this exercise is testing for.',
+        },
+        {
+          heading: 'Step 07 — Reflection (Rewrite and Re-Run)',
+          body: 'A tighter prompt: "...for each step, output the responsible role in a fixed column, even if you must guess — mark guessed roles with \'(inferred)\'. List any exception scenarios in a separate section titled \'Exceptions — Not in Source\', never inline." Running that version would likely mark "Warehouse system" and "System" as (inferred), making it obvious at a glance which roles came from the source vs. were assumed.',
+        },
+        {
+          heading: 'Step 08 — What to Verify With Real Staff',
+          body: 'Whether Step 3 ("warehouse receives order") is actually a distinct system event or just implicit in Step 4 — i.e., does the warehouse get a discrete notification, or do they only find out when they start packing? That\'s the one place the SOP presents something as a formal step that the raw process doesn\'t actually describe as an event.',
+        },
+      ],
+    },
   },
   {
     id: 67,

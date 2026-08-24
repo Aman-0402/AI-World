@@ -66,6 +66,40 @@ export default function TaskAnswer() {
                   ))}
                 </ul>
               )}
+              {section.table && (
+                <div className="overflow-x-auto rounded-xl border border-blue-100">
+                  <table className="w-full border-collapse text-sm">
+                    <thead>
+                      <tr>
+                        {section.table.columns.map((col) => (
+                          <th
+                            key={col}
+                            className="border-b border-blue-100 bg-blue-100 px-4 py-2.5 text-left font-semibold text-blue-950"
+                          >
+                            {col}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row, i) => (
+                        <tr key={i} className="odd:bg-white even:bg-blue-50/60">
+                          {row.map((cell, j) => (
+                            <td key={j} className="border-b border-blue-50 px-4 py-3 text-slate-700">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {section.note && (
+                <p className="mt-3 rounded-lg border border-blue-100 bg-blue-50 px-3 py-2 text-sm italic text-blue-800">
+                  {section.note}
+                </p>
+              )}
             </Section>
           ))}
 
