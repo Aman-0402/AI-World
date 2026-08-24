@@ -175,6 +175,17 @@ export default function TaskDetails() {
           <Section title="Questions About It">
             <QuestionCard questions={task.questions} />
           </Section>
+
+          {task.answer && (
+            <div className="flex justify-end pr-2">
+              <Link
+                to={`/task/${task.id}/answer`}
+                aria-label="???"
+                tabIndex={-1}
+                className="h-3 w-3 cursor-default rounded-full bg-red-500 opacity-[0.15] transition-opacity duration-300 hover:opacity-90"
+              />
+            </div>
+          )}
         </div>
       </main>
       <Footer />

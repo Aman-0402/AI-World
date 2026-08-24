@@ -1591,6 +1591,60 @@ export const tasks = [
       'Did any Cost Assumption or Risk in your output read as an invented fact rather than a labeled assumption?',
       'What would you change about your prompt if you ran this again?',
     ],
+    answer: {
+      prompt:
+        'You are a business consultant. Using the attached helpdesk scenario, write a one-page business proposal for an AI-powered employee helpdesk. Structure it into exactly these seven sections, each with a clear heading: Problem, Proposed Solution, Benefits, Cost Assumptions, Implementation Timeline, Risks, Recommendation. Requirements: Problem — describe the current issues employees face, how they affect HR/IT, and why a solution is needed now. Proposed Solution — describe the AI helpdesk, what it does, how it works, key features. Benefits — separate benefits for employees, for HR/IT, and for the organization. Cost Assumptions — implementation costs, ongoing/operational costs, and key assumptions; label every number as an assumption, do not state estimates as fact. Implementation Timeline — use this phase structure: Phase 1 (Weeks 1-2) Planning & Requirements, Phase 2 (Weeks 3-4) Solution Design & Setup, Phase 3 (Weeks 5-6) Development & Integration, Phase 4 (Weeks 7-8) Testing & Training, Phase 5 (Weeks 9+) Go-Live & Continuous Improvement. Risks — what could go wrong, its impact, and how it will be mitigated. Recommendation — why the company should move forward, the value delivered, and next steps. Keep the entire proposal to one page, professional, clear, and concise. Do not invent specific statistics or costs without flagging them as assumptions.',
+      sections: [
+        {
+          heading: 'Problem',
+          body: 'HR and IT teams are spending a large share of their week answering the same repetitive employee questions — password resets, leave balances, policy lookups, benefits info. Response times are slow, employees are frustrated, and HR/IT staff have less time for higher-value work. As headcount grows, this bottleneck will only get worse.',
+        },
+        {
+          heading: 'Proposed Solution',
+          body: "An AI-powered employee helpdesk (chat-based, integrated with existing HR/IT systems) that answers common employee questions instantly, escalates complex issues to a human agent, and learns from past tickets to improve over time. Key features: 24/7 availability, natural-language query handling, integration with HRIS/ticketing tools, and an escalation workflow for anything it can't resolve.",
+        },
+        {
+          heading: 'Benefits',
+          bullets: [
+            'Employees: faster answers, self-service at any hour, less waiting.',
+            'HR/IT: fewer repetitive tickets, more time for complex/strategic work.',
+            'Organization: lower support costs over time, better employee satisfaction, scalable support as the company grows.',
+          ],
+        },
+        {
+          heading: 'Cost Assumptions (labeled as assumptions, not facts)',
+          bullets: [
+            'Implementation: estimated one-time setup/integration cost (assumption — depends on vendor and system complexity).',
+            'Ongoing: estimated monthly subscription/maintenance cost (assumption).',
+            'Key assumption: existing HR/IT systems have API access for integration; actual cost depends on vendor chosen.',
+          ],
+        },
+        {
+          heading: 'Implementation Timeline',
+          bullets: [
+            'Phase 1 (Weeks 1-2): Planning & Requirements',
+            'Phase 2 (Weeks 3-4): Solution Design & Setup',
+            'Phase 3 (Weeks 5-6): Development & Integration',
+            'Phase 4 (Weeks 7-8): Testing & Training',
+            'Phase 5 (Weeks 9+): Go-Live & Continuous Improvement',
+          ],
+        },
+        {
+          heading: 'Risks',
+          bullets: [
+            "Low adoption: employees don't trust/use the bot — mitigate with training and clear escalation paths.",
+            'Inaccurate answers: AI gives wrong info — mitigate with human review of edge cases and regular retraining.',
+            'Integration issues: legacy systems don\'t connect cleanly — mitigate with a technical audit in Phase 1.',
+          ],
+        },
+        {
+          heading: 'Recommendation',
+          body: 'The AI helpdesk addresses a clear, growing pain point at manageable cost and risk. Moving forward now positions HR/IT to scale support without proportionally scaling headcount. Next step: approve budget for Phase 1 planning and select a vendor for pilot testing.',
+        },
+      ],
+      alternativePrompt:
+        'Using the attached helpdesk scenario, write a one-page AI helpdesk business proposal with these 7 headed sections: Problem, Proposed Solution, Benefits, Cost Assumptions, Implementation Timeline, Risks, Recommendation. Timeline must follow: Phase 1 (Wks 1-2) Planning, Phase 2 (Wks 3-4) Design & Setup, Phase 3 (Wks 5-6) Development & Integration, Phase 4 (Wks 7-8) Testing & Training, Phase 5 (Wks 9+) Go-Live. Keep it to one page, professional tone, and clearly label any cost/risk figures as assumptions — do not state them as fact.',
+    },
   },
   {
     id: 66,
