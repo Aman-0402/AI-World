@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Bell } from 'lucide-react'
 import { notifications, getSeenIds, markAllSeen } from '../data/notifications.js'
 
@@ -58,6 +59,35 @@ export default function NotificationBell() {
                 <div key={n.id} className="rounded-xl px-3 py-2.5 transition hover:bg-slate-50">
                   <p className="text-sm font-semibold text-slate-900">{n.title}</p>
                   <p className="mt-0.5 text-sm text-slate-600">{n.message}</p>
+                  {n.steps && (
+                    <ol className="mt-1.5 flex flex-col gap-1">
+                      {n.steps.map((step, i) => (
+                        <li key={i} className="flex gap-1.5 text-sm text-slate-600">
+                          <span className="shrink-0 font-semibold text-violet-600">{i + 1}.</span>
+                          <span>{step}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                  {n.note && <p className="mt-1.5 text-sm text-slate-600">{n.note}</p>}
+                  {n.link && n.link.to && (
+                    <Link
+                      to={n.link.to}
+                      className="mt-1.5 inline-block text-sm font-semibold text-violet-600 hover:underline"
+                    >
+                      {n.link.label}
+                    </Link>
+                  )}
+                  {n.link && n.link.href && (
+                    <a
+                      href={n.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1.5 inline-block text-sm font-semibold text-violet-600 hover:underline"
+                    >
+                      {n.link.label}
+                    </a>
+                  )}
                   {n.date && <p className="mt-1 text-xs text-slate-400">{n.date}</p>}
                 </div>
               ))}

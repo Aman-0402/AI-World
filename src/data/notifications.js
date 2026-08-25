@@ -1,5 +1,35 @@
 export const notifications = [
-  // { id: 1, title: 'Welcome', message: '...', date: '2026-08-21' },
+  {
+    id: 1,
+    title: 'Chapter 10',
+    message: 'Complete the tasks of Chapter 10 — these are very important questions.',
+    date: '2026-08-24',
+    link: { to: '/chapter/10', label: 'Go to Chapter 10' },
+  },
+  {
+    id: 2,
+    title: 'Career Prep Approach',
+    message: 'Hi, I recommend following this approach:',
+    steps: [
+      'Create professional accounts on LinkedIn and Naukri.com.',
+      'Search for 50+ internship/job postings related to your specialization and carefully read their job descriptions.',
+      'Identify the most commonly required skills, tools, technologies, and qualifications across those postings.',
+      'Make a list of the skills you are missing and prioritize the most frequently requested ones.',
+      'Start learning and practicing those skills through courses, projects, and hands-on work.',
+      'Update your resume and LinkedIn profile with the relevant skills and projects.',
+      'Start applying consistently for internships and entry-level opportunities that match your profile.',
+      'Keep tracking the applications and continue improving your skills based on the requirements you see in new job postings.',
+    ],
+    note: 'The goal is to understand what the industry actually demands, build those skills, and then start applying with a stronger profile.',
+    date: '2026-08-24',
+  },
+  {
+    id: 3,
+    title: 'Submit Your Resume',
+    message: 'Fill this form and upload your resume.',
+    date: '2026-08-24',
+    link: { href: 'https://forms.gle/4Gzu4Bnd1PFHowSr8', label: 'Open the Form' },
+  },
 ]
 
 const STORAGE_KEY = 'ai-world-seen-notifications'
