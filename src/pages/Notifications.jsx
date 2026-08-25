@@ -10,7 +10,7 @@ export default function Notifications() {
   return (
     <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-violet-100 bg-gradient-to-br from-violet-600 to-cyan-500 p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_20px_40px_-24px_rgba(109,40,217,0.35)] sm:p-8">
           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-white">
             <Bell className="h-5 w-5" aria-hidden="true" />
@@ -21,7 +21,7 @@ export default function Notifications() {
           </p>
         </div>
 
-        <div className="mt-6 flex flex-col gap-4">
+        <div className={sorted.length === 0 ? 'mt-6' : 'mt-6 columns-1 gap-4 lg:columns-2'}>
           {sorted.length === 0 ? (
             <div className="rounded-2xl border border-slate-200/70 bg-[#FFFCF5] p-8 text-center text-sm text-slate-500">
               No notifications yet.
@@ -30,7 +30,7 @@ export default function Notifications() {
             sorted.map((n) => (
               <div
                 key={n.id}
-                className="rounded-2xl border border-slate-200/70 bg-[#FFFCF5] p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:p-6"
+                className="mb-4 break-inside-avoid rounded-2xl border border-slate-200/70 bg-[#FFFCF5] p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:p-6"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <h2 className="font-display text-lg font-bold text-slate-900">{n.title}</h2>
