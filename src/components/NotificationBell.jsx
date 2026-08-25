@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Bell } from 'lucide-react'
+import { Bell, ChevronRight } from 'lucide-react'
 import { notifications, getSeenIds, markAllSeen } from '../data/notifications.js'
+
+const PREVIEW_COUNT = 3
 
 export default function NotificationBell() {
   const [open, setOpen] = useState(false)
@@ -32,6 +34,8 @@ export default function NotificationBell() {
     }
   }
 
+  const preview = [...notifications].reverse().slice(0, PREVIEW_COUNT)
+
   return (
     <div className="relative" ref={containerRef}>
       <button
@@ -50,49 +54,33 @@ export default function NotificationBell() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-11 z-50 w-72 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg sm:w-80">
-          {notifications.length === 0 ? (
-            <p className="px-3 py-6 text-center text-sm text-slate-500">No notifications yet.</p>
+        <div className="absolute right-0 top-11 z-50 w-80 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl sm:w-96">
+          <div className="border-b border-slate-100 px-4 py-3">
+            <p className="font-display text-sm font-bold text-slate-900">Notifications</p>
+          </div>
+
+          {preview.length === 0 ? (
+            <p className="px-4 py-8 text-center text-sm text-slate-500">No notifications yet.</p>
           ) : (
-            <div className="flex max-h-80 flex-col gap-1 overflow-y-auto">
-              {[...notifications].reverse().map((n) => (
-                <div key={n.id} className="rounded-xl px-3 py-2.5 transition hover:bg-slate-50">
+            <div className="flex flex-col divide-y divide-slate-100">
+              {preview.map((n) => (
+                <div key={n.id} className="px-4 py-3 transition hover:bg-slate-50">
                   <p className="text-sm font-semibold text-slate-900">{n.title}</p>
-                  <p className="mt-0.5 text-sm text-slate-600">{n.message}</p>
-                  {n.steps && (
-                    <ol className="mt-1.5 flex flex-col gap-1">
-                      {n.steps.map((step, i) => (
-                        <li key={i} className="flex gap-1.5 text-sm text-slate-600">
-                          <span className="shrink-0 font-semibold text-violet-600">{i + 1}.</span>
-                          <span>{step}</span>
-                        </li>
-                      ))}
-                    </ol>
-                  )}
-                  {n.note && <p className="mt-1.5 text-sm text-slate-600">{n.note}</p>}
-                  {n.link && n.link.to && (
-                    <Link
-                      to={n.link.to}
-                      className="mt-1.5 inline-block text-sm font-semibold text-violet-600 hover:underline"
-                    >
-                      {n.link.label}
-                    </Link>
-                  )}
-                  {n.link && n.link.href && (
-                    <a
-                      href={n.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-1.5 inline-block text-sm font-semibold text-violet-600 hover:underline"
-                    >
-                      {n.link.label}
-                    </a>
-                  )}
+                  <p className="mt-0.5 line-clamp-2 text-sm text-slate-600">{n.message}</p>
                   {n.date && <p className="mt-1 text-xs text-slate-400">{n.date}</p>}
                 </div>
               ))}
             </div>
           )}
+
+          <Link
+            to="/notifications"
+            onClick={() => setOpen(false)}
+            className="flex items-center justify-center gap-1 border-t border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold text-violet-600 transition hover:bg-slate-100"
+          >
+            Show all notifications
+            <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+          </Link>
         </div>
       )}
     </div>
