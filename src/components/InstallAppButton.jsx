@@ -34,10 +34,10 @@ export default function InstallAppButton() {
     <button
       type="button"
       onClick={handleInstall}
-      className="flex h-9 items-center gap-1.5 rounded-full border border-slate-200/70 bg-[#FFFCF5] px-3 text-sm font-semibold text-slate-700 transition hover:border-violet-200 hover:bg-[#F6F0FF] hover:text-violet-700"
+      className="fixed bottom-20 left-4 z-40 flex h-12 items-center gap-2 rounded-full border border-slate-200 bg-white/95 px-4 text-sm font-semibold text-violet-700 shadow-lg backdrop-blur transition hover:bg-slate-100 sm:bottom-24 sm:left-6"
     >
       <Download className="h-4 w-4" aria-hidden="true" />
-      <span className="hidden sm:inline">Install</span>
+      Download App
     </button>
   )
 }

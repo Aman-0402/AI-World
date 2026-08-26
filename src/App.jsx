@@ -4,6 +4,7 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 import DisableRightClick from './components/DisableRightClick.jsx'
 import DisableShortcuts from './components/DisableShortcuts.jsx'
 import NotificationPopup from './components/NotificationPopup.jsx'
+import InstallAppButton from './components/InstallAppButton.jsx'
 
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Explore = lazy(() => import('./pages/Explore.jsx'))
@@ -28,6 +29,7 @@ function App() {
       <DisableRightClick />
       <DisableShortcuts />
       <NotificationPopup />
+      <InstallAppButton />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />
