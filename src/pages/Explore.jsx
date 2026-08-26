@@ -3,7 +3,6 @@ import { Square, Triangle } from 'lucide-react'
 import Navbar from '../components/Navbar.jsx'
 import AIShortcuts from '../components/AIShortcuts.jsx'
 import ChapterCard from '../components/ChapterCard.jsx'
-import TodayPlanPopup from '../components/TodayPlanPopup.jsx'
 import HiddenSpot from '../components/HiddenSpot.jsx'
 import Footer from '../components/Footer.jsx'
 import { chapters } from '../data/chapters.js'
@@ -21,7 +20,6 @@ export default function Explore() {
 
   return (
     <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
-      <TodayPlanPopup />
       <Navbar />
       <HiddenSpot icon={Square} className="right-4 top-20 text-slate-500 hover:text-violet-600" />
       <HiddenSpot icon={Triangle} className="bottom-4 left-4 text-slate-500 hover:text-violet-600" />
