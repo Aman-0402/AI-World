@@ -328,24 +328,26 @@ export const tasks = [
   {
     id: 13,
     chapterId: 13,
-    title: 'Clean and Analyse a Dataset',
-    question: 'How can AI tools inside Excel help clean messy data and generate formulas?',
-    whatToDo: 'Use Microsoft Copilot or ChatGPT to help clean a sample dataset and generate the formulas needed to analyze it.',
+    title: 'Clean a Messy Dataset and Verify an AI-Generated Formula',
+    question: 'AI can write an Excel formula in seconds — but how do you know the formula it wrote is actually calculating the right thing?',
+    whatToDo:
+      'Use Microsoft Copilot or ChatGPT to help clean a sample dataset and generate the formula needed to analyze it, then manually verify the formula on a small sample before trusting it on the full dataset — a formula that looks correct and a formula that is correct are not the same thing.',
     steps: [
-      'Open a spreadsheet with messy or inconsistent data (duplicates, blanks, inconsistent formatting).',
-      'Ask Copilot or ChatGPT how to identify and remove duplicates and fix inconsistent entries.',
-      'Ask for a formula to calculate a specific metric (e.g. average, growth rate, percentage of total).',
-      'Apply the formula and verify the result manually on a small sample.',
+      'Open a spreadsheet with messy or inconsistent data (duplicates, blanks, inconsistent formatting, mismatched capitalization) — the messier the data, the more useful this exercise is.',
+      'Ask Copilot or ChatGPT how to identify and remove duplicates and fix inconsistent entries. Be specific about what inconsistent means in your data — for example, some rows spelling out the country name and others using an abbreviation — since a vague clean-this-up request gives AI no criteria to work from.',
+      'Ask for a formula to calculate a specific metric (e.g. average, growth rate, percentage of total). State exactly which column and which condition the formula should use, so there is no ambiguity about what it is supposed to calculate.',
+      'Before applying the formula to the whole dataset, pick 3-5 rows, calculate the expected result by hand, and compare against what the formula actually returns for those same rows.',
+      'Reflection: if the formula was wrong on your manual check, what part of your original instruction was ambiguous enough to cause that? A wrong formula is often a sign of an underspecified prompt, not just an AI mistake.',
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How AI can accelerate data cleaning in Excel.',
-      'How to verify an AI-generated formula before trusting it on a full dataset.',
+      'How AI can accelerate data cleaning in Excel once you give it specific, concrete criteria instead of a vague "clean this up" instruction.',
+      'Why manually verifying an AI-generated formula on a small, hand-checkable sample is the only way to catch a formula that looks plausible but calculates the wrong thing.',
     ],
     questions: [
-      'What data issue took the longest to explain to the AI?',
-      'Did the generated formula work correctly on the first try?',
+      'What data issue took the longest to explain clearly to the AI?',
+      'Did the generated formula match your manual calculation on the first try, or did you have to correct your instructions and re-ask?',
     ],
   },
   {
