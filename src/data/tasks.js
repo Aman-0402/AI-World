@@ -303,24 +303,26 @@ export const tasks = [
   {
     id: 12,
     chapterId: 12,
-    title: 'Prepare a Competitor Analysis',
-    question: 'How can AI help structure a competitor or SWOT analysis?',
-    whatToDo: 'Use ChatGPT or Perplexity AI to build a SWOT analysis for a company and a competitor.',
+    title: 'Build and Fact-Check a Competitor SWOT Analysis',
+    question: 'How can AI help you structure a fast, credible SWOT analysis instead of a vague list of guesses about a competitor?',
+    whatToDo:
+      'Pick a real company and a direct competitor, then use AI to research and organize a SWOT (Strengths, Weaknesses, Opportunities, Threats) comparison — but treat the output as a first draft that needs verification, not a finished analysis, since competitor claims are exactly the kind of specific-sounding detail AI can get wrong or invent.',
     steps: [
-      'Pick a company and one of its competitors.',
-      'Ask the AI to research and summarize each company\'s strengths and weaknesses.',
-      'Ask the AI to structure the findings into a SWOT (Strengths, Weaknesses, Opportunities, Threats) table.',
-      'Verify at least two claims from the SWOT against a real source.',
+      'Pick a company and one direct competitor in the same market — the comparison only works if they genuinely compete for the same customers.',
+      'Ask AI to research and summarize each company\'s strengths and weaknesses, giving it a specific instruction like "list 3 strengths and 3 weaknesses for each company based on public information" rather than a vague "tell me about these companies."',
+      'Ask AI to organize the findings into a SWOT table. Push it to identify Opportunities and Threats that are external to both companies (market trends, regulation, new entrants) instead of just repackaging the same strengths and weaknesses under new labels.',
+      'Before trusting any claim, verify at least two specific items from the SWOT — a market-share number, a stated weakness, a recent product launch — against a real, findable source (the company\'s own site, a news article, an annual report).',
+      'Reflection: for any claim that turned out wrong, vague, or unverifiable, note whether it still sounded confident when AI stated it. This is the core risk of using AI for competitive research — fluent-sounding claims are not the same as sourced claims.',
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How to use AI to structure competitive analysis frameworks.',
-      'Why competitor claims from AI still need source verification.',
+      'How to direct AI to structure a SWOT analysis into genuinely distinct quadrants instead of accepting an unstructured list of pros and cons.',
+      'Why every specific, checkable claim in an AI-generated competitor analysis needs verification before it goes into a real business decision — fluent output is not the same as accurate output.',
     ],
     questions: [
-      'Which quadrant of the SWOT did the AI handle best, and which needed the most correction?',
-      'What industry trend affects both companies you compared?',
+      'Which SWOT quadrant did AI handle best, and which needed the most correction?',
+      'Of the two claims you verified, did either turn out to be wrong, outdated, or simply unfindable?',
     ],
   },
   {
