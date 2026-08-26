@@ -1,0 +1,13 @@
+{
+  "name": "AI in Business Learning Portal",
+  "short_name": "AI in Business",
+  "start_url": "/AI-World/",
+  "scope": "/AI-World/",
+  "display": "standalone",
+  "background_color": "#FAF6EC",
+  "theme_color": "#7c3aed",
+  "icons": [
+    { "src": "/AI-World/favicon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/AI-World/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

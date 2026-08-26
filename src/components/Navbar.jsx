@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import NotificationBell from './NotificationBell.jsx'
+import InstallAppButton from './InstallAppButton.jsx'
 
 export default function Navbar() {
   return (
@@ -10,7 +11,16 @@ export default function Navbar() {
           <img src={logo} alt="AI in Business" className="h-8 w-8 rounded-lg object-cover shadow-sm ring-1 ring-slate-200" />
           <span>AI in Business</span>
         </Link>
-        <NotificationBell />
+        <div className="flex items-center gap-2">
+          <InstallAppButton />
+          <a
+            href="https://arxinfo.info"
+            className="flex h-9 items-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-4 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+          >
+            Login
+          </a>
+          <NotificationBell />
+        </div>
       </nav>
     </header>
   )
