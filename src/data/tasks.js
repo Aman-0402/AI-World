@@ -286,7 +286,17 @@ export const tasks = [
       'Read the example exchange below, then run your own research question through the same set of verification questions before trusting any AI-stated statistic.',
     steps: [
       'Read this example: asked what the most popular social media platform among Indian consumers is in 2026, an AI tool immediately answered "Instagram is the most popular platform among Indian consumers, with 78% of users actively engaging with the platform." That answer sounds precise and confident — but confidence is not evidence.',
-      'Before accepting any AI-stated statistic, run it through six questions: Where did the number come from? Who conducted the research? When was it conducted? How many people were surveyed? Was it India-specific? Does the actual source say what the AI claims it says?',
+      {
+        intro: 'Before accepting any AI-stated statistic, run it through six questions:',
+        checklist: [
+          'Where did the number come from?',
+          'Who conducted the research?',
+          'When was it conducted?',
+          'How many people were surveyed?',
+          'Was it India-specific?',
+          'Does the actual source say what the AI claims it says?',
+        ],
+      },
       'Pick your own real research question — a market stat, industry trend, or consumer behavior claim — and ask an AI tool for an answer that includes a specific number or percentage.',
       'Run the AI\'s answer through the same six questions. Ask the AI directly to name its source, then go try to find that source yourself.',
       'Reflection: if you found the original source, did it actually say what the AI claimed — same number, same population, same year? If you could not find it at all, what does that tell you about using that statistic in real work?',
@@ -1843,7 +1853,19 @@ export const tasks = [
     steps: [
       'AI can help you find, explain, summarize, compare, and discover information, and generate research questions — but AI itself is not necessarily the original source of any fact it gives you.',
       'Ask AI a factual question with a real answer, for example India\'s current GDP growth rate, and note the number it gives you.',
-      'Ask the follow-up question that matters more than the first one: according to whom? Government data, the World Bank, the IMF, the RBI, a research organization, a company report, a newspaper, and an academic paper are all different kinds of sources with different reliability.',
+      {
+        intro: 'Ask the follow-up question that matters more than the first one: according to whom? It could be any of these, each with different reliability:',
+        checklist: [
+          'Government data',
+          'World Bank',
+          'IMF',
+          'RBI',
+          'A research organization',
+          'A company report',
+          'A newspaper',
+          'An academic paper',
+        ],
+      },
       'Find the original or authoritative source AI is actually drawing from — not just any article that repeats the same number, but the place the number was first published.',
       'Reflection: AI gave you an answer immediately. How much longer did it take you to find the actual evidence behind it, and was the number the same once you found the source?',
     ],
@@ -1866,8 +1888,15 @@ export const tasks = [
     whatToDo:
       'Try the same research question across multiple AI tools (Perplexity for cited sources, Gemini for research/summarization/comparison, and a general AI assistant) and compare how differently they each frame the answer.',
     steps: [
-      'Perplexity is useful for asking research questions and discovering information with cited sources. Gemini is useful for research, summarization, comparison, and working with information from multiple sources. General AI assistants can explain information, generate research questions, and analyze material — each tool leans toward a different strength.',
-      'Ask the same question to three different AI tools: what are the biggest challenges facing Indian e-commerce businesses?',
+      {
+        intro: "Today you'll compare three kinds of AI tools, each with a different strength:",
+        checklist: [
+          'Perplexity — useful for asking research questions and discovering information with cited sources.',
+          'Gemini — useful for research, summarization, comparison, and working with information from multiple sources.',
+          'General AI assistants — can explain information, generate research questions, and analyze material.',
+        ],
+      },
+      'Ask the same question to three different AI tools: "What are the biggest challenges facing Indian e-commerce businesses?"',
       'Compare the three answers side by side. One might focus on logistics, another on customer acquisition, another on competition or regulation.',
       'Before concluding that one tool is wrong, consider whether they are interpreting the question differently or drawing on different information rather than one of them simply being incorrect.',
       'Reflection: which tool\'s answer did you trust most, and was that because of the content, the cited sources, or just the way it was phrased?',
@@ -1890,9 +1919,24 @@ export const tasks = [
     question: 'AI can name the players and trends in a market instantly. How do you turn that into research you can actually cite?',
     whatToDo: 'Ask AI to name the original sources behind its claims about a market trend, then track down those sources yourself.',
     steps: [
-      'Ask AI to research a trend, for example the growth of quick-commerce in India. It might mention specific companies, consumer behavior, delivery times, and market size — all useful starting points, not finished research.',
+      {
+        intro: 'Ask AI to research a trend, for example the growth of quick-commerce in India. It might mention things like:',
+        checklist: ['Specific companies', 'Consumer behavior', 'Delivery times', 'Market size'],
+        outro: 'All useful starting points, not finished research.',
+      },
       'Ask AI directly to give you the original sources supporting these claims.',
-      'Expect a mix of source types: company reports, investor presentations, industry reports, government statistics, research organizations, and reputable business publications — each carries different weight.',
+      {
+        intro: 'Expect a mix of source types:',
+        checklist: [
+          'Company reports',
+          'Investor presentations',
+          'Industry reports',
+          'Government statistics',
+          'Research organizations',
+          'Reputable business publications',
+        ],
+        outro: 'Each carries different weight.',
+      },
       'Pick at least two of the named sources and actually open them. Confirm they exist and say what AI claimed they say.',
       'Reflection: this is the shift from AI-generated information to source-backed research — what changed about your confidence in the trend once you had opened the actual sources?',
     ],
@@ -1968,7 +2012,10 @@ export const tasks = [
       'Take this claim as the example: the Indian EV market will grow by 40% annually over the next five years. Before using a number like this, it needs to survive five direct questions.',
       'Question 1 — who predicted 40%? An analyst firm, a company, a government body, and a blogger all carry different weight.',
       'Question 2 — when was the prediction made? A five-year forecast made two years ago is already partway through its own timeline.',
-      'Question 3 — what exactly does "EV market" mean here? Electric cars, two-wheelers, three-wheelers, total EV sales, and revenue are all different things that could each have their own 40% figure.',
+      {
+        intro: 'Question 3 — what exactly does "EV market" mean here? It could mean any of these, each with its own possible 40% figure:',
+        checklist: ['Electric cars', 'Two-wheelers', 'Three-wheelers', 'Total EV sales', 'Revenue'],
+      },
       'Question 4 — is 40% historical growth that already happened, or a future prediction that has not happened yet? AI stating a number does not tell you which one you are looking at.',
       'Question 5 — what is the original source? Trace the number back before repeating it anywhere.',
       'Reflection: research is not ask AI, then copy the answer. It is ask, investigate, verify, understand, then cite — which of these steps did you skip most often before this exercise?',

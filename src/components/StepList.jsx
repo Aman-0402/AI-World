@@ -20,6 +20,25 @@ function renderStepText(step) {
   })
 }
 
+function ChecklistStep({ intro, checklist, outro }) {
+  return (
+    <div>
+      {intro && <p className="mb-2">{intro}</p>}
+      <ul className="flex flex-col gap-1.5 rounded-xl border border-blue-100 bg-blue-50/60 p-3">
+        {checklist.map((item, i) => (
+          <li key={i} className="flex gap-2 text-sm text-slate-700">
+            <span className="text-blue-500" aria-hidden="true">
+              &bull;
+            </span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+      {outro && <p className="mt-2">{outro}</p>}
+    </div>
+  )
+}
+
 function FileStep({ file }) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3">
@@ -57,13 +76,20 @@ export default function StepList({ steps }) {
       >
         {steps.map((step, i) => {
           const isFile = typeof step === 'object' && step !== null && step.file
+          const isChecklist = typeof step === 'object' && step !== null && step.checklist
           return (
             <li key={i} className="flex gap-4 bg-white px-4 py-3 even:bg-blue-50/50">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center self-start rounded-md bg-blue-600 text-xs font-semibold text-white">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <span className="flex-1 py-0.5 text-sm text-slate-700">
-                {isFile ? <FileStep file={{ name: step.file, downloadUrl: step.downloadUrl }} /> : renderStepText(step)}
+                {isFile ? (
+                  <FileStep file={{ name: step.file, downloadUrl: step.downloadUrl }} />
+                ) : isChecklist ? (
+                  <ChecklistStep intro={step.intro} checklist={step.checklist} outro={step.outro} />
+                ) : (
+                  renderStepText(step)
+                )}
               </span>
             </li>
           )
