@@ -280,24 +280,26 @@ export const tasks = [
   {
     id: 11,
     chapterId: 11,
-    title: 'Conduct AI-Assisted Market Research',
-    question: 'How can AI tools speed up market research while still requiring verification?',
-    whatToDo: 'Use Perplexity AI or Gemini to research a market trend, then verify the key facts from a primary source.',
+    title: "Don't Trust a Statistic Just Because AI Said It",
+    question: 'An AI tool tells you 78% of Indian consumers use Instagram as their most-used platform. How do you know that number is real?',
+    whatToDo:
+      'Read the example exchange below, then run your own research question through the same set of verification questions before trusting any AI-stated statistic.',
     steps: [
-      'Choose a market or industry trend to research.',
-      'Ask Perplexity AI or Gemini to summarize the current state of that trend, with sources.',
-      'Pick two specific facts or statistics from the summary.',
-      'Verify those facts against the original cited source or another reputable outlet.',
+      'Read this example: asked what the most popular social media platform among Indian consumers is in 2026, an AI tool immediately answered "Instagram is the most popular platform among Indian consumers, with 78% of users actively engaging with the platform." That answer sounds precise and confident — but confidence is not evidence.',
+      'Before accepting any AI-stated statistic, run it through six questions: Where did the number come from? Who conducted the research? When was it conducted? How many people were surveyed? Was it India-specific? Does the actual source say what the AI claims it says?',
+      'Pick your own real research question — a market stat, industry trend, or consumer behavior claim — and ask an AI tool for an answer that includes a specific number or percentage.',
+      'Run the AI\'s answer through the same six questions. Ask the AI directly to name its source, then go try to find that source yourself.',
+      'Reflection: if you found the original source, did it actually say what the AI claimed — same number, same population, same year? If you could not find it at all, what does that tell you about using that statistic in real work?',
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How to use AI research tools that cite sources.',
-      'Why every AI-sourced statistic should be checked against the original before use.',
+      'A confident, specific-sounding number from AI is not automatically evidence — a statistic needs a source, a date, a sample, and a scope before it means anything.',
+      'The six questions to ask before trusting any AI-stated statistic: where, who, when, how many, how specific, and does the source actually match the claim.',
     ],
     questions: [
-      'Did the cited sources actually support the claim the AI made?',
-      'How much faster was this than manual research, and what did you trade off?',
+      'Could you find the original source for your statistic, and did it say exactly what the AI claimed?',
+      'What is one AI-stated number you would have used in real work before this exercise, without checking it first?',
     ],
   },
   {
