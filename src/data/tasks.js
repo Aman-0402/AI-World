@@ -1960,7 +1960,10 @@ export const tasks = [
       'Practice the fastest fact-checking habit there is: for any AI claim, ask who said it, when, where, and how many people were involved, before accepting it.',
     steps: [
       'Take a general-sounding AI claim, for example that Indian consumers are increasingly choosing sustainable products, and resist the urge to accept it immediately.',
-      'Ask who said this: was it a government survey, a university, a company selling sustainable products, a random website, or a research organization? Each of those has a different reason to say what it says.',
+      {
+        intro: 'Ask who said this — each of these has a different reason to say what it says:',
+        checklist: ['A government survey', 'A university', 'A company selling sustainable products', 'A random website', 'A research organization'],
+      },
       'Ask when: a study from several years ago may not describe what is happening now.',
       'Ask where: a global survey may not represent Indian consumers specifically.',
       'Ask how many people: a survey of 50 people is not equivalent to a survey of 50,000 — check the sample size before trusting the claim\'s weight.',
@@ -2010,7 +2013,10 @@ export const tasks = [
     whatToDo: 'Practice a five-question investigation on a specific AI-stated growth prediction before treating it as usable research.',
     steps: [
       'Take this claim as the example: the Indian EV market will grow by 40% annually over the next five years. Before using a number like this, it needs to survive five direct questions.',
-      'Question 1 — who predicted 40%? An analyst firm, a company, a government body, and a blogger all carry different weight.',
+      {
+        intro: 'Question 1 — who predicted 40%? These all carry different weight:',
+        checklist: ['An analyst firm', 'A company', 'A government body', 'A blogger'],
+      },
       'Question 2 — when was the prediction made? A five-year forecast made two years ago is already partway through its own timeline.',
       {
         intro: 'Question 3 — what exactly does "EV market" mean here? It could mean any of these, each with its own possible 40% figure:',
@@ -2039,12 +2045,36 @@ export const tasks = [
     whatToDo:
       'Choose one current business topic, research it with AI, pick three important claims, trace each claim to its original source, cross-verify your most important claim against a second source, then write a short evidence-based summary.',
     steps: [
-      'Choose one topic: growth of quick commerce in India, impact of AI on jobs, growth of digital payments in India, changing consumer behavior among Gen Z, or growth of electric vehicles in India — or a topic of your own.',
+      {
+        intro: 'Choose one topic (or one of your own):',
+        checklist: [
+          'Growth of quick commerce in India',
+          'Impact of AI on jobs',
+          'Growth of digital payments in India',
+          'Changing consumer behavior among Gen Z',
+          'Growth of electric vehicles in India',
+        ],
+      },
       'Step 1 — Ask AI. Use this prompt, filling in your topic: "I am researching [TOPIC]. Give me an overview of the topic and identify: major trends, important statistics, major companies or organizations involved, key factors driving the trend, and potential challenges. For every important factual claim, provide a source. Do not invent statistics or sources."',
       'Step 2 — Pick 3 Important Claims. If AI gives you 15 facts, do not try to verify everything at once. Select the three that matter most — for example, a market-growth percentage, a consumer-adoption percentage, and a specific company\'s user count.',
-      'Step 3 — Trace the Sources. For each of your three claims, ask where the information came from, then locate the original source. Track it like a simple log of claim, source, date, and whether you verified it — for example, market growth traced to a 2026 source and verified, but a company user count traced to a 2026 source still not verified and needing more digging.',
+      {
+        intro:
+          'Step 3 — Trace the Sources. For each of your three claims, ask where the information came from, then locate the original source. Track each claim with a simple log:',
+        checklist: ['Claim', 'Source', 'Date', 'Verified? (yes/no)'],
+        outro:
+          'For example: market growth traced to a 2026 source and verified, but a company user count traced to a 2026 source still not verified and needing more digging.',
+      },
       'Step 4 — Cross-Verify. Take your single most important claim and search for a second, independent credible source. If it supports the claim, your confidence increases. If it does not, investigate further before using the claim anywhere.',
-      'Step 5 — Create Your Summary. Write a short summary with five parts: a title naming your market trend, a 2-3 sentence key finding, three verified facts as evidence, one paragraph on what the trend means for businesses, and a list of your verified sources.',
+      {
+        intro: 'Step 5 — Create Your Summary. Write a short summary with five parts:',
+        checklist: [
+          'Title — the name of your market trend',
+          'Key Finding — 2-3 sentences',
+          'Evidence — three verified facts',
+          'Business Impact — what the trend means for companies',
+          'Sources — your list of verified sources',
+        ],
+      },
     ],
     requiredFile: null,
     downloadUrl: null,
@@ -2066,10 +2096,17 @@ export const tasks = [
       'Apply the full research formula (Discover, Source, Trace, Verify, Cross-check, Cite, Write) to a specific AI-generated jobs-automation claim, instead of copying it straight onto a slide.',
     steps: [
       'Imagine you are preparing a presentation titled "How AI Is Changing Jobs for BBA Students," and AI gives you this statement: "AI will eliminate 40% of all jobs within the next decade." Before it goes on a slide, treat it as a claim to investigate, not a fact to cite.',
-      'Ask who made this prediction — an academic study, a consulting firm, a tech company, or a social media post all carry very different weight.',
-      'Ask what "40%" actually means — does it mean 40% of jobs disappear entirely, or 40% of jobs change significantly in how they are done? Those are very different outcomes with the same headline number.',
+      {
+        intro: 'Ask who made this prediction — these carry very different weight:',
+        checklist: ['An academic study', 'A consulting firm', 'A tech company', 'A social media post'],
+      },
+      'Ask what the 40% figure actually means — does it mean 40% of jobs disappear entirely, or 40% of jobs change significantly in how they are done? Those are very different outcomes with the same headline number.',
       'Ask when the prediction was made and what the original source actually is, then check whether another credible source can independently verify the same figure.',
-      'Remember the research formula: AI leads to Discover, then Source, then Trace, then Verify, then Cross-check, then Cite, then Write — not AI leading straight to Copy and Submit.',
+      {
+        intro: 'Remember the research formula — the order matters:',
+        checklist: ['Discover', 'Source', 'Trace', 'Verify', 'Cross-check', 'Cite', 'Write'],
+        outro: 'Not: AI leading straight to Copy and Submit.',
+      },
       'Reflection: apply this same mindset to one claim from your own chapter 11 research activity — did it hold up, or did it turn out less solid than it first sounded?',
     ],
     requiredFile: null,
