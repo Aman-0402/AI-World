@@ -1833,6 +1833,209 @@ export const tasks = [
       'What is one skill gap your Job Match analysis surfaced that you are turning into an actual learning goal, per Rule 8?',
     ],
   },
+  {
+    id: 71,
+    chapterId: 11,
+    title: 'AI Is Not Automatically a Research Source',
+    question: 'AI gives you an answer. Research gives you evidence. What is the difference, and why does it matter?',
+    whatToDo:
+      'Understand what AI is actually good for in research (finding, explaining, summarizing, comparing information, discovering sources, generating research questions) versus what it is not — the original source of the information itself. Then trace one AI-given number back to its authoritative source.',
+    steps: [
+      'AI can help you find, explain, summarize, compare, and discover information, and generate research questions — but AI itself is not necessarily the original source of any fact it gives you.',
+      'Ask AI a factual question with a real answer, for example India\'s current GDP growth rate, and note the number it gives you.',
+      'Ask the follow-up question that matters more than the first one: according to whom? Government data, the World Bank, the IMF, the RBI, a research organization, a company report, a newspaper, and an academic paper are all different kinds of sources with different reliability.',
+      'Find the original or authoritative source AI is actually drawing from — not just any article that repeats the same number, but the place the number was first published.',
+      'Reflection: AI gave you an answer immediately. How much longer did it take you to find the actual evidence behind it, and was the number the same once you found the source?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'AI is useful for finding, explaining, and summarizing information, but it is not itself a research source — every fact it gives you traces back to something else.',
+      'Why "according to whom?" is the single most useful follow-up question in AI-assisted research.',
+    ],
+    questions: [
+      'What was the actual authoritative source behind the number AI gave you?',
+      'Did the number match exactly once you found the original source, or had it shifted?',
+    ],
+  },
+  {
+    id: 72,
+    chapterId: 11,
+    title: 'Different AI Tools, Different Answers',
+    question: 'If three AI tools give three different answers to the same research question, does that mean one of them is lying?',
+    whatToDo:
+      'Try the same research question across multiple AI tools (Perplexity for cited sources, Gemini for research/summarization/comparison, and a general AI assistant) and compare how differently they each frame the answer.',
+    steps: [
+      'Perplexity is useful for asking research questions and discovering information with cited sources. Gemini is useful for research, summarization, comparison, and working with information from multiple sources. General AI assistants can explain information, generate research questions, and analyze material — each tool leans toward a different strength.',
+      'Ask the same question to three different AI tools: what are the biggest challenges facing Indian e-commerce businesses?',
+      'Compare the three answers side by side. One might focus on logistics, another on customer acquisition, another on competition or regulation.',
+      'Before concluding that one tool is wrong, consider whether they are interpreting the question differently or drawing on different information rather than one of them simply being incorrect.',
+      'Reflection: which tool\'s answer did you trust most, and was that because of the content, the cited sources, or just the way it was phrased?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Different AI tools can give genuinely different answers to the same question without any of them being false — they may interpret the question differently or draw on different information.',
+      'Why disagreement between AI tools is itself a signal that source verification matters, not a sign that something is broken.',
+    ],
+    questions: [
+      'Which of the three answers would you have trusted most before doing this exercise, and why?',
+      'Did any of the three tools cite an actual source you could check?',
+    ],
+  },
+  {
+    id: 73,
+    chapterId: 11,
+    title: 'From AI-Generated Information to Source-Backed Research',
+    question: 'AI can name the players and trends in a market instantly. How do you turn that into research you can actually cite?',
+    whatToDo: 'Ask AI to name the original sources behind its claims about a market trend, then track down those sources yourself.',
+    steps: [
+      'Ask AI to research a trend, for example the growth of quick-commerce in India. It might mention specific companies, consumer behavior, delivery times, and market size — all useful starting points, not finished research.',
+      'Ask AI directly to give you the original sources supporting these claims.',
+      'Expect a mix of source types: company reports, investor presentations, industry reports, government statistics, research organizations, and reputable business publications — each carries different weight.',
+      'Pick at least two of the named sources and actually open them. Confirm they exist and say what AI claimed they say.',
+      'Reflection: this is the shift from AI-generated information to source-backed research — what changed about your confidence in the trend once you had opened the actual sources?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'AI-named entities, trends, and figures are a research starting point, not a finished citation.',
+      'How to move from AI-generated information to source-backed research by asking directly for original sources and verifying them yourself.',
+    ],
+    questions: [
+      'Which of the sources AI named did you actually manage to find and open?',
+      'Did any source say something different from what AI claimed it said?',
+    ],
+  },
+  {
+    id: 74,
+    chapterId: 11,
+    title: 'Ask "Who Is Saying This?" Before You Believe It',
+    question: 'AI says Indian consumers are increasingly choosing sustainable products. Before you accept that, what should you ask first?',
+    whatToDo:
+      'Practice the fastest fact-checking habit there is: for any AI claim, ask who said it, when, where, and how many people were involved, before accepting it.',
+    steps: [
+      'Take a general-sounding AI claim, for example that Indian consumers are increasingly choosing sustainable products, and resist the urge to accept it immediately.',
+      'Ask who said this: was it a government survey, a university, a company selling sustainable products, a random website, or a research organization? Each of those has a different reason to say what it says.',
+      'Ask when: a study from several years ago may not describe what is happening now.',
+      'Ask where: a global survey may not represent Indian consumers specifically.',
+      'Ask how many people: a survey of 50 people is not equivalent to a survey of 50,000 — check the sample size before trusting the claim\'s weight.',
+      'Apply all four questions (who, when, where, how many) to one real AI claim you generate yourself, and note which answer was hardest to find.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'The four fastest fact-checking questions for any AI claim: who said it, when, where, and how many people were involved.',
+      'Why a claim\'s source matters as much as its content — a company selling a product has a different incentive than an independent research organization.',
+    ],
+    questions: [
+      'Which of the four questions (who, when, where, how many) was hardest to answer for your claim?',
+      'Did knowing the source change how much you trusted the claim?',
+    ],
+  },
+  {
+    id: 75,
+    chapterId: 11,
+    title: 'The Citation Trap: A Real Source, a Misquoted Claim',
+    question: 'An AI-given citation can be completely real and still misrepresent what its source actually says. How do you catch that?',
+    whatToDo: 'Learn to verify not just whether a cited source exists, but whether it actually supports the exact claim AI attributed to it.',
+    steps: [
+      'AI can sometimes provide a citation that looks relevant but does not actually support the exact claim it attaches to it — the source may be real, and the citation may be real, while AI\'s interpretation of it is wrong.',
+      'Example — what AI stated: "According to XYZ Research, 70% of students use AI for academic research."',
+      'Example — what the source actually said: "70% of surveyed students have experimented with generative AI." Those are not necessarily the same claim — used for academic research and experimented with describe different levels of usage.',
+      'Take an AI-cited statistic from an earlier chapter 11 exercise, or generate a new one, and open its actual source.',
+      'Compare word-for-word: does the source state the exact number, population, and framing AI attributed to it, or has AI paraphrased it into something stronger or different?',
+      'Remember the rule: never verify only whether the source exists — verify whether the source supports the exact claim.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'A citation can be completely real while still being used to support a claim the source does not actually make.',
+      'The difference between verifying that a source exists and verifying that a source supports the exact claim attributed to it.',
+    ],
+    questions: [
+      'Did the source you checked say exactly what AI claimed, or was it paraphrased into something stronger?',
+      'What specific wording difference, if any, did you find between the AI\'s claim and the source\'s actual words?',
+    ],
+  },
+  {
+    id: 76,
+    chapterId: 11,
+    title: 'Investigate Before You Copy: The EV Market Growth Example',
+    question: 'AI tells you the Indian EV market will grow by 40% annually over the next five years. Would you put that straight into your assignment?',
+    whatToDo: 'Practice a five-question investigation on a specific AI-stated growth prediction before treating it as usable research.',
+    steps: [
+      'Take this claim as the example: the Indian EV market will grow by 40% annually over the next five years. Before using a number like this, it needs to survive five direct questions.',
+      'Question 1 — who predicted 40%? An analyst firm, a company, a government body, and a blogger all carry different weight.',
+      'Question 2 — when was the prediction made? A five-year forecast made two years ago is already partway through its own timeline.',
+      'Question 3 — what exactly does "EV market" mean here? Electric cars, two-wheelers, three-wheelers, total EV sales, and revenue are all different things that could each have their own 40% figure.',
+      'Question 4 — is 40% historical growth that already happened, or a future prediction that has not happened yet? AI stating a number does not tell you which one you are looking at.',
+      'Question 5 — what is the original source? Trace the number back before repeating it anywhere.',
+      'Reflection: research is not ask AI, then copy the answer. It is ask, investigate, verify, understand, then cite — which of these steps did you skip most often before this exercise?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'A single AI-stated growth number can hide several different unanswered questions: who said it, when, what exactly it measures, whether it is historical or predicted, and where it originally came from.',
+      'The shift from "ask AI, copy answer" to "ask, investigate, verify, understand, cite."',
+    ],
+    questions: [
+      'Which of the five investigation questions was hardest to answer for the EV market example?',
+      'Which step in ask-investigate-verify-understand-cite did you skip most often before this chapter?',
+    ],
+  },
+  {
+    id: 77,
+    chapterId: 11,
+    title: 'Research Activity: Verify a Real Business Trend End to End',
+    question: 'Can you take a business topic from a single AI prompt all the way to a short, source-backed research summary?',
+    whatToDo:
+      'Choose one current business topic, research it with AI, pick three important claims, trace each claim to its original source, cross-verify your most important claim against a second source, then write a short evidence-based summary.',
+    steps: [
+      'Choose one topic: growth of quick commerce in India, impact of AI on jobs, growth of digital payments in India, changing consumer behavior among Gen Z, or growth of electric vehicles in India — or a topic of your own.',
+      'Step 1 — Ask AI. Use this prompt, filling in your topic: "I am researching [TOPIC]. Give me an overview of the topic and identify: major trends, important statistics, major companies or organizations involved, key factors driving the trend, and potential challenges. For every important factual claim, provide a source. Do not invent statistics or sources."',
+      'Step 2 — Pick 3 Important Claims. If AI gives you 15 facts, do not try to verify everything at once. Select the three that matter most — for example, a market-growth percentage, a consumer-adoption percentage, and a specific company\'s user count.',
+      'Step 3 — Trace the Sources. For each of your three claims, ask where the information came from, then locate the original source. Track it like a simple log of claim, source, date, and whether you verified it — for example, market growth traced to a 2026 source and verified, but a company user count traced to a 2026 source still not verified and needing more digging.',
+      'Step 4 — Cross-Verify. Take your single most important claim and search for a second, independent credible source. If it supports the claim, your confidence increases. If it does not, investigate further before using the claim anywhere.',
+      'Step 5 — Create Your Summary. Write a short summary with five parts: a title naming your market trend, a 2-3 sentence key finding, three verified facts as evidence, one paragraph on what the trend means for businesses, and a list of your verified sources.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'A repeatable five-step research process: ask AI for an overview with sources, pick a few important claims instead of trying to verify everything, trace each claim to its original source, cross-verify the most important one against a second source, then summarize only what survived verification.',
+      'Why picking three claims to verify deeply beats trying to shallowly check fifteen — depth on what matters most produces more reliable research than breadth on everything.',
+    ],
+    questions: [
+      'Which of your three claims failed to trace back to a real, findable source?',
+      'Did your cross-verification of the most important claim increase or decrease your confidence in it?',
+    ],
+  },
+  {
+    id: 78,
+    chapterId: 11,
+    title: 'Apply the Research Formula: Would AI Really Eliminate 40% of Jobs?',
+    question: 'Before putting "AI will eliminate 40% of all jobs within the next decade" on a presentation slide, what should you check first?',
+    whatToDo:
+      'Apply the full research formula (Discover, Source, Trace, Verify, Cross-check, Cite, Write) to a specific AI-generated jobs-automation claim, instead of copying it straight onto a slide.',
+    steps: [
+      'Imagine you are preparing a presentation titled "How AI Is Changing Jobs for BBA Students," and AI gives you this statement: "AI will eliminate 40% of all jobs within the next decade." Before it goes on a slide, treat it as a claim to investigate, not a fact to cite.',
+      'Ask who made this prediction — an academic study, a consulting firm, a tech company, or a social media post all carry very different weight.',
+      'Ask what "40%" actually means — does it mean 40% of jobs disappear entirely, or 40% of jobs change significantly in how they are done? Those are very different outcomes with the same headline number.',
+      'Ask when the prediction was made and what the original source actually is, then check whether another credible source can independently verify the same figure.',
+      'Remember the research formula: AI leads to Discover, then Source, then Trace, then Verify, then Cross-check, then Cite, then Write — not AI leading straight to Copy and Submit.',
+      'Reflection: apply this same mindset to one claim from your own chapter 11 research activity — did it hold up, or did it turn out less solid than it first sounded?',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to apply a full research mindset (who, what does the number mean, when, source, cross-check) to a single striking AI-generated claim before using it publicly, like in a presentation.',
+      'The research formula for this chapter: AI, Discover, Source, Trace, Verify, Cross-check, Cite, Write — as the alternative to AI, Copy, Submit.',
+    ],
+    questions: [
+      'Does "40% of jobs eliminated" mean jobs disappearing or jobs changing — and does that distinction change how you would present the claim?',
+      'Which step in the research formula (Discover, Source, Trace, Verify, Cross-check, Cite, Write) do you think you will actually keep using after this chapter?',
+    ],
+  },
 ]
 
 export function getTaskById(taskId) {
@@ -1842,3 +2045,4 @@ export function getTaskById(taskId) {
 export function getTasksByChapter(chapterId) {
   return tasks.filter((task) => String(task.chapterId) === String(chapterId))
 }
+
