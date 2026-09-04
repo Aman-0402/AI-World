@@ -30,10 +30,19 @@ export default function Notifications() {
             sorted.map((n) => (
               <div
                 key={n.id}
-                className="mb-4 break-inside-avoid rounded-2xl border border-slate-200/70 bg-[#FFFCF5] p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:p-6"
+                className={`mb-4 break-inside-avoid rounded-2xl border bg-[#FFFCF5] p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:p-6 ${
+                  n.urgent ? 'border-red-200 border-l-4 border-l-red-500' : 'border-slate-200/70'
+                }`}
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <h2 className="font-display text-lg font-bold text-slate-900">{n.title}</h2>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h2 className={`font-display text-lg font-bold ${n.urgent ? 'text-red-700' : 'text-slate-900'}`}>{n.title}</h2>
+                    {n.urgent && (
+                      <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-red-700">
+                        Urgent
+                      </span>
+                    )}
+                  </div>
                   {n.date && <span className="text-xs font-medium text-slate-400">{n.date}</span>}
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-slate-700">{n.message}</p>
@@ -60,7 +69,9 @@ export default function Notifications() {
                 {n.link && n.link.to && (
                   <Link
                     to={n.link.to}
-                    className="mt-4 inline-flex items-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+                    className={`mt-4 inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md ${
+                      n.urgent ? 'bg-gradient-to-r from-red-600 to-rose-500' : 'bg-gradient-to-r from-violet-600 to-cyan-500'
+                    }`}
                   >
                     {n.link.label}
                   </Link>
@@ -70,7 +81,9 @@ export default function Notifications() {
                     href={n.link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+                    className={`mt-4 inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow-md ${
+                      n.urgent ? 'bg-gradient-to-r from-red-600 to-rose-500' : 'bg-gradient-to-r from-violet-600 to-cyan-500'
+                    }`}
                   >
                     {n.link.label}
                   </a>

@@ -1,3 +1,5 @@
+import hrmNotesUrl from '../assets/HRM_Complete_Notes.pdf?url'
+
 export const notifications = [
   {
     id: 1,
@@ -29,6 +31,14 @@ export const notifications = [
     message: 'Fill this form and upload your resume.',
     date: '2026-08-24',
     link: { href: 'https://forms.gle/4Gzu4Bnd1PFHowSr8', label: 'Open the Form' },
+  },
+  {
+    id: 4,
+    title: 'HRM Complete Notes',
+    message: 'HRM complete notes are now available — download the PDF below.',
+    date: '2026-09-04',
+    urgent: true,
+    link: { href: hrmNotesUrl, label: 'Download HRM Notes (PDF)' },
   },
 ]
 

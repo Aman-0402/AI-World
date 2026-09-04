@@ -8,11 +8,14 @@ const PREVIEW_COUNT = 3
 export default function NotificationBell() {
   const [open, setOpen] = useState(false)
   const [unreadCount, setUnreadCount] = useState(0)
+  const [hasUrgentUnread, setHasUrgentUnread] = useState(false)
   const containerRef = useRef(null)
 
   useEffect(() => {
     const seenIds = getSeenIds()
-    setUnreadCount(notifications.filter((n) => !seenIds.includes(n.id)).length)
+    const unseen = notifications.filter((n) => !seenIds.includes(n.id))
+    setUnreadCount(unseen.length)
+    setHasUrgentUnread(unseen.some((n) => n.urgent))
   }, [])
 
   useEffect(() => {
@@ -47,7 +50,11 @@ export default function NotificationBell() {
       >
         <Bell className="h-4.5 w-4.5" aria-hidden="true" />
         {unreadCount > 0 && (
-          <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 px-1 text-[10px] font-bold text-white">
+          <span
+            className={`absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-bold text-white ${
+              hasUrgentUnread ? 'bg-gradient-to-br from-red-600 to-rose-500' : 'bg-gradient-to-br from-violet-600 to-fuchsia-500'
+            }`}
+          >
             {unreadCount}
           </span>
         )}
@@ -65,7 +72,14 @@ export default function NotificationBell() {
             <div className="flex flex-col divide-y divide-slate-100">
               {preview.map((n) => (
                 <div key={n.id} className="px-4 py-3 transition hover:bg-slate-50">
-                  <p className="text-sm font-semibold text-slate-900">{n.title}</p>
+                  <div className="flex items-center gap-2">
+                    <p className={`text-sm font-semibold ${n.urgent ? 'text-red-700' : 'text-slate-900'}`}>{n.title}</p>
+                    {n.urgent && (
+                      <span className="rounded-full bg-red-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-red-700">
+                        Urgent
+                      </span>
+                    )}
+                  </div>
                   <p className="mt-0.5 line-clamp-2 text-sm text-slate-600">{n.message}</p>
                   {n.date && <p className="mt-1 text-xs text-slate-400">{n.date}</p>}
                 </div>

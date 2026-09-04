@@ -31,10 +31,21 @@ export default function NotificationPopup() {
         >
           <X className="h-4 w-4" aria-hidden="true" />
         </button>
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-cyan-500 text-white">
+        <div
+          className={`flex h-10 w-10 items-center justify-center rounded-full text-white ${
+            notification.urgent ? 'bg-gradient-to-br from-red-600 to-rose-500' : 'bg-gradient-to-br from-violet-600 to-cyan-500'
+          }`}
+        >
           <Bell className="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 className="font-display mt-4 text-lg font-bold text-slate-900">{notification.title}</h2>
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <h2 className="font-display text-lg font-bold text-slate-900">{notification.title}</h2>
+          {notification.urgent && (
+            <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-red-700">
+              Urgent
+            </span>
+          )}
+        </div>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">{notification.message}</p>
         {notification.steps && (
           <ol className="mt-3 flex flex-col gap-1.5">
@@ -53,7 +64,9 @@ export default function NotificationPopup() {
           <Link
             to={notification.link.to}
             onClick={handleClose}
-            className="mt-5 flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+            className={`mt-5 flex w-full items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:shadow-md ${
+              notification.urgent ? 'bg-gradient-to-r from-red-600 to-rose-500' : 'bg-gradient-to-r from-violet-600 to-cyan-500'
+            }`}
           >
             {notification.link.label}
           </Link>
@@ -64,7 +77,9 @@ export default function NotificationPopup() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleClose}
-            className="mt-5 flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+            className={`mt-5 flex w-full items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:shadow-md ${
+              notification.urgent ? 'bg-gradient-to-r from-red-600 to-rose-500' : 'bg-gradient-to-r from-violet-600 to-cyan-500'
+            }`}
           >
             {notification.link.label}
           </a>
