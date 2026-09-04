@@ -72,14 +72,7 @@ export default function NotificationBell() {
             <div className="flex flex-col divide-y divide-slate-100">
               {preview.map((n) => (
                 <div key={n.id} className="px-4 py-3 transition hover:bg-slate-50">
-                  <div className="flex items-center gap-2">
-                    <p className={`text-sm font-semibold ${n.urgent ? 'text-red-700' : 'text-slate-900'}`}>{n.title}</p>
-                    {n.urgent && (
-                      <span className="rounded-full bg-red-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-red-700">
-                        Urgent
-                      </span>
-                    )}
-                  </div>
+                  <p className={`text-sm font-semibold ${n.urgent ? 'text-red-700' : 'text-slate-900'}`}>{n.title}</p>
                   <p className="mt-0.5 line-clamp-2 text-sm text-slate-600">{n.message}</p>
                   {n.date && <p className="mt-1 text-xs text-slate-400">{n.date}</p>}
                 </div>

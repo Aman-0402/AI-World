@@ -39,6 +39,7 @@ export const notifications = [
     message: 'HRM complete notes are now available — download the PDF below.',
     date: '2026-09-04',
     urgent: true,
+    silent: true,
     link: { href: hrmNotesUrl, label: 'Download HRM Notes (PDF)' },
   },
   {
@@ -46,6 +47,8 @@ export const notifications = [
     title: 'Marketing Complete Notes',
     message: 'Marketing complete notes are now available — download the PDF below.',
     date: '2026-09-04',
+    urgent: true,
+    silent: true,
     link: { href: marketingNotesUrl, label: 'Download Marketing Notes (PDF)' },
   },
 ]

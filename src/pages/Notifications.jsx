@@ -35,14 +35,7 @@ export default function Notifications() {
                 }`}
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <h2 className={`font-display text-lg font-bold ${n.urgent ? 'text-red-700' : 'text-slate-900'}`}>{n.title}</h2>
-                    {n.urgent && (
-                      <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-red-700">
-                        Urgent
-                      </span>
-                    )}
-                  </div>
+                  <h2 className={`font-display text-lg font-bold ${n.urgent ? 'text-red-700' : 'text-slate-900'}`}>{n.title}</h2>
                   {n.date && <span className="text-xs font-medium text-slate-400">{n.date}</span>}
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-slate-700">{n.message}</p>

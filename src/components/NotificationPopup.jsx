@@ -7,7 +7,7 @@ export default function NotificationPopup() {
   const [notification, setNotification] = useState(null)
 
   useEffect(() => {
-    const unseen = getUnseenNotifications()
+    const unseen = getUnseenNotifications().filter((n) => !n.silent)
     if (unseen.length > 0) {
       setNotification(unseen[unseen.length - 1])
     }
@@ -38,14 +38,9 @@ export default function NotificationPopup() {
         >
           <Bell className="h-5 w-5" aria-hidden="true" />
         </div>
-        <div className="mt-4 flex flex-wrap items-center gap-2">
-          <h2 className="font-display text-lg font-bold text-slate-900">{notification.title}</h2>
-          {notification.urgent && (
-            <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-red-700">
-              Urgent
-            </span>
-          )}
-        </div>
+        <h2 className={`font-display mt-4 text-lg font-bold ${notification.urgent ? 'text-red-700' : 'text-slate-900'}`}>
+          {notification.title}
+        </h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">{notification.message}</p>
         {notification.steps && (
           <ol className="mt-3 flex flex-col gap-1.5">
