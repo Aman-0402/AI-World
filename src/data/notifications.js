@@ -1,6 +1,3 @@
-import hrmNotesUrl from '../assets/HRM_Complete_Notes.pdf?url'
-import marketingNotesUrl from '../assets/Marketing_Complete_Notes.pdf?url'
-
 export const notifications = [
   {
     id: 1,
@@ -35,21 +32,12 @@ export const notifications = [
   },
   {
     id: 4,
-    title: 'HRM Complete Notes',
-    message: 'HRM complete notes are now available — download the PDF below.',
+    title: 'Notes',
+    message: 'Complete notes for all subjects are now available — view or download any of them.',
     date: '2026-09-04',
     urgent: true,
     silent: true,
-    link: { href: hrmNotesUrl, label: 'Download HRM Notes (PDF)' },
-  },
-  {
-    id: 5,
-    title: 'Marketing Complete Notes',
-    message: 'Marketing complete notes are now available — download the PDF below.',
-    date: '2026-09-04',
-    urgent: true,
-    silent: true,
-    link: { href: marketingNotesUrl, label: 'Download Marketing Notes (PDF)' },
+    link: { to: '/notes', label: 'View All Notes' },
   },
 ]
 
