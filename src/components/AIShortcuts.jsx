@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Bot, Sparkles, MessageCircleMore, FolderOpenDot, Keyboard, X } from 'lucide-react'
+import { Bot, Sparkles, MessageCircleMore, FolderOpenDot, Keyboard, Sheet, X } from 'lucide-react'
 
 const tools = [
   { name: 'ChatGPT', href: 'https://chat.openai.com', icon: MessageCircleMore },
@@ -11,6 +11,8 @@ const tools = [
     icon: FolderOpenDot,
   },
   { name: 'Typing Practice', href: 'https://www.typing.com', icon: Keyboard },
+  { name: 'Google Sheets', href: 'https://sheets.new', icon: Sheet },
+  { name: 'Excel Online', href: 'https://excel.new', icon: Sheet },
 ]
 
 export default function AIShortcuts() {
