@@ -1,9 +1,29 @@
-import { Eye, FileDown, FileText } from 'lucide-react'
+import { Eye, FileDown, FileText, Lock } from 'lucide-react'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import { completeNotes } from '../data/completeNotes.js'
 
+const NOTES_LOCKED = true
+
 export default function NotesGrid() {
+  if (NOTES_LOCKED) {
+    return (
+      <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
+        <Navbar />
+        <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center px-4 py-10 text-center sm:px-6">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-200 text-slate-500">
+            <Lock className="h-6 w-6" aria-hidden="true" />
+          </div>
+          <h1 className="font-display mt-5 text-2xl font-bold text-slate-900">Notes Locked</h1>
+          <p className="mt-2 max-w-md text-sm text-slate-600">
+            Complete notes aren't available yet — check back soon.
+          </p>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
   return (
     <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
