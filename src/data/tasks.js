@@ -340,26 +340,52 @@ export const tasks = [
   {
     id: 13,
     chapterId: 13,
-    title: 'Clean a Messy Dataset and Verify an AI-Generated Formula',
-    question: 'AI can write an Excel formula in seconds — but how do you know the formula it wrote is actually calculating the right thing?',
+    title: 'Data Cleaning with AI — Activity 1',
+    question: 'AI can help you spot a problem and suggest a fix — but who decides whether the fix is actually correct?',
     whatToDo:
-      'Use Microsoft Copilot or ChatGPT to help clean a sample dataset and generate the formula needed to analyze it, then manually verify the formula on a small sample before trusting it on the full dataset — a formula that looks correct and a formula that is correct are not the same thing.',
+      'Use the attached raw transactions spreadsheet (Transactions sheet, 116 rows). Rule for this activity: AI can help you spot a problem and suggest a fix, but you decide whether the fix is correct — never delete or change a row just because AI told you to.',
     steps: [
-      'Open a spreadsheet with messy or inconsistent data (duplicates, blanks, inconsistent formatting, mismatched capitalization) — the messier the data, the more useful this exercise is.',
-      'Ask Copilot or ChatGPT how to identify and remove duplicates and fix inconsistent entries. Be specific about what inconsistent means in your data — for example, some rows spelling out the country name and others using an abbreviation — since a vague clean-this-up request gives AI no criteria to work from.',
-      'Ask for a formula to calculate a specific metric (e.g. average, growth rate, percentage of total). State exactly which column and which condition the formula should use, so there is no ambiguity about what it is supposed to calculate.',
-      'Before applying the formula to the whole dataset, pick 3-5 rows, calculate the expected result by hand, and compare against what the formula actually returns for those same rows.',
-      'Reflection: if the formula was wrong on your manual check, what part of your original instruction was ambiguous enough to cause that? A wrong formula is often a sign of an underspecified prompt, not just an AI mistake.',
+      {
+        intro: 'Step 1 — Understand the Dataset (no editing yet). On a new sheet called My Work, answer:',
+        checklist: [
+          'What does one row represent?',
+          'Can the same customer name appear more than once legitimately? Give a reason.',
+        ],
+      },
+      'Step 2 — Ask AI to Build a Cleaning Checklist. Use a prompt like this, edited into your own words rather than copied blindly: "I have an Excel dataset of customer orders with 116 rows. Help me build a data-cleaning checklist covering duplicate records, missing values, inconsistent text formatting, date formatting problems, and unusual values. For each issue, explain how I can check for it in Excel. Do not modify or invent any data." Paste the checklist into My Work, then inspect the real dataset yourself.',
+      {
+        intro: 'Step 3 — Find and Classify the Problems. In My Work, list:',
+        checklist: [
+          'Rows you believe are true duplicates (same order re-entered) — and why.',
+          'Rows that look like duplicates but might be legitimate repeat customers — and why.',
+          'Rows with missing values (City, Phone, PurchaseDate, or UnitsSold) — for each, decide: leave blank, trace back to source, estimate, or can\'t tell.',
+          'Rows with inconsistent text (capitalization, extra spaces).',
+          'The different date formats you can find in PurchaseDate (list at least 3).',
+          'Any UnitsSold value that looks unusual — is it a data-entry error, or could it be a real bulk order? What would you check before deciding?',
+        ],
+      },
+      {
+        intro: 'Step 4 — Clean It. Using Excel functions (ask AI to explain each one before you use it):',
+        checklist: [
+          'Standardize name/city capitalization, e.g. =PROPER(A2)',
+          'Remove extra spaces, e.g. =TRIM(A2)',
+          "Handle the true duplicates you identified in Step 3 using Excel's Remove Duplicates, applied only to the rows you decided are genuine duplicates — not the whole sheet blindly.",
+        ],
+      },
+      'Step 5 — Justify Your Decisions. In My Work, write 3-4 sentences: what did you keep, what did you remove, and why? What would you still want to verify with a human before finalizing this dataset?',
+      'Submission: submit the edited workbook with My Work completed and the cleaned Transactions sheet.',
     ],
-    requiredFile: null,
-    downloadUrl: null,
+    requiredFile: 'activity1_raw_data_cleaning.xlsx',
+    downloadUrl: getTaskFileUrl('activity1_raw_data_cleaning.xlsx'),
     whatYouLearn: [
-      'How AI can accelerate data cleaning in Excel once you give it specific, concrete criteria instead of a vague "clean this up" instruction.',
-      'Why manually verifying an AI-generated formula on a small, hand-checkable sample is the only way to catch a formula that looks plausible but calculates the wrong thing.',
+      'How to use AI to generate a structured data-cleaning checklist, then apply your own judgment to decide which rows are genuine duplicates versus legitimate repeat entries.',
+      'Why blindly applying Remove Duplicates to a whole sheet is risky, and how to scope cleaning functions like PROPER and TRIM to only the rows that actually need them.',
     ],
     questions: [
-      'What data issue took the longest to explain clearly to the AI?',
-      'Did the generated formula match your manual calculation on the first try, or did you have to correct your instructions and re-ask?',
+      'What is the difference between a duplicate row and a legitimate repeat customer? How did you tell them apart here?',
+      'Name one missing value you did not fill in automatically. Why?',
+      'Why is it risky to apply Remove Duplicates to an entire sheet without first deciding what one row represents?',
+      'What is one Excel function AI suggested that you had to ask it to explain before using?',
     ],
   },
   {
@@ -2118,6 +2144,96 @@ export const tasks = [
     questions: [
       'Does "40% of jobs eliminated" mean jobs disappearing or jobs changing — and does that distinction change how you would present the claim?',
       'Which step in the research formula (Discover, Source, Trace, Verify, Cross-check, Cite, Write) do you think you will actually keep using after this chapter?',
+    ],
+  },
+  {
+    id: 79,
+    chapterId: 13,
+    title: 'AI-Assisted Formula Generation — Activity 2',
+    question: 'Why is describing the business problem to AI a better habit than just asking for the formula?',
+    whatToDo:
+      "Use the attached Sales sheet (105 rows). Rule for this activity: describe the business problem to AI in your own words — don't just ask for the formula directly. And never use a formula you can't explain.",
+    steps: [
+      {
+        intro: 'Step 1 — Look at the Data. Columns are:',
+        checklist: ['SaleID', 'Region', 'Product', 'Month', 'UnitsSold', 'Price', 'CostPerUnit', 'DiscountPercent'],
+        outro: 'On a new sheet called My Work, write one line describing what each column means in plain business language.',
+      },
+      {
+        intro:
+          'Step 2 — Build These 5 Formulas (with AI\'s help). For each one, first describe the business need to AI in a sentence, then ask it to turn that into a formula. Example starting prompt style: "I want to calculate the revenue for each sale where units sold is in column E and price is in column F. What formula should I use?" Build these, as new columns in Sales:',
+        checklist: [
+          'Revenue = Units Sold × Price',
+          'Discount Amount = Revenue × Discount %',
+          'Net Revenue = Revenue − Discount Amount',
+          'Total Cost = Units Sold × Cost per Unit',
+          'Profit Margin = (Net Revenue − Total Cost) ÷ Net Revenue',
+        ],
+      },
+      'Step 3 — Explain Every Formula. For each formula, ask AI: "Explain this formula step by step and tell me what each cell reference represents." Write the explanation in your own words (not AI\'s exact wording) in My Work — one to two sentences per formula.',
+      'Step 4 — Manually Verify. Pick any 3 rows. Calculate Revenue, Net Revenue, and Profit Margin by hand. Do they match your formulas? If not, find the mistake — is it the formula or your manual math? Record this check in My Work.',
+      {
+        intro:
+          "Step 5 — One Formula AI Gets Wrong (on purpose). Ask AI for a formula to calculate average profit margin by product using a function it suggests (it may offer something Excel can't run, or something more advanced than what you've learned).",
+        checklist: [
+          'Try it — does it work in your Excel?',
+          'If it fails or errors, ask AI: "That gave an error. What\'s a simpler way to do this with functions like AVERAGEIF?"',
+          'Note what happened in My Work. This is a normal part of working with AI — not every suggestion works the first time.',
+        ],
+      },
+    ],
+    requiredFile: 'activity2_raw_data_formulas.xlsx',
+    downloadUrl: getTaskFileUrl('activity2_raw_data_formulas.xlsx'),
+    whatYouLearn: [
+      'How to describe a business need in plain language and let AI translate it into a formula, rather than jumping straight to asking for the formula.',
+      "Why manually verifying formulas like Revenue, Net Revenue, and Profit Margin on a few rows by hand is the only way to confirm AI's formula actually matches your intended calculation.",
+    ],
+    questions: [
+      "What does Net Revenue represent that plain Revenue doesn't?",
+      'Why does dividing by Net Revenue (not Total Cost) give you profit margin?',
+      "Describe, in your own words, one time AI's first suggestion didn't work and what you did next.",
+      'Why is describing the business problem a better habit than just asking for the formula?',
+    ],
+  },
+  {
+    id: 80,
+    chapterId: 13,
+    title: 'Outliers & Business Judgment — Activity 3',
+    question: "AI can flag an unusual value. Who decides, using business context, whether it's an error or a real customer?",
+    whatToDo:
+      "Use the attached CustomerPurchases sheet (106 rows). Rule for this activity: AI can flag an unusual value — only you decide, using business context, whether it's an error or a real customer.",
+    steps: [
+      'Step 1 — Define Best Customer Before You Calculate Anything. Before opening AI, write in a new sheet called My Work, in your own words, what would make someone your best customer — highest spend, most orders, longest relationship, or something else. There is no single right answer — commit to a definition first.',
+      'Step 2 — Ask AI to Scan for Unusual Values. Use a prompt like this, edited to fit your data: "I have a dataset of 106 customers with TotalOrders and TotalSpend columns. Help me identify rows where values look unusually high or low compared to the rest of the data, and explain why each one might be flagged. Do not delete or change any data — just flag and explain." Paste AI\'s flagged list into My Work.',
+      {
+        intro: 'Step 3 — Investigate Each Flagged Row Yourself. For every row AI flagged, decide and write down:',
+        checklist: [
+          'Is this a plausible large/frequent customer (e.g. a corporate or bulk buyer)? What in the data supports that?',
+          'Or does it look like a data-entry error (e.g. an implausible extra digit)? What in the data suggests that?',
+          'What additional information (not in this sheet) would you want before making a final call?',
+        ],
+      },
+      {
+        intro: 'Step 4 — Handle Missing Values. Some rows are missing LastPurchaseDate or CustomerSince. In My Work:',
+        checklist: [
+          'Would you leave these blank, estimate them, or flag them for follow-up with the source system?',
+          'Explain your reasoning — would your answer change depending on what you are using the data for, e.g. a loyalty report vs. a monthly sales total?',
+        ],
+      },
+      'Step 5 — Apply Your Definition. Using the definition of best customer you wrote in Step 1, use a formula (ask AI to help, then explain it) to identify your top 10 customers by your definition. Add a Rank or TopCustomer column to support it.',
+      'Step 6 — Would You Send This As-Is? Imagine your manager asked for a top-customers list by end of day, and AI already cleaned everything and picked the top 10 for you automatically using its own default definition (usually highest total spend). In My Work, write 3-4 sentences: would you send that straight to your manager? What would you check first?',
+    ],
+    requiredFile: 'activity3_raw_data_outliers.xlsx',
+    downloadUrl: getTaskFileUrl('activity3_raw_data_outliers.xlsx'),
+    whatYouLearn: [
+      'Why defining a business concept like best customer before calculating anything prevents you from accidentally adopting AI\'s default definition without noticing.',
+      'How to use business context — not just statistical unusualness — to decide whether a flagged value is a data-entry error or a legitimate outlier.',
+    ],
+    questions: [
+      'Why might two people reasonably define best customer differently? What did you choose and why?',
+      'Pick one flagged row you decided was legitimate. What made you keep it instead of removing it?',
+      'Pick one flagged row you decided was likely an error. What made you suspicious?',
+      "What is the risk of letting AI apply its own default definition of best without checking what you actually meant?",
     ],
   },
 ]
