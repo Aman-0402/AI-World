@@ -391,24 +391,46 @@ export const tasks = [
   {
     id: 14,
     chapterId: 14,
-    title: 'Build an Executive Dashboard',
-    question: 'How can AI turn raw weekly updates into a KPI dashboard view?',
-    whatToDo: 'Use the attached real weekly update bullets and ask an AI tool to organize them into KPI categories suitable for a dashboard.',
+    title: 'KPI Identification — What Actually Belongs on a Dashboard',
+    question: 'If you were handed this file with no other instructions, what would you actually put on the dashboard — and what is just data the dashboard is built from?',
+    whatToDo:
+      "Use the attached Transactions sheet (120 rows, 13 columns). Rule for this activity: don't start with charts — start with the business questions a manager would actually ask.",
     steps: [
-      'Open the attached weekly update bullets file.',
-      'Prompt Microsoft Copilot or Excel AI: "Organize these updates into categories: Progress, Risks, Blockers, and Metrics."',
-      'Identify which bullets could become a trackable KPI (e.g. sprint velocity, on-time delivery).',
-      'Sketch how you would visualize two of those KPIs as a chart.',
+      'Step 1 — Write the Business Questions First. Before opening the data properly, write in a new sheet called My Work: if you were handed this file by your manager with no other instructions, what 5-6 questions would they realistically want answered — things like how much you sold, or which product or region is doing best.',
+      "Step 2 — Look at Every Column. List all 13 columns in My Work. For each one, answer: does this belong on an executive dashboard, or is it just data the dashboard is built from? Example judgment call: TransactionID is data, not a KPI, because it doesn't summarize anything meaningful on its own.",
+      'Step 3 — Ask AI to Propose KPIs, Then Push Back. Prompt AI with something like: "I have a sales transactions dataset with columns TransactionID, Date, CustomerID, CustomerName, Phone, City, Product, Region, Quantity, Price, Sales, Cost, Profit. Suggest 5-7 KPIs for an executive sales dashboard, and explain what business question each one answers. Do not invent information not in the dataset." Paste AI\'s answer into My Work.',
+      {
+        intro: 'Then answer honestly:',
+        checklist: [
+          "Did AI suggest anything that's really just a raw column, not a KPI?",
+          'Did AI miss a KPI you think matters?',
+        ],
+      },
+      {
+        intro: 'Step 4 — Finalize Your KPI List (max 7). Pick your final 5-7 KPIs. For each, write in My Work:',
+        checklist: [
+          'The KPI name',
+          'The formula/calculation (e.g. Average Order Value = Total Sales ÷ Total Orders)',
+          'The business question it answers',
+        ],
+      },
+      {
+        intro:
+          'Step 5 — Calculate Them. Using formulas in Excel (ask AI to help write and explain each one), calculate your final KPIs from the Transactions sheet:',
+        checklist: ['Total Sales', 'Total Profit', 'Total Orders', 'Average Order Value', 'Top Product (by Sales)', 'Top Region (by Sales)'],
+      },
     ],
-    requiredFile: 'weekly_update_bullets_sample.txt',
-    downloadUrl: getTaskFileUrl('weekly_update_bullets_sample.txt'),
+    requiredFile: 'kpi_activity1_raw_data.xlsx',
+    downloadUrl: getTaskFileUrl('kpi_activity1_raw_data.xlsx'),
     whatYouLearn: [
-      'How to convert unstructured status updates into dashboard-ready categories.',
-      'How to pick which raw updates are actually measurable KPIs.',
+      'How to separate raw data columns from actual KPIs by asking whether a number summarizes something meaningful on its own.',
+      'Why pushing back on an AI-suggested KPI list — checking for raw columns mistaken as KPIs, or KPIs it missed — matters more than accepting the first list AI gives you.',
     ],
     questions: [
-      'Which bullet points were not measurable, and why?',
-      'What chart type would best represent the KPI you picked?',
+      'Name two columns in the raw data that you decided should not appear on the dashboard. Why not?',
+      'What is the difference between data that exists and a KPI that matters? Give an example from this dataset.',
+      'If your manager only had 10 seconds to look at your dashboard, which 2 of your KPIs would you want them to see first, and why?',
+      'Did AI suggest any KPI you disagreed with? What was your reasoning for changing it?',
     ],
   },
   {
@@ -2234,6 +2256,93 @@ export const tasks = [
       'Pick one flagged row you decided was legitimate. What made you keep it instead of removing it?',
       'Pick one flagged row you decided was likely an error. What made you suspicious?',
       "What is the risk of letting AI apply its own default definition of best without checking what you actually meant?",
+    ],
+  },
+  {
+    id: 81,
+    chapterId: 14,
+    title: 'Choosing the Right Chart (and Spotting Misleading Ones)',
+    question: 'Can a chart be completely truthful and still mislead the person looking at it?',
+    whatToDo:
+      "Use the attached SalesData sheet (130 rows) and EmployeeSalaries sheet (100 rows). Rule for this activity: pick the chart based on what you're trying to communicate, not because it looks nice.",
+    steps: [
+      {
+        intro:
+          'Part A — Choosing the Right Chart (use the SalesData sheet). For each of the following, decide which chart type you would use (Line / Bar / Pie / KPI card) and explain why in a new sheet called My Work:',
+        checklist: [
+          'Total sales trend across the ~2 years in this dataset, by month.',
+          'Comparing total sales across the 6 products.',
+          'Comparing total sales across the 5 regions.',
+          'Showing a single number: total sales across the whole dataset.',
+        ],
+      },
+      "For each, ask AI why that chart type is appropriate for that kind of comparison, and write the reasoning in your own words. Then actually build the 3 charts (skip the KPI card, just calculate the number) using Excel's chart tools or PivotTables/PivotCharts.",
+      'Part B — Can a Truthful Chart Still Mislead? (use SalesData). Build your monthly sales trend line chart from Part A again, but this time set the vertical axis to start at a value close to your lowest month instead of zero. Compare it to a version where the axis starts at zero. In My Work, describe: does the same underlying data look different depending on the axis? Which version would you actually publish, and why?',
+      'Part C — When the Average Lies (use EmployeeSalaries). Calculate the average salary across all 100 employees using =AVERAGE(), then the median salary using =MEDIAN(). Ask AI to explain why the average and median might be very different in this dataset, and what that tells you about the data.',
+      'In My Work, answer: if a company announced its average employee salary using the AVERAGE() number, would that fairly represent what a typical employee earns here? What would you report instead, and why?',
+    ],
+    requiredFile: 'kpi_activity2_raw_data.xlsx',
+    downloadUrl: getTaskFileUrl('kpi_activity2_raw_data.xlsx'),
+    whatYouLearn: [
+      "Why the right chart type depends on what you're trying to show — a trend needs a line, a category comparison needs a bar, and too many categories break a pie chart.",
+      "How a chart's axis choice, or using average instead of median, can make truthful data look misleading without a single number being wrong.",
+    ],
+    questions: [
+      'What is the risk of using a pie chart for 15 categories instead of a bar chart?',
+      'Explain, in your own words, how a chart can be factually correct and still misleading.',
+      'Why did the average and median salary differ so much in Part C? What does that tell you about using average without checking the underlying distribution?',
+      'Give one rule you will follow from now on before publishing any chart.',
+    ],
+  },
+  {
+    id: 82,
+    chapterId: 14,
+    title: 'Build Your KPI Dashboard',
+    question: 'Can you go from raw sales data to a one-page dashboard that actually supports a decision, not just a set of pretty charts?',
+    whatToDo:
+      'Use the attached SalesData sheet (138 rows, 12 months of 2026). Framework for this activity: Data → KPI → Visualization → Insight → Decision — not Data → Charts → Make it pretty.',
+    steps: [
+      'Step 1 — Ask Business Questions. In a new sheet called My Work, write down what a manager would want to know from this data — for example, whether performance is improving, which product or region is doing best, or whether there are any unusual changes.',
+      'Step 2 — Choose Your KPIs (5-7 maximum). Pick from things like Total Sales, Total Profit, Total Orders, Average Order Value, Sales Growth (month over month), Top Product, Top Region. Write your final list and why each one answers a question from Step 1.',
+      'Step 3 — Choose Your Visuals. For each KPI/comparison, decide the right chart (Line for trend, Bar for comparison, KPI card for a single headline number). Write your choices in My Work before building anything.',
+      {
+        intro: 'Step 4 — Build a One-Page Dashboard. Using PivotTables/PivotCharts or Excel charts, lay it out as:',
+        checklist: [
+          'Top: KPI cards (Total Sales, Total Profit, Total Orders, Growth %)',
+          'Middle: Monthly sales trend (line chart)',
+          'Bottom: Sales by Product and Sales by Region (bar charts)',
+        ],
+        outro: 'Keep it to one page. Resist adding more than 6-7 visual elements.',
+      },
+      'Step 5 — Ask AI for Insights (carefully). Once your dashboard numbers are ready, use this exact style of prompt: "Analyze the following KPI results: [paste your numbers]. Identify: three important business observations, two unusual or potentially concerning patterns, two questions that require further investigation, and three possible business actions. Use only the information provided. Do not invent causes or unsupported explanations. Clearly distinguish observations from hypotheses." Paste AI\'s response into My Work.',
+      {
+        intro: "Step 6 — Fact-Check AI's Insights. Go through AI's response line by line. For each insight, mark it:",
+        checklist: [
+          'Observation — directly supported by your numbers (e.g. sales grew each month from Jan to Dec).',
+          "Hypothesis — a possible explanation AI added that the data doesn't actually prove (e.g. because of a marketing campaign — is that actually in your data? No.)",
+        ],
+        outro: 'If AI stated any hypothesis as if it were a fact, rewrite it as a question that needs further investigation instead.',
+      },
+      {
+        intro: 'Step 7 — The Growth-vs-Profit Check. Look specifically at Sales, Cost, and Profit trends across the year.',
+        checklist: [
+          'Is Sales growth matched by Profit growth every month?',
+          'If not, in which months does the gap appear, and what might be happening?',
+          'Would you report strong business growth based on Sales alone, or investigate further first? Write your answer in My Work.',
+        ],
+      },
+    ],
+    requiredFile: 'kpi_activity3_raw_data.xlsx',
+    downloadUrl: getTaskFileUrl('kpi_activity3_raw_data.xlsx'),
+    whatYouLearn: [
+      "The Data → KPI → Visualization → Insight → Decision framework, and why starting from charts instead of business questions produces a dashboard that looks good but doesn't actually support a decision.",
+      'How to fact-check AI-generated dashboard insights by separating what the numbers actually show (observation) from what AI added as a plausible-sounding explanation (hypothesis).',
+    ],
+    questions: [
+      'What is the difference between an observation and a hypothesis? Give one example of each from your own dashboard.',
+      'Why is correlation-is-not-causation relevant to how you read AI\'s insights?',
+      'Describe the Level 1 / Level 2 / Level 3 thinking (What happened? Why? What should we do?) using one real number from your dashboard.',
+      'If you had to remove one chart from your dashboard to keep it to one page, which would you remove and why?',
     ],
   },
 ]
