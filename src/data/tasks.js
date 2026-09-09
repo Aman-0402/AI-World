@@ -436,24 +436,37 @@ export const tasks = [
   {
     id: 15,
     chapterId: 15,
-    title: 'Create a Business Presentation',
-    question: 'How can AI help you go from bullet points to a structured presentation outline?',
-    whatToDo: 'Use Microsoft Copilot or Gamma AI to turn a business topic into a slide-by-slide presentation outline.',
+    title: 'Turn a Business Brief into a 5-Slide Story',
+    question: 'Can you turn a one-paragraph business brief into a 5-slide story that a business owner would actually find useful?',
+    whatToDo:
+      'Use this brief: "A local coffee shop near a college has seen a 25% increase in customers over the last six months. However, average order value has remained almost unchanged. Most students purchase low-priced beverages, while premium food items have low sales. The owner wants to increase revenue without significantly increasing prices." Work through it before touching AI, then use the exact prompt given, then review AI\'s output critically rather than accepting it.',
     steps: [
-      'Choose a business topic (e.g. a quarterly update, a product pitch).',
-      'Prompt the AI tool for a 10-slide outline including title, key points per slide, and a call to action.',
-      'Review the outline for logical flow and audience fit.',
-      'Identify two slides that would benefit from a chart or image.',
+      {
+        intro: 'Step 1 — Before touching AI, write down (on paper or in a doc):',
+        checklist: ['What is going well?', 'What is the actual problem?', 'What opportunity exists?'],
+      },
+      'Step 2 — Use this exact prompt with AI: "Create a 5-slide business presentation from this brief. The presentation should tell a clear story: 1. Current situation, 2. Key business problem, 3. Evidence, 4. Business insight, 5. Recommendation. For each slide provide: a message-driven title, maximum 3 supporting points, and a suggested visual. Audience: Business owner. Goal: Increase revenue without significantly increasing prices. Do not invent data that is not provided. Brief: [paste the brief above]"',
+      {
+        intro: "Step 3 — Review, don't accept. Answer honestly:",
+        checklist: [
+          'Does the story make sense start to finish?',
+          'Does every slide have a purpose?',
+          'Is AI inventing any information not in the brief?',
+          'Is the recommendation actually supported by the evidence given?',
+          'Would the coffee shop owner find this useful?',
+        ],
+      },
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How to use AI to structure a presentation before designing it.',
-      'How storytelling principles apply to a business slide deck.',
+      'How to turn a short business brief into a 5-part story arc (situation, problem, evidence, insight, recommendation) instead of a flat bullet-point summary.',
+      'Why reviewing an AI-generated presentation for invented data and unsupported recommendations matters more than reviewing it for polish.',
     ],
     questions: [
-      'Did the AI outline follow a logical narrative arc?',
-      'What would you reorder or cut from the AI-generated outline?',
+      'Which slide title did AI give you — is it message-driven (e.g. "Sales Increased 18%") or just a label (e.g. "Sales Performance")? Rewrite it if it\'s weak.',
+      'Did AI state anything as fact that the brief never mentioned? Quote it.',
+      "What's the single recommendation you'd keep if you could only keep one?",
     ],
   },
   {
@@ -2343,6 +2356,63 @@ export const tasks = [
       'Why is correlation-is-not-causation relevant to how you read AI\'s insights?',
       'Describe the Level 1 / Level 2 / Level 3 thinking (What happened? Why? What should we do?) using one real number from your dashboard.',
       'If you had to remove one chart from your dashboard to keep it to one page, which would you remove and why?',
+    ],
+  },
+  {
+    id: 83,
+    chapterId: 15,
+    title: 'Weak Prompt vs. Better Prompt',
+    question: 'Why do AI-generated presentations feel generic when you only give it a topic instead of a real brief?',
+    whatToDo:
+      'Run a weak, topic-only prompt first, then a better templated prompt with real specifics, then compare the two outputs side by side.',
+    steps: [
+      'Step 1 — Run the weak prompt first: "Make a PowerPoint about customer satisfaction." Look at what AI gives you. Note how generic or assumption-filled it is.',
+      'Step 2 — Now run a better prompt, using this template (fill in the brackets yourself): "Create a 5-slide presentation for [specific audience]. Objective: [specific decision this should support]. Audience: [who exactly will see this]. Use the following data: [paste real data or a real brief]. Focus on: [2-4 specific things]. Do not invent statistics or opinions not in the data."',
+      'Step 3 — Compare the two outputs side by side.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Why an AI prompt with only a topic produces a generic, assumption-filled presentation, while a prompt with a real audience, objective, and data produces something usable.',
+      'How to use a fill-in-the-bracket prompt template to force yourself to supply the specifics AI could never guess on its own.',
+    ],
+    questions: [
+      'List 3 concrete differences between the weak-prompt output and the better-prompt output.',
+      'What information did you have to supply that AI could never have guessed on its own?',
+      'In your own words, complete this sentence: "Better input → ___________ → Better presentation."',
+      'Why do AI-generated presentations "feel generic" when given only a topic instead of a brief?',
+    ],
+  },
+  {
+    id: 84,
+    chapterId: 15,
+    title: 'The CEO Test — Improving an AI Draft',
+    question: "Can you take AI's first-draft presentation and turn it into something that survives a CEO asking so what, why, and what do you recommend?",
+    whatToDo:
+      'Take the 5-slide output you generated in Activity 1 and apply "The Presentation Challenge" from class — cut, simplify, rewrite, and fact-check it.',
+    steps: [
+      "Step 1 — Find one slide that's unnecessary. Remove it and explain why it didn't earn its place.",
+      'Step 2 — Find one slide with too much information. Simplify it to a title + max 3 points.',
+      'Step 3 — Find one generic title. Rewrite it as a message-driven title.',
+      'Step 4 — Pick one recommendation AI gave you and ask AI directly: "What evidence from the brief supports this recommendation?" Read the answer critically — is the evidence actually there, or is AI justifying itself after the fact?',
+      {
+        intro: 'Step 5 — Run the CEO Test on your revised deck. Imagine your CEO asks, in order:',
+        checklist: ['So what?', 'Why?', 'What do you recommend?'],
+        outro: 'Can your presentation answer all three without you talking over it?',
+      },
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to apply "The Presentation Challenge" — cutting an unnecessary slide, simplifying an overloaded one, and rewriting a generic title into a message-driven one — to turn an AI first draft into something usable.',
+      'Why asking AI to justify its own recommendation after the fact sometimes reveals the evidence was thinner than the confident-sounding slide suggested.',
+    ],
+    questions: [
+      "Which slide did you cut, and what would have been lost if you'd left it in?",
+      'Write your before and after for the generic title you fixed.',
+      'Did the evidence-check in Step 4 hold up, or did you have to change/soften the recommendation?',
+      "In one sentence: what's the difference between a fact, a hypothesis, and a recommendation — and which one did AI most often blur together?",
+      "Did your revised deck pass the CEO Test? If not, what's still missing?",
     ],
   },
 ]
