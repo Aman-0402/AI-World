@@ -504,24 +504,29 @@ export const tasks = [
   {
     id: 17,
     chapterId: 17,
-    title: 'Create a Monthly Content Calendar',
-    question: 'How can AI help plan a month of social media content in advance?',
-    whatToDo: 'Use ChatGPT or Gemini to build a one-month content calendar for a business of your choice.',
+    title: 'Platform Selection — Audience Before Platform',
+    question: 'Is "which platform is popular" the right question when deciding where a business should post?',
+    whatToDo:
+      "Pick 2 businesses from the list, decide their target audience and where that audience actually spends time online, then compare your reasoning against AI's platform recommendation.",
     steps: [
-      'Choose a business type and its main social platform.',
-      'Prompt the AI for a monthly content calendar with post themes, dates, and formats.',
-      'Ask the AI to vary the content types (educational, promotional, behind-the-scenes).',
-      'Pick three posts and outline the caption for each.',
+      {
+        intro: 'Step 1 — Pick any 2 of these businesses:',
+        checklist: ['A B2B SaaS company', 'A luxury skincare brand', 'A local gym', 'A college food delivery startup'],
+        outro: 'For each, write down: who is the actual target audience, and where would they realistically spend time online?',
+      },
+      'Step 2 — Use this prompt: "I\'m deciding which social media platforms to prioritize for [business type] targeting [audience]. My main objective is [business objective]. Recommend which 2-3 platforms deserve the most effort and which I should deprioritize, and explain the reasoning for each. Do not assume I should be present on every platform."',
+      "Step 3 — Compare AI's answer to your own Step 1 reasoning.",
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How to use AI to plan content strategically instead of day-by-day.',
-      'Why a content calendar needs a mix of content types, not just promotions.',
+      'Why starting from the target audience and where they actually spend time online produces a better platform strategy than starting from which platform is currently popular.',
+      'How to ask AI to recommend which platforms to deprioritize, not just which to use — since being present everywhere is not a strategy.',
     ],
     questions: [
-      'Did the calendar have a good balance of content types?',
-      'Which post would you prioritize first, and why?',
+      'For your two businesses, which platform did you rule out completely, and why?',
+      "Did AI recommend a platform you hadn't considered? Do you agree with the reasoning?",
+      'Why is "which platform is popular" the wrong starting question for platform selection?',
     ],
   },
   {
@@ -2542,6 +2547,115 @@ export const tasks = [
       'Which item in the Final Quality Check did you answer no to, and what specifically needs to change?',
       'Name one AI suggestion you rejected because it would have changed the underlying facts or overstated the evidence.',
       "In one sentence: what is the difference between a functional presentation and a persuasive one, based on today's session?",
+    ],
+  },
+  {
+    id: 89,
+    chapterId: 17,
+    title: 'Content Pillars & the Content Matrix',
+    question: 'Why does "post something about the product" fail as a content plan, while a set of content pillars doesn\'t?',
+    whatToDo:
+      'Define 4-5 content pillars for a brand, build a pillars × formats content matrix, then sanity-check the pillars with AI.',
+    steps: [
+      'Step 1 — Choose a brand (real or invented). Define 4-5 content pillars for it, the way the coffee shop example did (Product, Education, Community, Behind-the-Scenes, Promotion — or your own set that fits the brand).',
+      'Step 2 — Build a content matrix: your pillars × 3-4 content formats (Reel, Carousel, Story, Poll, etc.) to generate a grid of possible content combinations, following the "5 pillars × 4 formats = 20 combinations" idea from class.',
+      'Step 3 — Use this prompt to sanity-check your pillars: "Here are the content pillars I\'ve defined for [brand]: [list them]. For each pillar, suggest 2 content formats that would work well, and explain why that format fits that pillar specifically. Do not suggest the same format for every pillar."',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to define content pillars for a brand and cross them with content formats to generate many concrete post ideas instead of guessing day-by-day.',
+      'Why content pillars survive as a repeatable content plan while a single instruction like "post about the product" doesn\'t.',
+    ],
+    questions: [
+      'List your 4-5 pillars and one topic idea under each.',
+      "Pick one pillar and show 2 different formats you'd use for it — how does the same pillar look different in each format?",
+      'Why does "post something about the product" fail as a content plan, but content pillars doesn\'t?',
+    ],
+  },
+  {
+    id: 90,
+    chapterId: 17,
+    title: 'Build the CampusBrew One-Month Content Calendar (Main Activity)',
+    question: 'Does an AI-generated content calendar actually hold up against variety, repetition, and balance checks — or does it just look full?',
+    whatToDo:
+      'Use the CampusBrew brand brief to generate a one-month Instagram content calendar, then audit it against seven specific checks before trusting it.',
+    steps: [
+      {
+        intro: 'Step 1 — Use the exact CampusBrew brand brief from class:',
+        checklist: [
+          'College coffee shop, audience 18-24',
+          'Objective: store visits, brand awareness, and student engagement',
+          'Content pillars: Products, Student lifestyle, Coffee education, Community, Promotions',
+          'Platform: Instagram',
+        ],
+      },
+      'Step 2 — Run this prompt: "Create a one-month Instagram content calendar for CampusBrew. Target audience: College students aged 18-24. Objectives: Increase store visits, brand awareness and student engagement. Content pillars: 1. Products, 2. Student lifestyle, 3. Coffee education, 4. Community, 5. Promotions. For each content idea provide: Date, Content pillar, Topic, Format, Short content concept, CTA. Requirements: Use varied formats. Do not repeat topics. Do not repeat hooks. Do not make every post promotional. Maintain a friendly, youthful and relatable tone. Avoid generic motivational content. Avoid unsupported statistics or claims."',
+      {
+        intro: 'Step 3 — Audit the calendar AI gives you against these checks:',
+        checklist: ['Variety', 'Repetition', 'Balance', 'Audience fit', 'Brand consistency', 'Platform fit', 'Business objective'],
+      },
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to run a full one-month content calendar prompt with explicit constraints (varied formats, no repeated topics/hooks, not every post promotional, no unsupported claims) instead of a vague content-ideas request.',
+      'How to audit an AI-generated calendar against concrete checks — variety, repetition, balance, audience fit, brand consistency, platform fit, business objective — instead of accepting it because it looks full.',
+    ],
+    questions: [
+      'Count AI\'s output: how many posts were promotional vs. non-promotional? Does that match the 70-20-10 idea from class, or is it skewed?',
+      'Find two posts that are secretly the same idea with different wording. What pillar/format would you change one of them to instead?',
+      'Pick one post and explain specifically why (or why not) a college student would actually stop scrolling for it.',
+      'Did AI include any statistic or claim (e.g. "students love our coffee") that isn\'t actually backed by anything? Flag it.',
+    ],
+  },
+  {
+    id: 91,
+    chapterId: 17,
+    title: "Breaking AI's Repetition Habit",
+    question: 'Does asking AI for more content ideas actually fix repetition, or just hide it better?',
+    whatToDo:
+      'Run a weak prompt for 15 Instagram captions, then a heavily constrained version, and compare which one actually produces different ideas.',
+    steps: [
+      'Step 1 — Run this weak prompt first and save the output: "Give me 15 Instagram captions for CampusBrew."',
+      'Step 2 — Now run the constrained version: "Create 15 Instagram content ideas for CampusBrew. Important requirements: Do not repeat topics. Do not repeat hooks. Do not use the same CTA more than twice. Do not make every post promotional. Use different content formats. Include educational, entertaining, community and product-focused ideas. Avoid generic motivational content. Avoid phrases such as \'Don\'t miss out\', \'Level up\', and \'Perfect for you\'. Each idea should provide a different reason for the audience to engage."',
+      'Step 3 — Compare both lists side by side.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Why a vague request like "give me 15 captions" produces reworded duplicates, while explicit constraints (no repeated topics/hooks/CTAs, banned generic phrases, a mix of content types) forces genuinely different ideas.',
+      'How to check AI output for content that repeats itself in a sneakier way — same idea, different wording — even after adding constraints.',
+    ],
+    questions: [
+      'In the weak-prompt output, find 3 captions that are really the same idea reworded. Quote them.',
+      'Did the constrained prompt actually produce more variety, or did AI still repeat itself in a sneakier way? Give an example either way.',
+      "What's the difference between 30 captions and 30 different ideas? Why does simply asking for more content not solve repetition?",
+    ],
+  },
+  {
+    id: 92,
+    chapterId: 17,
+    title: 'Brand Voice & Claim Verification',
+    question: 'Can a piece of AI-written marketing copy be completely convincing and still contain a claim nobody can actually back up?',
+    whatToDo:
+      'Write a brand voice brief, use it to rewrite two calendar posts in that voice, then hunt your full calendar for unverifiable claims.',
+    steps: [
+      'Step 1 — Write a brand voice brief for CampusBrew (or your Activity 2 brand) covering: tone, audience, language style, and what to avoid — following the format from class.',
+      'Step 2 — Take 2 posts from your Activity 3 calendar and run them through: "Rewrite this social media content using this brand voice: [paste your brand voice brief]. The content should feel like it was written by a real brand team, not a generic AI marketing tool. Content: [paste post]"',
+      'Step 3 — Go back through your full calendar and specifically hunt for unverifiable claims (e.g. "#1 student choice," "90% of customers prefer..."). List every one you find, and for each, either remove it or mark it as needing evidence before publishing.',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to write a brand voice brief (tone, audience, language style, what to avoid) and use it to make AI-rewritten copy sound like a real brand instead of generic AI marketing.',
+      'Why "convincing" is not the same as "true" — AI can generate a confident-sounding statistic or superlative claim with nothing behind it.',
+    ],
+    questions: [
+      'Show one post before and after the brand-voice rewrite. What specifically changed?',
+      'List any unsupported claims or statistics you found in your calendar. Where do you think AI invented them from?',
+      'Why is "convincing" not the same as "true" when it comes to AI-written marketing copy?',
+      'If your finished calendar had 8 promotional posts, 7 posts about the same product, and only 2 educational posts, would you publish it? What would you tell AI to fix first?',
     ],
   },
 ]
