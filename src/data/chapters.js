@@ -15,7 +15,7 @@ export const chapters = [
   { id: 14, title: 'Charts & KPI Dashboards', description: 'Charts, KPI Dashboard, Business Insights.' },
   { id: 15, title: 'PowerPoint with AI', description: 'PowerPoint with AI, Storytelling, Presentation Design.' },
   { id: 16, title: 'AI Presentation Enhancement', description: 'AI Presentation Enhancement, Speaker Notes, Visual Storytelling.' },
-  { id: 17, title: 'Social Media Strategy', description: 'Social Media Strategy, Content Calendar, Content Planning.', locked: true },
+  { id: 17, title: 'Social Media Strategy', description: 'Social Media Strategy, Content Calendar, Content Planning.' },
   { id: 18, title: 'Customer Persona & Buyer Journey', description: 'Customer Persona, Buyer Journey, Market Segmentation.', locked: true },
   { id: 19, title: 'A/B Ad Copy & Headlines', description: 'A/B Ad Copy, Headlines, Call-to-Action.', locked: true },
   { id: 20, title: 'AI Marketing Campaign Planning', description: 'AI Marketing Campaign Planning, Campaign Strategy, Brand Messaging.', locked: true },
