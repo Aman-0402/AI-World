@@ -472,24 +472,33 @@ export const tasks = [
   {
     id: 16,
     chapterId: 16,
-    title: 'Improve Presentation Quality',
-    question: 'How can AI improve an existing presentation\'s visual storytelling and speaker notes?',
-    whatToDo: 'Take an existing presentation outline and use Gamma AI or Canva AI to improve its visual flow, then generate speaker notes.',
+    title: 'Visual Hierarchy — The One-Slide Test',
+    question: "If you can only remember one thing from a slide, does the slide actually make that one thing obvious?",
+    whatToDo:
+      'Take any slide from your Session 15 coffee shop presentation and apply visual hierarchy — BIG (the headline finding), MEDIUM (the supporting number), SMALL (extra context).',
     steps: [
-      'Start from a presentation outline (your own or from the previous activity).',
-      'Ask Gamma AI or Canva AI to suggest visual improvements for two weak slides.',
-      'Ask the AI to generate speaker notes for each slide.',
-      'Review whether the speaker notes match what you would actually say.',
+      "Step 1 — Take any slide from your Session 15 coffee shop presentation. Cover it or set it aside, then ask yourself: what is the one thing I want the audience to remember from this slide? If you can't answer in one sentence, the slide needs work.",
+      {
+        intro:
+          'Step 2 — Rewrite the slide applying visual hierarchy — BIG (the headline finding), MEDIUM (the supporting number), SMALL (extra context). Example pattern from class:',
+        checklist: [
+          'BIG: 18% Sales Growth',
+          'MEDIUM: Sales increased from ₹15.7L to ₹18.5L',
+          'SMALL: Growth was highest in the North region.',
+        ],
+      },
+      'Step 3 — Use this prompt on your weakest slide: "Review this presentation slide as a business presentation consultant. Identify: the main message of the slide, any unnecessary content, information that should be emphasized, content that should be simplified, a better slide title, a better visual structure, and a suitable chart or visual if needed. Keep the original facts unchanged. Do not invent information. Slide: [paste slide content]"',
     ],
     requiredFile: null,
     downloadUrl: null,
     whatYouLearn: [
-      'How AI can suggest visual storytelling improvements to a deck.',
-      'How to use AI-generated speaker notes as a starting point, not a script.',
+      'How to apply BIG/MEDIUM/SMALL visual hierarchy so a slide makes its one key message obvious at a glance, instead of presenting every fact with equal visual weight.',
+      'How to use AI as a presentation consultant on a specific weak slide — asking it to separate the main message from unnecessary content, rather than just asking it to make the slide better.',
     ],
     questions: [
-      'Which visual suggestion improved the slide the most?',
-      'Did you need to rewrite the AI speaker notes in your own words?',
+      'Which slide did you test, and what did you (or a classmate) say the one thing to remember was, before you fixed it?',
+      'What did you move from BIG to SMALL (or vice versa), and why?',
+      "Did AI suggest removing content that actually wasn't unnecessary, and you disagreed? Why did you keep it?",
     ],
   },
   {
@@ -2413,6 +2422,126 @@ export const tasks = [
       'Did the evidence-check in Step 4 hold up, or did you have to change/soften the recommendation?',
       "In one sentence: what's the difference between a fact, a hypothesis, and a recommendation — and which one did AI most often blur together?",
       "Did your revised deck pass the CEO Test? If not, what's still missing?",
+    ],
+  },
+  {
+    id: 85,
+    chapterId: 16,
+    title: 'Content Refinement — From Boring to Business-Sharp',
+    question: "What's the difference between a sentence that's short and a sentence that's actually sharp?",
+    whatToDo:
+      'Pick 3 sentences from your Session 15 slides and rewrite each one to be short enough to understand quickly, but detailed enough to communicate accurately — not just short for the sake of it.',
+    steps: [
+      'Step 1 — Pick 3 sentences of body text from your Session 15 slides. Write them exactly as they currently appear.',
+      'Step 2 — Rewrite each one following the class rule: short enough to understand quickly, detailed enough to communicate accurately — not just short for the sake of it. Aim for the style of: "Sales grew 18%, but higher discounting limited profit growth to 4%."',
+      'Step 3 — Ask AI to check your work: "Review these before-and-after sentences from a business presentation. For each pair, tell me if the \'after\' version lost any important meaning, and whether it\'s now clear, specific, and business-focused rather than just short. Do not invent facts. Sentences: [paste your 3 before/after pairs]"',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      "The difference between a sentence that's short and a sentence that's sharp — sharp keeps the specific number and the tension in the finding, short just deletes words.",
+      'Why asking AI to check whether your after version lost meaning is more useful than asking it to shorten the sentence for you.',
+    ],
+    questions: [
+      'Show one before/after pair. What specifically changed — word count, clarity, or both?',
+      'Did any of your after versions accidentally become too simplistic (like "Sales up")? How did you catch it?',
+      'Rewrite this example yourself first, without AI: "There has been a considerable increase in customer complaints related to delivery." What\'s your version?',
+    ],
+  },
+  {
+    id: 86,
+    chapterId: 16,
+    title: 'Visual Storytelling — Matching Chart to Message',
+    question: 'When does a fact deserve to become a chart instead of staying a sentence?',
+    whatToDo:
+      'Find a fact in your presentation written as a sentence that could be shown as data instead, then choose the visual that actually fits the message.',
+    steps: [
+      'Step 1 — Find a place in your presentation where a fact is written as a sentence (e.g. customer complaints increased significantly) but could be shown as data instead.',
+      {
+        intro: 'Step 2 — Decide which visual fits the message:',
+        checklist: [
+          'Line chart — for a trend',
+          'Bar chart — for a comparison',
+          'KPI card — for one important number',
+          'Flow diagram — for a process',
+          'Map — only if geography actually matters',
+        ],
+      },
+      'Step 3 — Ask AI: "I want to show this information visually instead of as a sentence: [paste the fact/data]. What chart type would communicate it most clearly, and why? Do not suggest a chart just because it looks impressive — explain the reasoning."',
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'How to decide when a sentence should become a chart, and which chart type (line, bar, KPI card, flow diagram, map) actually fits the kind of message being communicated.',
+      'Why "does this chart help the audience understand" is the right filter for a visual element — not whether it looks impressive.',
+    ],
+    questions: [
+      'What sentence did you convert into a visual, and which chart type did you choose?',
+      'Why would a pie chart or decorative graphic have been the wrong choice here?',
+      "Name one visual element (icon, stock photo, gradient, animation) you removed from a slide because it didn't help the audience understand the message.",
+    ],
+  },
+  {
+    id: 87,
+    chapterId: 16,
+    title: 'Speaker Notes — Sound Like Yourself, Not Like AI',
+    question: "Do your speaker notes sound like something you'd actually say out loud, or like something AI wrote?",
+    whatToDo:
+      "Generate speaker notes for one Session 15 slide, then rewrite anything that doesn't sound like your own natural speaking voice.",
+    steps: [
+      'Step 1 — Pick one slide from your Session 15 presentation. Use this prompt: "Create speaker notes for this presentation slide. Audience: Business management team. The notes should: explain the slide naturally, add useful context without repeating the slide word-for-word, highlight the most important point, explain why the information matters, and suggest a smooth transition to the next slide. Use a natural speaking style. Do not invent facts. Slide: [paste slide content]"',
+      "Step 2 — Read the AI-generated notes out loud. Circle any sentence that doesn't sound like something you'd actually say.",
+      "Step 3 — Rewrite those notes in your own words — the way you'd naturally explain it to a classmate, not read from a script.",
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      "How to generate a first draft of speaker notes with AI, then edit for your own natural speaking voice instead of reading a script word-for-word.",
+      'Why reading AI-generated notes out loud is the fastest way to catch sentences that sound robotic or overly formal.',
+    ],
+    questions: [
+      'Paste one sentence AI gave you that sounded robotic or overly formal, and your rewritten version.',
+      'What is the difference between using AI notes as a starting point versus as a script?',
+      'If your notes for one slide are approaching 500 words, what does that tell you? What should you cut?',
+    ],
+  },
+  {
+    id: 88,
+    chapterId: 16,
+    title: 'Full Presentation Enhancement — Consistency & the Final Check',
+    question: 'After individually fixing slides, does your presentation actually hold together as one consistent, persuasive deck?',
+    whatToDo:
+      'Run a full-deck AI review for consistency and narrative flow, test it on a real audience, then run a final yes/no quality check before calling it done.',
+    steps: [
+      'Step 1 — Run this prompt on your entire Session 15 presentation: "Act as a professional business presentation consultant. Review my presentation and improve it without changing the underlying facts. For each slide: identify the main message, improve the slide title, remove unnecessary content, refine the wording, suggest a better visual structure, identify the most important information to emphasize, create concise speaker notes, and suggest a transition to the next slide. Also review the full presentation for narrative flow, visual hierarchy, content consistency, presentation consistency, repetition, content density, and business relevance. Do not invent statistics, facts, causes, or recommendations that are unsupported by the provided information. Presentation: [paste your full presentation content]"',
+      'Step 2 — Do the Audience Test: show one slide to a classmate for a few seconds, then ask them what they think the main point was, and what the business owner should do after seeing this presentation.',
+      {
+        intro: 'Step 3 — Run the Final Presentation Quality Check on your revised deck. Answer yes/no honestly for each:',
+        checklist: [
+          'Story',
+          'Slides',
+          'Visual hierarchy',
+          'Content',
+          'Visuals',
+          'Consistency',
+          'Speaker notes',
+          'Delivery',
+          'Business value',
+        ],
+      },
+    ],
+    requiredFile: null,
+    downloadUrl: null,
+    whatYouLearn: [
+      'Why a deck needs a full-presentation consistency pass (fonts, terminology, number formatting, tone) after individual slides have already been fixed one at a time.',
+      'How the Audience Test — asking someone what they think the main point was — reveals whether your intended message actually landed, independent of what you meant to say.',
+    ],
+    questions: [
+      "What inconsistency (fonts, terminology, number formatting, tone) did AI catch across your slides that you hadn't noticed?",
+      'What did your classmate say the main point was during the Audience Test — did it match what you intended?',
+      'Which item in the Final Quality Check did you answer no to, and what specifically needs to change?',
+      'Name one AI suggestion you rejected because it would have changed the underlying facts or overstated the evidence.',
+      "In one sentence: what is the difference between a functional presentation and a persuasive one, based on today's session?",
     ],
   },
 ]
