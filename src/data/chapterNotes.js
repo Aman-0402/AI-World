@@ -151,6 +151,183 @@ export const chapterNotes = [
       },
     ],
   },
+  {
+    chapterId: 18,
+    title: 'Customer Personas & Buyer Journey',
+    objective: 'Create customer personas and buyer journey maps.',
+    topics: [
+      'Customer personas',
+      'Demographics',
+      'Pain points',
+      'Goals',
+      'Customer segmentation',
+      'Buyer journey',
+      'Touchpoints',
+    ],
+    activity: 'Create 2 customer personas and a buyer journey map.',
+    discussion: 'What real customer data should support an AI-generated persona?',
+    keyTakeaway: 'Good personas are based on evidence, not AI assumptions.',
+    sections: [
+      {
+        heading: '1. What a Customer Persona Means',
+        body:
+          'A customer persona is a simple profile of a type of customer. It helps a business understand who the customer is, what they need, what problem they face, and why they may buy a product. A persona is not one real person. It is a useful picture of a customer group.',
+        bullets: [
+          'Name: a simple fictional name to make the persona easy to remember.',
+          'Age and life stage: student, working professional, parent, business owner, or another group.',
+          'Needs: what the customer is looking for.',
+          'Pain points: problems, frustrations, or difficulties the customer faces.',
+          'Goals: what the customer wants to achieve.',
+          'Buying behavior: how the customer searches, compares, decides, and buys.',
+        ],
+        example:
+          'Example: For a college cafe, one persona can be Riya, a 20-year-old student who wants affordable snacks, fast service, and a quiet place to sit between classes.',
+      },
+      {
+        heading: '2. Demographics',
+        body:
+          'Demographics are basic facts about customers. They help the business understand the customer group clearly. Demographics should be realistic and connected to the product.',
+        bullets: [
+          'Age group, such as 18-24 or 25-35.',
+          'Gender, only if it matters for the product or campaign.',
+          'Location, such as college campus, city area, residential society, or business district.',
+          'Occupation, such as student, employee, entrepreneur, parent, or freelancer.',
+          'Income or spending level, such as low budget, moderate budget, or premium buyer.',
+          'Education level, if it affects how the customer understands or chooses the product.',
+        ],
+        example:
+          'Example: A budget food brand near a college should not create a premium corporate persona unless that audience is actually likely to buy from it.',
+      },
+      {
+        heading: '3. Pain Points',
+        body:
+          'Pain points are the problems customers want solved. Strong marketing usually starts from pain points because people pay attention when a message connects to their real problem.',
+        bullets: [
+          'Functional pain point: a practical problem, such as slow delivery, high price, confusing app, or limited options.',
+          'Emotional pain point: a feeling, such as stress, fear of missing out, embarrassment, boredom, or lack of confidence.',
+          'Financial pain point: concern about price, value for money, discounts, or wasted spending.',
+          'Time pain point: not enough time, long waiting, difficult process, or too many steps.',
+        ],
+        example:
+          'Example: A student may not only want coffee. The real pain point may be needing a quick, affordable drink before the next class.',
+      },
+      {
+        heading: '4. Goals',
+        body:
+          'Goals are what the customer wants to achieve. Goals are different from pain points. A pain point is the problem. A goal is the desired result after the problem is solved.',
+        bullets: [
+          'A student may want to save money and still enjoy time with friends.',
+          'A working professional may want to look polished without spending too much time.',
+          'A parent may want a safe, reliable, and simple solution.',
+          'A business owner may want more customers, less manual work, or better sales.',
+        ],
+        example:
+          'Example: Pain point: the student has very little time between classes. Goal: get food quickly and reach class on time.',
+      },
+      {
+        heading: '5. Customer Segmentation',
+        body:
+          'Customer segmentation means dividing customers into smaller groups based on common needs or behavior. One business can have many customer segments, and each segment may need a different message.',
+        bullets: [
+          'Demographic segmentation: age, occupation, income, location, or education.',
+          'Behavioral segmentation: how often they buy, what they buy, when they buy, and how they use the product.',
+          'Need-based segmentation: budget buyers, convenience seekers, premium buyers, or quality-focused buyers.',
+          'Lifestyle segmentation: fitness-focused, career-focused, family-focused, social, or trend-conscious customers.',
+        ],
+        example:
+          'Example: A gym can have student beginners, working professionals, and serious fitness users. All three may use the same gym, but their reasons for joining are different.',
+      },
+      {
+        heading: '6. Buyer Journey',
+        body:
+          'The buyer journey is the path a customer follows before and after buying. It helps the business understand what the customer needs at each stage.',
+        bullets: [
+          'Awareness: the customer first notices the problem or discovers the brand.',
+          'Consideration: the customer compares options and checks whether the product fits their need.',
+          'Decision: the customer chooses whether to buy or not.',
+          'Post-purchase: the customer uses the product and decides whether to return, recommend, or complain.',
+        ],
+      },
+      {
+        heading: '7. Touchpoints',
+        body:
+          'Touchpoints are the places where the customer interacts with the brand. A touchpoint can happen before purchase, during purchase, or after purchase.',
+        bullets: [
+          'Social media post, reel, story, or ad.',
+          'Website, landing page, Google search result, or online review.',
+          'Store visit, phone call, WhatsApp message, or sales conversation.',
+          'Packaging, bill, delivery message, customer support, or follow-up message.',
+          'Friend recommendation, influencer post, or campus event.',
+        ],
+        example:
+          'Example: For a cafe, touchpoints can include an Instagram reel, a poster near campus, a WhatsApp offer, the menu board, the payment counter, and a feedback message after purchase.',
+      },
+      {
+        heading: '8. Using AI to Create Personas',
+        body:
+          'AI can help create personas quickly, but it should not be allowed to invent everything freely. Students must give the AI clear information and then check whether the persona sounds realistic.',
+        prompt:
+          'Create 2 realistic customer personas for [product/service]. Target location is [city/campus/area]. The business goal is [goal]. For each persona, include name, age range, occupation, budget level, goals, pain points, buying behavior, preferred platforms, and what message would attract them. Use simple language. Do not make generic statements. Mark any assumption clearly as an assumption.',
+      },
+      {
+        heading: '9. Real Customer Data That Should Support a Persona',
+        body:
+          'A good persona should be supported by evidence. AI can make a draft, but real business decisions should use real customer data wherever possible.',
+        bullets: [
+          'Customer surveys: what customers say they need, like, dislike, or expect.',
+          'Sales data: what products sell most, when people buy, and which offers work.',
+          'Website or social media analytics: age group, location, engagement, clicks, saves, and comments.',
+          'Customer reviews: common compliments, complaints, questions, and objections.',
+          'Customer support messages: repeated problems customers ask about.',
+          'Observation: what staff notice in-store or during customer conversations.',
+          'Competitor reviews: what people praise or complain about in similar products.',
+        ],
+        prompt:
+          'Review this customer persona. Tell me which parts are supported by the information I provided and which parts are assumptions. Create a table with columns: Persona detail, Evidence provided, Assumption, How to verify. Do not invent evidence.',
+      },
+      {
+        heading: '10. Sample Buyer Journey Map',
+        body:
+          'This example shows how one student-customer persona may move from first noticing a cafe to becoming a repeat customer.',
+        table: {
+          columns: ['Stage', 'Customer Thought', 'Touchpoint', 'Business Action'],
+          rows: [
+            ['Awareness', 'I need a quick snack before class.', 'Instagram story or campus poster', 'Show a simple combo offer with price.'],
+            ['Consideration', 'Is it affordable and nearby?', 'Menu board, Google listing, friend recommendation', 'Show price, distance, and popular items clearly.'],
+            ['Decision', 'Can I get it fast?', 'Store counter or WhatsApp order', 'Make ordering quick and highlight fast service.'],
+            ['Post-purchase', 'Was it worth buying again?', 'Feedback message or loyalty card', 'Ask for feedback and offer a repeat-visit benefit.'],
+          ],
+        },
+      },
+      {
+        heading: '11. Activity Guide',
+        body:
+          'For the class activity, create two customer personas for the same brand. Then create one buyer journey map for each persona or one combined journey map showing where they are different.',
+        bullets: [
+          'Step 1: Choose one sample brand, such as a cafe, gym, clothing store, study app, salon, or delivery service.',
+          'Step 2: Write what you already know about the likely customers before opening AI.',
+          'Step 3: Use AI to create 2 personas, but ask it to mark assumptions clearly.',
+          'Step 4: Build a buyer journey map with awareness, consideration, decision, and post-purchase stages.',
+          'Step 5: Add at least one touchpoint and one business action for every stage.',
+          'Step 6: Review the personas and remove anything that sounds fake, too broad, or unsupported.',
+        ],
+      },
+      {
+        heading: '12. Final Checklist for Students',
+        body:
+          'Before submitting, use this checklist to make sure your personas and journey map are useful.',
+        bullets: [
+          'I created 2 different personas, not two copies with different names.',
+          'Each persona has demographics, goals, pain points, and buying behavior.',
+          'I wrote which details are evidence and which are assumptions.',
+          'My buyer journey has awareness, consideration, decision, and post-purchase stages.',
+          'Each journey stage has at least one touchpoint.',
+          'The marketing message matches the customer pain point.',
+          'I did not accept AI assumptions without checking them.',
+        ],
+      },
+    ],
+  },
 ]
 
 export function getChapterNoteById(chapterId) {
