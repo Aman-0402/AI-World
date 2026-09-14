@@ -328,6 +328,187 @@ export const chapterNotes = [
       },
     ],
   },
+  {
+    chapterId: 19,
+    title: 'A/B Ad Copy & CTA Generation',
+    objective: 'Generate and evaluate advertising variations.',
+    topics: [
+      'Headlines',
+      'Ad copy',
+      'CTA design',
+      'A/B testing',
+      'Conversion metrics',
+      'AI copy generation',
+    ],
+    activity: 'Generate 5 headline + CTA combinations.',
+    discussion: 'Which metric should determine the winning variation?',
+    keyTakeaway: 'AI generates variations; real-world testing determines winners.',
+    sections: [
+      {
+        heading: '1. What Ad Copy Means',
+        body:
+          'Ad copy is the written text used in an advertisement. It can include the headline, body text, offer, benefit, and call-to-action. Good ad copy is short, clear, and focused on what the customer cares about.',
+        bullets: [
+          'Headline: the first line people notice.',
+          'Body copy: the short explanation below the headline.',
+          'Benefit: what the customer gets.',
+          'Offer: the deal, feature, or reason to act now.',
+          'CTA: the action you want the customer to take.',
+        ],
+        example:
+          'Example: For a gym, weak ad copy says "Join our gym today." Better ad copy says "Start your fitness routine with flexible student plans. Book a free trial this week."',
+      },
+      {
+        heading: '2. Headlines',
+        body:
+          'A headline is the most important line in an ad because it decides whether the audience will stop and read more. A headline should be clear before it tries to be clever.',
+        bullets: [
+          'Problem headline: shows the customer problem, such as "No time for a full workout?"',
+          'Benefit headline: shows the result, such as "Get fit with 30-minute training sessions."',
+          'Curiosity headline: creates interest, such as "The easiest way students build a fitness habit."',
+          'Offer headline: shows the deal, such as "Student fitness plans from Rs. 999/month."',
+          'Urgency headline: gives a time reason, such as "Free trial available this week only."',
+        ],
+        example:
+          'Example: A headline for a cafe can be "Quick coffee between classes" because it connects directly to a student situation.',
+      },
+      {
+        heading: '3. Ad Copy',
+        body:
+          'Ad copy explains the headline in one or two short lines. It should not try to say everything. It should give enough information for the customer to understand the benefit and next step.',
+        bullets: [
+          'Keep sentences short.',
+          'Use simple words customers naturally understand.',
+          'Focus on one main benefit.',
+          'Avoid exaggerated claims like "best in the city" unless there is proof.',
+          'Match the copy to the audience and platform.',
+        ],
+        example:
+          'Example: "Grab a cold coffee and sandwich combo before your next lecture. Fast service, student-friendly price, and campus-side pickup."',
+      },
+      {
+        heading: '4. CTA Design',
+        body:
+          'CTA means Call-To-Action. It tells the audience what to do next. A strong CTA is clear, specific, and matched to the stage of the customer journey.',
+        bullets: [
+          'Awareness CTA: Learn more, See the menu, Watch the demo, Follow for tips.',
+          'Engagement CTA: Comment your choice, Vote in the poll, Save this post, Tag a friend.',
+          'Lead CTA: Book a free trial, Send us a DM, Download the guide, Register now.',
+          'Purchase CTA: Order now, Visit today, Claim the offer, Buy before Sunday.',
+          'Retention CTA: Visit again, Share feedback, Join the loyalty list, Refer a friend.',
+        ],
+        example:
+          'Example: "Buy now" may be too strong for a customer who just discovered the brand. "See the menu" may work better at the awareness stage.',
+      },
+      {
+        heading: '5. A/B Testing',
+        body:
+          'A/B testing means comparing two versions of an ad to see which one performs better. Version A and Version B should usually change only one major thing, such as the headline or CTA. If everything changes at once, it becomes hard to know what caused the result.',
+        bullets: [
+          'Test one difference at a time when possible.',
+          'Show both versions to similar audience groups.',
+          'Use the same platform and time period if possible.',
+          'Decide the winning metric before the test starts.',
+          'Do not choose the winner only because you personally like it.',
+        ],
+        example:
+          'Example: Version A uses "Quick coffee between classes" and Version B uses "Student combo from Rs. 99." If Version B gets more store visits, the offer-focused headline may be stronger for that audience.',
+      },
+      {
+        heading: '6. Conversion Metrics',
+        body:
+          'A conversion metric is the number used to judge whether an ad worked. The best metric depends on the campaign goal. Likes are not always the best metric.',
+        bullets: [
+          'Awareness goal: reach, impressions, video views, or profile visits.',
+          'Engagement goal: comments, shares, saves, poll votes, or direct messages.',
+          'Lead generation goal: form fills, registrations, calls, or enquiries.',
+          'Sales goal: purchases, orders, coupon use, store visits, or revenue.',
+          'Retention goal: repeat purchases, loyalty sign-ups, reviews, or referrals.',
+        ],
+        example:
+          'Example: If the goal is store visits, the winning ad should not be chosen only by likes. It should be judged by visits, coupon redemptions, or messages asking for location/menu.',
+      },
+      {
+        heading: '7. Using AI to Generate Ad Variations',
+        body:
+          'AI is useful for quickly generating many headline and CTA options. But students must give AI the product, audience, benefit, tone, and campaign goal. Without those details, AI will produce generic ad lines.',
+        prompt:
+          'Generate 5 ad variations for [product/service]. Target audience: [audience]. Campaign goal: [awareness/engagement/leads/sales]. Main benefit: [benefit]. Tone: simple, clear, and business-friendly. For each variation, provide Headline, 1-line ad copy, CTA, intended customer journey stage, and why it may work. Do not make unsupported claims or fake statistics.',
+      },
+      {
+        heading: '8. How to Evaluate AI Ad Copy',
+        body:
+          'AI may create many options, but not every option is good. Students should check whether the ad is clear, believable, specific, and matched to the audience.',
+        bullets: [
+          'Is the headline easy to understand in 2-3 seconds?',
+          'Does the copy explain one clear benefit?',
+          'Is the CTA specific and suitable for the campaign goal?',
+          'Does the ad avoid fake proof, fake numbers, and exaggerated claims?',
+          'Would the target audience actually care about this message?',
+          'Is this variation different from the other variations, or just rewritten?',
+        ],
+        prompt:
+          'Review these 5 ad variations. Score each one from 1 to 5 for clarity, audience fit, CTA strength, uniqueness, and risk of unsupported claims. Then recommend which 2 should be tested first and explain why. Do not choose based only on creativity.',
+      },
+      {
+        heading: '9. Sample A/B Ad Copy Table',
+        body:
+          'This sample table shows how students can compare headline and CTA combinations before choosing what to test.',
+        table: {
+          columns: ['Version', 'Headline', 'CTA', 'Best Metric', 'Why Test It'],
+          rows: [
+            ['A', 'Quick coffee between classes', 'See today\'s menu', 'Profile visits', 'Tests whether convenience attracts students.'],
+            ['B', 'Student combo from Rs. 99', 'Claim the combo', 'Coupon use', 'Tests whether price offer drives action.'],
+            ['C', 'Your study break just got better', 'Tag your study group', 'Comments/tags', 'Tests whether social positioning creates engagement.'],
+            ['D', 'Cold coffee ready in minutes', 'Visit before class', 'Store visits', 'Tests whether speed matters most.'],
+            ['E', 'Need a campus-side snack?', 'DM for the menu', 'Direct messages', 'Tests whether direct enquiry is easier than visiting first.'],
+          ],
+        },
+      },
+      {
+        heading: '10. Which Metric Should Decide the Winner?',
+        body:
+          'The winning metric should match the campaign objective. If the objective is sales, likes should not decide the winner. If the objective is awareness, purchases may not be the first metric to judge.',
+        bullets: [
+          'For awareness, choose reach, impressions, or profile visits.',
+          'For engagement, choose comments, shares, saves, or poll responses.',
+          'For enquiries, choose direct messages, calls, or form submissions.',
+          'For sales, choose purchases, store visits, coupon redemptions, or revenue.',
+          'For repeat customers, choose repeat visits, loyalty sign-ups, or referrals.',
+        ],
+        example:
+          'Example: If a cafe wants more students to visit this week, coupon use or store visits should matter more than likes.',
+      },
+      {
+        heading: '11. Activity Guide',
+        body:
+          'For the class activity, students must generate 5 headline + CTA combinations and decide which one should be tested first.',
+        bullets: [
+          'Step 1: Choose one product or service.',
+          'Step 2: Write the target audience and campaign goal.',
+          'Step 3: Use AI to generate 5 headline + CTA combinations.',
+          'Step 4: Put all 5 variations in a table.',
+          'Step 5: Choose the best metric for each variation.',
+          'Step 6: Select the top 2 variations for A/B testing and explain why.',
+          'Step 7: Remove or rewrite any copy that sounds exaggerated, repetitive, or unsupported.',
+        ],
+      },
+      {
+        heading: '12. Final Checklist for Students',
+        body:
+          'Before submitting, check that your ad copy is testable and realistic.',
+        bullets: [
+          'I created 5 different headline + CTA combinations.',
+          'Each variation targets the same audience and campaign goal.',
+          'Each variation has a clear CTA.',
+          'I selected a metric that matches the campaign objective.',
+          'I did not choose a winner based only on personal preference.',
+          'I removed fake numbers, unsupported claims, and over-promising language.',
+          'I explained which variation should be tested first and why.',
+        ],
+      },
+    ],
+  },
 ]
 
 export function getChapterNoteById(chapterId) {
