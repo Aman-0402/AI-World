@@ -82,6 +82,92 @@ const HERO_PALETTES = [
   },
 ]
 
+const BEGINNER_GUIDES = {
+  17: {
+    tool: 'ChatGPT, Gemini, or Claude',
+    workArea: 'a notebook, Google Docs, or the same document where you save your class activity work',
+    focus: 'social media strategy',
+    promptStarter:
+      'Act as a social media strategist. Help me complete this class activity step by step. Use simple language. Ask me for missing details before making assumptions. My task is: [paste the task title and question]. My brand/business is: [write your chosen brand or business].',
+  },
+  18: {
+    tool: 'ChatGPT, Gemini, Claude, or Meta AI',
+    workArea: 'a notebook, Google Docs, or a simple table with columns for Persona, Pain Point, Journey Stage, Message, and Channel',
+    focus: 'customer personas and buyer journey',
+    promptStarter:
+      'Act as a marketing teacher. Help me create a realistic customer persona and buyer journey. Use simple words and give examples. Do not make the customer too generic. My product/service is: [write product]. My target customer is: [write who may buy it].',
+  },
+  19: {
+    tool: 'ChatGPT, Gemini, or Claude',
+    workArea: 'a notebook, Google Docs, or a table with columns for Version A, Version B, Audience, CTA, Reason, and Best Choice',
+    focus: 'ad copy and A/B testing',
+    promptStarter:
+      'Act as an advertising copywriter. Help me write simple ad copy for A/B testing. Give clear headline and CTA options. Do not make unsupported claims. Product: [write product]. Audience: [write audience]. Main benefit: [write benefit].',
+  },
+  20: {
+    tool: 'ChatGPT, Gemini, Claude, or Canva AI',
+    workArea: 'a notebook, Google Docs, or a campaign planning table with columns for Objective, Audience, Channel, Message, Date, CTA, and Risk',
+    focus: 'marketing campaign planning',
+    promptStarter:
+      'Act as a marketing campaign planner. Help me plan this campaign in simple steps. Do not invent facts or unrealistic budgets. Campaign idea: [write idea]. Target audience: [write audience]. Goal: [write goal]. Timeline: [write timeline].',
+  },
+  21: {
+    tool: 'Canva, Canva AI, ChatGPT, Gemini, or Claude',
+    workArea: 'Canva for the design work, plus a notebook or Google Docs for your brand rules and review notes',
+    focus: 'Canva creatives and brand consistency',
+    promptStarter:
+      'Act as a brand design assistant. Help me create clear Canva design instructions. Keep the design simple, readable, and consistent. Brand/business: [write brand]. Audience: [write audience]. Design format: [Instagram post/story/etc.].',
+  },
+  22: {
+    tool: 'Canva AI, Microsoft Designer, ChatGPT, Gemini, or Claude',
+    workArea: 'the image/design tool for generating visuals, plus a notebook or Google Docs for prompts, comparisons, and final review',
+    focus: 'AI image generation for marketing',
+    promptStarter:
+      'Act as a marketing visual designer. Help me write an image-generation prompt. The image must be clear, brand-safe, and useful for a business promotion. Product: [write product]. Audience: [write audience]. Offer/message: [write message]. Style: [write style].',
+  },
+}
+
+function getBeginnerGuide(task) {
+  return BEGINNER_GUIDES[task.chapterId]
+}
+
+function getDetailedWhatToDo(task, chapter) {
+  const guide = getBeginnerGuide(task)
+  if (!guide) return [task.whatToDo]
+
+  return [
+    task.whatToDo,
+    `This activity is about ${guide.focus}. Do it slowly: first write your own idea, then ask AI for help, then check and improve the answer.`,
+    `Use ${guide.tool}. Keep your final answer in ${guide.workArea}.`,
+    `When a step says "use this prompt", open the AI tool, click in the message box, type or paste the prompt, replace the bracket text with your own details, and press Enter.`,
+    `Chapter ${chapter?.id}: ${chapter?.title}. Do not submit the first AI answer directly. Your final work should show your own choice, AI help, and your final edited version.`,
+  ]
+}
+
+function getDetailedSteps(task) {
+  const guide = getBeginnerGuide(task)
+  if (!guide) return task.steps
+
+  return [
+    `Before opening AI, read the task question again: "${task.question}" Write one short answer in your own words so you know what you are trying to do.`,
+    `Open ${guide.tool}. You can use the floating AI shortcuts button, or open the tool in a new browser tab.`,
+    `Open your work area: ${guide.workArea}. Write the task title at the top so your work is easy to check later.`,
+    `In the AI tool message box, write this starter prompt. Replace every bracket with your own details before you send it: "${guide.promptStarter}"`,
+    'Read the AI answer carefully. If any part is too difficult, too generic, or not related to your product/brand, ask a follow-up question: "Explain this in easier words and make it specific to my example."',
+    {
+      intro: 'Now complete the original activity steps below. Treat them as your main checklist:',
+      checklist: task.steps.map((step) => {
+        if (typeof step === 'string') return step
+        if (step?.checklist) return [step.intro, ...step.checklist, step.outro].filter(Boolean).join(' ')
+        if (step?.file) return `Open or download the file: ${step.file}`
+        return 'Complete this part of the activity.'
+      }),
+    },
+    'After completing the checklist, write your final answer in your own words. Include: what you asked AI, what AI suggested, what you changed, and why your final choice is better.',
+    'Before marking the task complete, check three things: the answer is easy to read, the prompt is included, and no unsupported claim or fake statistic was copied from AI.',
+  ]
+}
+
 export default function TaskDetails() {
   const { taskId } = useParams()
   const task = getTaskById(taskId)
@@ -92,6 +178,8 @@ export default function TaskDetails() {
   }
 
   const chapter = getChapterById(task.chapterId)
+  const whatToDo = getDetailedWhatToDo(task, chapter)
+  const steps = getDetailedSteps(task)
   const resources =
     task.resources ?? (task.requiredFile ? [{ name: task.requiredFile, downloadUrl: task.downloadUrl }] : [])
 
@@ -151,11 +239,15 @@ export default function TaskDetails() {
           )}
 
           <Section title="What to Do">
-            <p className="text-slate-700">{task.whatToDo}</p>
+            <div className="flex flex-col gap-2 text-slate-700">
+              {whatToDo.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </Section>
 
           <Section title="Steps">
-            <StepList steps={task.steps} />
+            <StepList steps={steps} />
           </Section>
 
           {task.comparisonTable && (
