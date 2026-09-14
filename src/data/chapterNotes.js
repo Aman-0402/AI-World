@@ -728,6 +728,204 @@ export const chapterNotes = [
       },
     ],
   },
+  {
+    chapterId: 21,
+    title: 'Canva AI & Brand Kits',
+    objective: 'Create consistent branded content using Canva AI.',
+    topics: [
+      'Brand identity',
+      'Brand colors',
+      'Typography',
+      'Logos',
+      'Brand kits',
+      'Templates',
+      'Magic Design',
+    ],
+    activity: 'Create 3 branded social media creatives.',
+    discussion: 'How can a brand kit stop AI-generated designs from looking inconsistent?',
+    keyTakeaway: 'Brand kits help maintain consistency across AI-generated designs.',
+    sections: [
+      {
+        heading: '1. What Brand Identity Means',
+        body:
+          'Brand identity is the visual and written personality of a business. It is how people recognize the brand. A brand identity includes colors, fonts, logo, image style, tone, and layout style. Without brand identity, every design may look like it belongs to a different business.',
+        bullets: [
+          'Colors help people recognize the brand quickly.',
+          'Fonts control whether the brand feels playful, professional, premium, or simple.',
+          'Logo connects every design back to the same business.',
+          'Tone controls how the brand sounds in captions and text.',
+          'Templates help posts look consistent even when the topic changes.',
+        ],
+        example:
+          'Example: A college cafe may use bright colors, friendly fonts, casual captions, and photos of students. A finance consultancy may use calmer colors, clean fonts, and professional wording.',
+      },
+      {
+        heading: '2. Brand Colors',
+        body:
+          'Brand colors are the main colors a business uses again and again. Good brand colors should match the business personality and be easy to read. Students should avoid choosing colors only because they personally like them.',
+        bullets: [
+          'Primary color: the main color used most often.',
+          'Secondary color: a support color used with the primary color.',
+          'Accent color: a small highlight color for buttons, offers, or important words.',
+          'Background color: a light or neutral color that keeps the design readable.',
+          'Text color: dark enough to read clearly on the background.',
+        ],
+        example:
+          'Example: For a healthy juice brand, green can suggest freshness, yellow can suggest energy, and white can keep the design clean.',
+      },
+      {
+        heading: '3. Typography',
+        body:
+          'Typography means the fonts and text styling used in a design. Fonts affect how a brand feels. Typography also controls readability. A creative can look beautiful but fail if people cannot read the message quickly.',
+        bullets: [
+          'Use one font style for headings.',
+          'Use one simple font style for body text.',
+          'Keep the headline large and easy to read.',
+          'Do not use too many fonts in one design.',
+          'Avoid very decorative fonts for important information.',
+          'Make sure text has enough contrast from the background.',
+        ],
+        example:
+          'Example: A student event poster can use a bold heading font for energy, but the date, time, and venue should use a clean readable font.',
+      },
+      {
+        heading: '4. Logos',
+        body:
+          'A logo is a visual mark for the brand. In social media creatives, the logo should support recognition but should not cover the main message. A logo must be clear, properly placed, and not stretched.',
+        bullets: [
+          'Place the logo in a consistent position, such as top-left, top-right, or bottom corner.',
+          'Do not stretch or distort the logo.',
+          'Keep enough blank space around the logo.',
+          'Use a logo color that is visible on the background.',
+          'Do not make the logo bigger than the main message unless the design is only for brand awareness.',
+        ],
+        example:
+          'Example: In a product offer post, the offer headline should be most visible. The logo should appear clearly but quietly in one corner.',
+      },
+      {
+        heading: '5. Brand Kits',
+        body:
+          'A brand kit is a saved set of brand rules inside Canva. It usually includes brand colors, fonts, logos, and sometimes templates. Brand kits save time and help every design look connected.',
+        bullets: [
+          'Upload or choose the brand logo.',
+          'Save the primary, secondary, and accent colors.',
+          'Choose heading and body fonts.',
+          'Use the same brand kit across every creative.',
+          'Check each AI-generated design against the brand kit before using it.',
+        ],
+        example:
+          'Example: If CampusBrew uses brown, cream, and teal as brand colors, the Instagram post, story, and offer poster should all use the same color family.',
+      },
+      {
+        heading: '6. Templates',
+        body:
+          'Templates are ready-made layouts that can be edited. They help students create professional designs faster. But templates should be adapted to the brand instead of used exactly as they are.',
+        bullets: [
+          'Choose a template that fits the content type.',
+          'Replace template colors with brand colors.',
+          'Replace sample text with your own campaign message.',
+          'Replace stock images if they do not match the product.',
+          'Keep the layout clean and remove unnecessary decoration.',
+        ],
+        example:
+          'Example: A sale template can become a cafe combo offer post by changing the colors, product photo, price, CTA, and logo.',
+      },
+      {
+        heading: '7. Magic Design',
+        body:
+          'Magic Design is a Canva AI feature that can generate design ideas from a prompt or uploaded media. It is useful for getting quick layout options, but students still need to check brand fit and readability.',
+        bullets: [
+          'Give Canva AI the design format, such as Instagram post, story, flyer, or presentation slide.',
+          'Give the product, audience, message, and brand tone.',
+          'Ask for a clean design with readable text.',
+          'Generate multiple options and compare them.',
+          'Edit the chosen design manually before submitting.',
+        ],
+        prompt:
+          'Create an Instagram post design for [brand/business]. Audience: [target audience]. Message: [main message]. Brand colors: [colors]. Brand tone: [friendly/professional/premium/youthful]. Use a clean layout, readable text, and space for the logo. Do not make the design crowded.',
+      },
+      {
+        heading: '8. Creating 3 Branded Social Media Creatives',
+        body:
+          'For this activity, students should create three different creatives for the same brand. The designs should not be identical, but they should clearly belong to the same brand.',
+        bullets: [
+          'Creative 1: Product announcement post.',
+          'Creative 2: Educational or tip-based carousel cover.',
+          'Creative 3: Promotional offer story or post.',
+          'All three should use the same brand colors.',
+          'All three should use the same logo style and placement.',
+          'All three should use similar fonts and tone.',
+        ],
+      },
+      {
+        heading: '9. Prompt for Brand Kit Planning',
+        body:
+          'Before designing in Canva, students can use AI to plan a simple brand kit. This makes the design work easier and more consistent.',
+        prompt:
+          'Help me create a simple brand kit for [business/brand]. Target audience: [audience]. Brand personality: [3 words]. Suggest 2 main colors, 1 accent color, heading font style, body font style, logo placement rule, image style, and 5 words the brand should use often. Also list 5 design mistakes to avoid.',
+      },
+      {
+        heading: '10. Brand Consistency Check',
+        body:
+          'After creating the designs, students should check whether the set feels consistent. Consistency does not mean every design looks exactly the same. It means the audience can recognize the same brand across all designs.',
+        bullets: [
+          'Do all designs use the same main colors?',
+          'Do all designs use similar fonts?',
+          'Is the logo placed consistently?',
+          'Is the tone of the text similar across designs?',
+          'Can someone understand the main message in 3 seconds?',
+          'Does any design look like it belongs to a different brand?',
+        ],
+        prompt:
+          'Review these 3 social media creative descriptions for brand consistency. Check colors, fonts, logo placement, tone, message clarity, and readability. Tell me which design feels least consistent and exactly what to fix.',
+      },
+      {
+        heading: '11. Sample Brand Kit Table',
+        body:
+          'This is a simple sample brand kit for a student-focused cafe.',
+        table: {
+          columns: ['Brand Element', 'Example Choice', 'Reason'],
+          rows: [
+            ['Primary color', 'Warm brown', 'Connects to coffee and comfort.'],
+            ['Secondary color', 'Cream', 'Keeps the design soft and readable.'],
+            ['Accent color', 'Teal', 'Adds freshness and helps CTAs stand out.'],
+            ['Heading font', 'Bold rounded font', 'Feels friendly and student-focused.'],
+            ['Body font', 'Simple clean font', 'Easy to read quickly on mobile.'],
+            ['Logo rule', 'Top-right corner', 'Keeps placement consistent.'],
+            ['Image style', 'Bright cafe photos with students', 'Matches the audience and setting.'],
+          ],
+        },
+      },
+      {
+        heading: '12. Activity Guide',
+        body:
+          'For the class activity, create 3 branded social media creatives using Canva AI and a simple brand kit.',
+        bullets: [
+          'Step 1: Choose a brand or create a fictional one.',
+          'Step 2: Define brand colors, fonts, logo rule, and brand personality.',
+          'Step 3: Open Canva and choose or create a brand kit.',
+          'Step 4: Use Magic Design or templates to create 3 social media creatives.',
+          'Step 5: Edit each creative so it follows the same brand kit.',
+          'Step 6: Check readability, logo placement, and message clarity.',
+          'Step 7: Write a short note explaining how the 3 designs stay consistent.',
+        ],
+      },
+      {
+        heading: '13. Final Checklist for Students',
+        body:
+          'Before submitting, check whether your Canva designs look like one brand system.',
+        bullets: [
+          'I created 3 different social media creatives.',
+          'All designs use the same brand colors.',
+          'All designs use readable typography.',
+          'The logo is clear and placed consistently.',
+          'Each creative has one clear main message.',
+          'I used Canva AI or templates but edited the final designs myself.',
+          'The designs look connected, not random.',
+        ],
+      },
+    ],
+  },
 ]
 
 export function getChapterNoteById(chapterId) {
