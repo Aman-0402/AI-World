@@ -509,6 +509,225 @@ export const chapterNotes = [
       },
     ],
   },
+  {
+    chapterId: 20,
+    title: 'AI Marketing Campaign Planning',
+    objective: 'Create an end-to-end AI-assisted marketing campaign.',
+    topics: [
+      'Campaign objectives',
+      'Target audience',
+      'Messaging pillars',
+      'Content strategy',
+      'Channel selection',
+      'Campaign timeline',
+      'Brand voice',
+    ],
+    activity: 'Create a complete campaign brief for a sample product launch.',
+    discussion: 'How should brand guidelines control AI-generated content?',
+    keyTakeaway: 'AI can build campaign components, but humans must maintain strategic coherence.',
+    sections: [
+      {
+        heading: '1. What a Marketing Campaign Means',
+        body:
+          'A marketing campaign is a planned set of messages and activities designed to achieve one clear business goal. A campaign can promote a product launch, sale, event, service, app, course, or brand awareness activity. It is not one random post. It is a connected plan.',
+        bullets: [
+          'A campaign has one main objective.',
+          'It speaks to a defined target audience.',
+          'It uses clear messaging pillars.',
+          'It chooses channels that match the audience.',
+          'It follows a timeline.',
+          'It keeps the same brand voice across every message.',
+        ],
+        example:
+          'Example: A new cafe launching near a college may run a two-week campaign to introduce its student combo offer through Instagram reels, stories, posters, and WhatsApp messages.',
+      },
+      {
+        heading: '2. Campaign Objectives',
+        body:
+          'A campaign objective explains what the business wants to achieve. Without a clear objective, AI may create a campaign that looks creative but does not support the business goal.',
+        bullets: [
+          'Awareness objective: make more people know about the brand or product.',
+          'Engagement objective: make people comment, share, save, vote, or reply.',
+          'Lead objective: collect enquiries, sign-ups, calls, or registrations.',
+          'Sales objective: increase purchases, store visits, orders, or revenue.',
+          'Retention objective: bring existing customers back again.',
+        ],
+        example:
+          'Example: "Get more likes" is weak. "Increase student visits during lunch hours for the new combo offer" is much clearer.',
+      },
+      {
+        heading: '3. Target Audience',
+        body:
+          'The target audience is the group of people the campaign is made for. A campaign should not speak to everyone. It should speak clearly to the people most likely to care.',
+        bullets: [
+          'Who are they? Students, parents, professionals, business owners, or another group.',
+          'Where are they? Campus, city area, office district, online community, or local market.',
+          'What do they need? Convenience, low price, quality, status, speed, trust, or support.',
+          'What problem do they have? High cost, lack of time, confusion, poor options, or low trust.',
+          'What action should they take after seeing the campaign?',
+        ],
+        example:
+          'Example: A student audience may care about price, speed, and social hangout space. A corporate audience may care more about quality, reliability, and professionalism.',
+      },
+      {
+        heading: '4. Messaging Pillars',
+        body:
+          'Messaging pillars are the main ideas the campaign repeats in different ways. They keep the campaign focused. Each pillar should connect to a customer need or product benefit.',
+        bullets: [
+          'Value pillar: why the product is worth buying.',
+          'Convenience pillar: how the product saves time or effort.',
+          'Trust pillar: why the customer can believe the brand.',
+          'Lifestyle pillar: how the product fits the customer\'s daily life.',
+          'Offer pillar: what deal, launch benefit, or special reason exists now.',
+        ],
+        example:
+          'Example for a study app launch: Learn faster, Track progress, Study anywhere, Prepare with confidence, Start free this week.',
+      },
+      {
+        heading: '5. Content Strategy',
+        body:
+          'Content strategy explains what type of content will be posted during the campaign and why. It connects campaign objectives with practical content ideas.',
+        bullets: [
+          'Educational content explains a problem or teaches something useful.',
+          'Product content shows features, benefits, use cases, or demonstrations.',
+          'Social proof content shows reviews, testimonials, user stories, or results.',
+          'Promotional content explains offers, deadlines, discounts, or launch benefits.',
+          'Engagement content asks questions, runs polls, invites comments, or encourages sharing.',
+        ],
+        example:
+          'Example: For a product launch, the first posts can build awareness, the middle posts can explain benefits, and the final posts can push the launch offer.',
+      },
+      {
+        heading: '6. Channel Selection',
+        body:
+          'Channel selection means choosing where the campaign will appear. The right channel depends on the audience, content type, budget, and campaign objective.',
+        bullets: [
+          'Instagram: useful for visual products, reels, stories, student audiences, food, fashion, beauty, fitness, and lifestyle.',
+          'LinkedIn: useful for professional services, B2B products, hiring, training, consulting, and business audiences.',
+          'YouTube: useful for product demos, tutorials, storytelling, reviews, and long explanations.',
+          'WhatsApp: useful for local offers, customer follow-up, small business updates, and direct communication.',
+          'Email: useful for detailed updates, launch announcements, reminders, and existing customer lists.',
+          'Offline channels: posters, flyers, events, store displays, and campus promotion.',
+        ],
+        example:
+          'Example: A local food campaign may use Instagram, WhatsApp, and campus posters. A software launch for HR managers may use LinkedIn, email, and webinars.',
+      },
+      {
+        heading: '7. Campaign Timeline',
+        body:
+          'A campaign timeline shows what happens before, during, and after the launch. It prevents last-minute random posting and makes the campaign easier to manage.',
+        bullets: [
+          'Pre-launch: create curiosity, introduce the problem, tease the product, and collect interest.',
+          'Launch: announce the product, explain the offer, show key benefits, and guide people to act.',
+          'Post-launch: share feedback, answer questions, remind people, and encourage repeat action.',
+          'Review: check metrics and learn what worked or failed.',
+        ],
+        example:
+          'Example: Week 1 can tease the launch. Week 2 can announce the product. Week 3 can show benefits and testimonials. Week 4 can push the final offer and review results.',
+      },
+      {
+        heading: '8. Brand Voice',
+        body:
+          'Brand voice is the way a brand sounds in writing. It controls the words, tone, style, and personality of the campaign. AI should follow the brand voice so the campaign does not sound different in every post.',
+        bullets: [
+          'Friendly voice: simple, warm, conversational.',
+          'Professional voice: clear, formal, reliable.',
+          'Youthful voice: energetic, casual, relatable.',
+          'Premium voice: polished, calm, confident.',
+          'Helpful voice: educational, patient, supportive.',
+        ],
+        example:
+          'Example: A college cafe can sound friendly and youthful. A financial consultancy should sound professional and trustworthy.',
+      },
+      {
+        heading: '9. How Brand Guidelines Should Control AI Content',
+        body:
+          'Brand guidelines should give AI clear limits. Without guidelines, AI may use words, claims, visuals, and tone that do not fit the brand.',
+        bullets: [
+          'Tell AI the brand tone: friendly, premium, professional, youthful, or helpful.',
+          'Give banned words or phrases the brand should not use.',
+          'Give preferred words or phrases the brand uses often.',
+          'Give visual rules such as colors, fonts, logo placement, and image style.',
+          'Give claim rules such as no fake statistics, no "best" claims, and no exaggeration.',
+          'Ask AI to explain how each piece of content matches the brand guidelines.',
+        ],
+        prompt:
+          'Use these brand guidelines to rewrite the campaign content. Brand tone: [tone]. Audience: [audience]. Preferred words: [words]. Avoid these words/claims: [list]. Keep the message simple and consistent. Do not invent statistics, awards, customer numbers, or guarantees.',
+      },
+      {
+        heading: '10. Using AI to Build a Campaign Brief',
+        body:
+          'A campaign brief is a document that explains the full campaign plan. AI can help create the first draft, but students must check whether all parts work together.',
+        prompt:
+          'Create a complete marketing campaign brief for a sample product launch. Product: [product]. Target audience: [audience]. Campaign objective: [objective]. Brand voice: [tone]. Timeline: [number of weeks]. Budget level: [low/medium/high]. Include campaign objective, audience profile, customer pain points, messaging pillars, content strategy, channel selection, campaign timeline, sample posts, CTAs, success metrics, and possible risks. Use simple language. Do not invent unsupported claims.',
+      },
+      {
+        heading: '11. Sample Campaign Brief',
+        body:
+          'This sample shows how a simple launch campaign can be organized.',
+        table: {
+          columns: ['Part', 'Example'],
+          rows: [
+            ['Product', 'CampusBrew student combo meal'],
+            ['Objective', 'Increase student visits during lunch hours for the first month.'],
+            ['Audience', 'College students aged 18-24 near campus.'],
+            ['Pain Point', 'Students want quick, affordable food between classes.'],
+            ['Messaging Pillars', 'Affordable, quick, tasty, campus-friendly.'],
+            ['Channels', 'Instagram reels, Instagram stories, WhatsApp, campus posters.'],
+            ['Timeline', '1 week teaser, 1 week launch, 2 weeks reminders and offers.'],
+            ['CTA', 'Visit today, show college ID, DM for menu.'],
+            ['Metric', 'Store visits, combo sales, story replies, coupon use.'],
+          ],
+        },
+      },
+      {
+        heading: '12. Campaign Risk Check',
+        body:
+          'Before using an AI-generated campaign, check the plan for weak thinking. A campaign can look complete but still fail if the pieces do not connect.',
+        bullets: [
+          'Does the campaign objective match the content?',
+          'Does the channel match the audience?',
+          'Does the message solve a real customer problem?',
+          'Does the CTA tell people exactly what to do?',
+          'Are the success metrics connected to the objective?',
+          'Are there any unsupported claims or fake statistics?',
+          'Does every post sound like the same brand?',
+        ],
+        prompt:
+          'Review this campaign brief for strategic coherence. Check whether the objective, audience, message, channels, timeline, CTAs, and metrics fit together. Identify weak assumptions, unsupported claims, repeated ideas, and anything that does not match the brand voice. Suggest improvements in simple language.',
+      },
+      {
+        heading: '13. Activity Guide',
+        body:
+          'For the class activity, create a complete campaign brief for a sample product launch.',
+        bullets: [
+          'Step 1: Choose a sample product launch.',
+          'Step 2: Define the campaign objective clearly.',
+          'Step 3: Write the target audience and their main pain point.',
+          'Step 4: Create 3-5 messaging pillars.',
+          'Step 5: Choose the best channels for the audience.',
+          'Step 6: Build a simple campaign timeline.',
+          'Step 7: Use AI to draft the campaign brief.',
+          'Step 8: Review the AI output for brand voice, consistency, and unsupported claims.',
+        ],
+      },
+      {
+        heading: '14. Final Checklist for Students',
+        body:
+          'Before submitting, make sure your campaign brief is complete and connected.',
+        bullets: [
+          'My campaign has one clear objective.',
+          'My target audience is specific.',
+          'My messaging pillars match customer needs.',
+          'My channels match where the audience spends time.',
+          'My timeline has pre-launch, launch, and post-launch activity.',
+          'My brand voice is clear and consistent.',
+          'My metrics match the campaign objective.',
+          'I removed unsupported claims, fake numbers, and repeated generic content.',
+        ],
+      },
+    ],
+  },
 ]
 
 export function getChapterNoteById(chapterId) {
