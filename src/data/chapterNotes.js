@@ -926,6 +926,215 @@ export const chapterNotes = [
       },
     ],
   },
+  {
+    chapterId: 22,
+    title: 'AI Image Generation',
+    objective: 'Generate promotional visuals using AI.',
+    topics: [
+      'Image prompting',
+      'Composition',
+      'Style',
+      'Product posters',
+      'Promotional graphics',
+      'Canva AI',
+      'Microsoft Designer',
+      'Commercial usage considerations',
+    ],
+    activity: 'Create a promotional product poster.',
+    discussion: 'What should be checked before using an AI-generated image for business promotion?',
+    keyTakeaway:
+      'AI image generation is excellent for rapid concept development, but commercial usage should be reviewed carefully.',
+    sections: [
+      {
+        heading: '1. What AI Image Generation Means',
+        body:
+          'AI image generation means using an AI tool to create a visual from a written prompt. The prompt tells the tool what image to make. For business, AI images can help create quick poster ideas, product concepts, backgrounds, social media graphics, and campaign visuals.',
+        bullets: [
+          'AI can create many visual concepts quickly.',
+          'AI can help students explore different styles before designing the final version.',
+          'AI images still need human checking for accuracy, brand fit, and usage safety.',
+          'AI should be used as a design helper, not as a replacement for judgment.',
+        ],
+        example:
+          'Example: A student can ask Canva AI or Microsoft Designer to create a poster for a new cold coffee launch, then edit the text, logo, price, and layout manually.',
+      },
+      {
+        heading: '2. Image Prompting',
+        body:
+          'Image prompting means writing clear instructions for the image tool. A weak prompt gives vague results. A strong prompt gives the product, audience, purpose, layout, colors, text, and style.',
+        bullets: [
+          'Subject: what should appear in the image.',
+          'Purpose: poster, Instagram post, story, banner, flyer, or product visual.',
+          'Audience: who the visual is made for.',
+          'Style: modern, clean, premium, playful, minimal, bold, or festive.',
+          'Composition: where the product, headline, offer, and background should appear.',
+          'Brand details: colors, logo space, font style, and tone.',
+          'Text: exact headline or offer to include, if the tool supports text well.',
+        ],
+        prompt:
+          'Create a promotional product poster for [product]. Audience: [target audience]. Main message: [offer or launch message]. Style: [clean/premium/playful/modern]. Use brand colors: [colors]. Composition: product in the center, clear headline at the top, offer details below, space for logo in the corner. Make it readable on mobile. Do not add fake brand names, fake awards, or extra text.',
+      },
+      {
+        heading: '3. Composition',
+        body:
+          'Composition means how the elements are arranged in the design. Good composition helps the audience understand the message quickly. Poor composition makes the poster crowded or confusing.',
+        bullets: [
+          'Main focus: the product or main message should be easy to notice first.',
+          'Hierarchy: headline should be larger than supporting details.',
+          'Spacing: leave enough empty space so the design does not feel crowded.',
+          'Balance: product image, text, and background should feel arranged, not random.',
+          'Logo space: leave a small clear area for the logo.',
+          'CTA area: keep the call-to-action easy to find.',
+        ],
+        example:
+          'Example: For a product poster, the product can be in the center, the headline at the top, the offer below the product, and the CTA near the bottom.',
+      },
+      {
+        heading: '4. Style',
+        body:
+          'Style is the visual mood of the image. It includes color, lighting, texture, background, and overall feeling. The style must match the brand and audience.',
+        bullets: [
+          'A youth brand can use bright colors, energetic layouts, and casual visuals.',
+          'A premium brand can use simple backgrounds, elegant lighting, and fewer elements.',
+          'A food brand should make the product look fresh, clear, and appetizing.',
+          'A professional service should use clean layouts and trustworthy colors.',
+          'The chosen style should support the message, not distract from it.',
+        ],
+        example:
+          'Example: A luxury perfume poster should not use cartoon graphics unless the brand is intentionally playful.',
+      },
+      {
+        heading: '5. Product Posters',
+        body:
+          'A product poster promotes one product, service, offer, or launch. It should make the audience understand what is being offered and what action to take.',
+        bullets: [
+          'Product name or visual should be clear.',
+          'Main benefit should be easy to understand.',
+          'Offer or price should be readable if included.',
+          'CTA should tell the customer what to do next.',
+          'Brand logo or name should be visible.',
+          'The poster should not include incorrect product details.',
+        ],
+        example:
+          'Example: A poster for a new snack combo can include product photo, combo name, price, short benefit, and CTA: "Visit today" or "Order on WhatsApp."',
+      },
+      {
+        heading: '6. Promotional Graphics',
+        body:
+          'Promotional graphics are visuals made for campaigns, offers, events, launches, or announcements. They may be used on Instagram, WhatsApp, posters, websites, or presentations.',
+        bullets: [
+          'Launch graphic: announces a new product or service.',
+          'Offer graphic: promotes a discount, combo, or limited-time deal.',
+          'Event graphic: promotes a workshop, sale, opening, or special activity.',
+          'Reminder graphic: reminds the audience before the offer ends.',
+          'Feature graphic: explains one product feature or benefit.',
+        ],
+      },
+      {
+        heading: '7. Canva AI',
+        body:
+          'Canva AI is useful when students want both image generation and easy editing in the same place. After generating a design, students can change text, colors, logo, layout, and size.',
+        bullets: [
+          'Use Canva when you need a social media post, story, flyer, or poster.',
+          'Use Magic Design or AI image tools to create first concepts.',
+          'Edit the generated design to match the brand kit.',
+          'Check all text manually because AI-generated text in images may be wrong.',
+          'Export only after checking size, readability, and brand consistency.',
+        ],
+        prompt:
+          'Design an Instagram promotional poster for [brand]. Product: [product]. Offer: [offer]. Audience: [audience]. Use [brand colors]. Keep the layout clean, with one clear headline, product image focus, CTA at the bottom, and space for logo. Make it suitable for a business page.',
+      },
+      {
+        heading: '8. Microsoft Designer',
+        body:
+          'Microsoft Designer can quickly create promotional graphics from text prompts. It is useful for fast campaign ideas, but students should still check whether the output is accurate and usable.',
+        bullets: [
+          'Write the product, audience, style, and message clearly.',
+          'Generate more than one version so you can compare options.',
+          'Check whether the image matches the product and audience.',
+          'Do not accept strange product shapes, wrong text, or confusing layouts.',
+          'Use the best version as a draft and improve it manually if needed.',
+        ],
+      },
+      {
+        heading: '9. Commercial Usage Considerations',
+        body:
+          'Commercial usage means using an image for a real business purpose, such as advertising, selling, posting from a brand account, or printing promotional material. AI-generated images should be reviewed carefully before business use.',
+        bullets: [
+          'Check the tool rules: different AI tools may have different usage terms.',
+          'Avoid using protected brand logos, celebrity faces, copyrighted characters, or copied artwork styles.',
+          'Do not show a product feature that the real product does not have.',
+          'Do not include fake awards, fake certificates, fake customer numbers, or fake claims.',
+          'Check whether people, hands, text, packaging, and product details look correct.',
+          'Keep a record of the prompt and tool used for important business work.',
+          'Ask a teacher, manager, or designer to review important commercial visuals before publishing.',
+        ],
+      },
+      {
+        heading: '10. How to Review an AI-Generated Image',
+        body:
+          'A generated image can look attractive but still be unusable. Students should review it like a business designer, not only like a viewer.',
+        bullets: [
+          'Message clarity: can the audience understand the offer quickly?',
+          'Product accuracy: does the product look correct?',
+          'Text accuracy: are spellings, prices, dates, and CTAs correct?',
+          'Brand fit: do colors, style, and tone match the brand?',
+          'Readability: can the design be read on a mobile screen?',
+          'Layout: is the design clean or crowded?',
+          'Risk: does the image include unsupported claims or questionable elements?',
+        ],
+        prompt:
+          'Review this promotional poster concept. Check message clarity, product accuracy, text accuracy, brand fit, readability, layout, and commercial usage risk. Give a table with Problem, Why it matters, and Fix. Do not invent extra product claims.',
+      },
+      {
+        heading: '11. Sample Poster Planning Table',
+        body:
+          'Before generating the poster, students can fill this table so the AI prompt becomes clearer.',
+        table: {
+          columns: ['Poster Part', 'Student Example'],
+          rows: [
+            ['Product', 'Cold coffee combo'],
+            ['Audience', 'College students aged 18-24'],
+            ['Main message', 'Quick drink and snack before class'],
+            ['Offer', 'Combo from Rs. 99'],
+            ['Style', 'Bright, friendly, campus-focused'],
+            ['Composition', 'Product center, headline top, CTA bottom'],
+            ['CTA', 'Visit today with college ID'],
+            ['Brand check', 'Use cafe colors and logo in corner'],
+          ],
+        },
+      },
+      {
+        heading: '12. Activity Guide',
+        body:
+          'For the class activity, students should create one promotional product poster using Canva AI, Microsoft Designer, or another approved AI image/design tool.',
+        bullets: [
+          'Step 1: Choose a product or service.',
+          'Step 2: Decide the target audience and main promotion message.',
+          'Step 3: Write the poster prompt with product, audience, style, colors, layout, and CTA.',
+          'Step 4: Generate at least two poster concepts.',
+          'Step 5: Compare both concepts for clarity, readability, product accuracy, and brand fit.',
+          'Step 6: Edit the best concept manually if text, logo, layout, or colors need improvement.',
+          'Step 7: Write a short note explaining why the final poster is suitable for the audience.',
+        ],
+      },
+      {
+        heading: '13. Final Checklist for Students',
+        body:
+          'Before submitting, check whether the poster is both attractive and usable.',
+        bullets: [
+          'My poster has one clear product or offer.',
+          'The target audience is clear.',
+          'The headline is readable on mobile.',
+          'The product visual is accurate and not distorted.',
+          'The CTA tells the customer what to do next.',
+          'The design matches the brand colors and style.',
+          'I checked spelling, price, date, and offer details.',
+          'I reviewed commercial usage risks before treating the image as publishable.',
+        ],
+      },
+    ],
+  },
 ]
 
 export function getChapterNoteById(chapterId) {
