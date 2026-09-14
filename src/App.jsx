@@ -15,6 +15,7 @@ const TaskAnswer = lazy(() => import('./pages/TaskAnswer.jsx'))
 const SecretPage = lazy(() => import('./pages/SecretPage.jsx'))
 const Notifications = lazy(() => import('./pages/Notifications.jsx'))
 const NotesGrid = lazy(() => import('./pages/NotesGrid.jsx'))
+const ChapterNotes = lazy(() => import('./pages/ChapterNotes.jsx'))
 
 function PageFallback() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/chapter/:chapterId" element={<ChapterDetails />} />
+        <Route path="/chapter/:chapterId/notes" element={<ChapterNotes />} />
         <Route path="/task/:taskId" element={<TaskDetails />} />
         <Route path="/task/:taskId/answer" element={<TaskAnswer />} />
         <Route path="/psst" element={<SecretPage />} />

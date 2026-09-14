@@ -9,6 +9,7 @@ import Footer from '../components/Footer.jsx'
 import { getChapterById } from '../data/chapters.js'
 import { getTasksByChapter } from '../data/tasks.js'
 import { getChapterNotesUrl } from '../data/notes.js'
+import { getChapterNoteById } from '../data/chapterNotes.js'
 
 const HERO_PALETTES = [
   {
@@ -89,6 +90,7 @@ export default function ChapterDetails() {
 
   const tasks = getTasksByChapter(chapter.id)
   const notesUrl = getChapterNotesUrl(chapter.id)
+  const websiteNote = getChapterNoteById(chapter.id)
 
   return (
     <div className="relative flex min-h-screen flex-col bg-[#FAF6EC]">
@@ -138,7 +140,21 @@ export default function ChapterDetails() {
         </div>
 
         <h2 className="font-display mt-10 text-lg font-semibold text-slate-900">Notes</h2>
-        <div className="mt-4">
+        <div className="mt-4 flex flex-col gap-3">
+          {websiteNote && (
+            <Link
+              to={`/chapter/${chapter.id}/notes`}
+              className="group flex items-center justify-between rounded-xl border border-slate-200/70 bg-[#FFFCF5] px-4 py-3 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-[#F6F0FF] hover:shadow-[0_8px_20px_-12px_rgba(109,40,217,0.3)]"
+            >
+              <div className="flex items-center gap-3">
+                <FileText className="h-5 w-5 text-violet-600" aria-hidden="true" />
+                <span className="font-medium text-slate-900">Chapter {String(chapter.id).padStart(2, '0')} Notes (Website)</span>
+              </div>
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-cyan-400 group-hover:text-white">
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+              </span>
+            </Link>
+          )}
           {notesUrl ? (
             <a
               href={notesUrl}
@@ -154,9 +170,9 @@ export default function ChapterDetails() {
                 <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
               </span>
             </a>
-          ) : (
+          ) : !websiteNote ? (
             <p className="text-sm text-slate-500">No notes available for this chapter yet.</p>
-          )}
+          ) : null}
         </div>
 
         <h2 className="font-display mt-8 text-lg font-semibold text-slate-900">Tasks</h2>
