@@ -93,7 +93,7 @@ export default function ChapterNotes() {
   return (
     <div className="flex min-h-screen flex-col bg-[#FAF6EC]">
       <Navbar />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-[1400px] flex-1 px-4 py-10 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-violet-100 bg-gradient-to-br from-violet-100 via-cyan-50 to-[#FFFCF5] p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_18px_40px_-24px_rgba(109,40,217,0.25)] sm:p-8">
           <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cyan-200/40 blur-3xl" aria-hidden="true" />
           <div className="pointer-events-none absolute -bottom-20 left-10 h-52 w-52 rounded-full bg-violet-200/50 blur-3xl" aria-hidden="true" />
