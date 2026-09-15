@@ -149,6 +149,177 @@ export const chapterNotes = [
           'My final calendar still sounds like the brand, not like generic AI content.',
         ],
       },
+      {
+        heading: '11. The Common Mistake',
+        body:
+          'Many businesses think social media strategy means "post something every day." That is not a strategy. Posting without direction usually creates random, repetitive, and weak content.',
+        bullets: [
+          'A strategy asks who the brand is trying to reach.',
+          'A strategy asks where that audience spends time.',
+          'A strategy decides what the brand should talk about.',
+          'A strategy explains why the audience would care.',
+          'A strategy decides what action the audience should take.',
+        ],
+        example:
+          'Example: A small clothing brand for college students should not automatically post on Instagram, Facebook, LinkedIn, YouTube, X, and Pinterest every day. It should first decide which platforms actually match college students and the brand goal.',
+      },
+      {
+        heading: '12. One Platform Does Not Have to Do Everything',
+        body:
+          'Each social media platform has a different purpose. A business can choose one or two strong platforms instead of spreading effort everywhere.',
+        bullets: [
+          'For a B2B consulting company, LinkedIn business insights may matter more than Instagram memes.',
+          'For a visual student fashion brand, Instagram reels and stories may matter more than LinkedIn posts.',
+          'For tutorials or reviews, YouTube may be stronger than short image posts.',
+          'The right platform is decided by audience, content, and business objective together.',
+        ],
+        example:
+          'Example: If business owners are the decision-makers, spend more effort where business owners read, search, and trust content.',
+      },
+      {
+        heading: '13. Content Strategy Formula',
+        body:
+          'A simple formula can help students create better ideas instead of asking AI for random posts.',
+        bullets: [
+          'Pillar: the main category, such as Education or Product.',
+          'Topic: the specific idea inside the pillar.',
+          'Format: reel, carousel, story, image, poll, or testimonial.',
+          'Audience: the people the post is made for.',
+          'Objective: the result the post should support.',
+        ],
+        example:
+          'Example: Education + Coffee selection + Reel + College students + Engagement is much clearer than "post something about coffee."',
+      },
+      {
+        heading: '14. Build Brand Context Before Asking AI',
+        body:
+          'AI gives better content when it understands the brand. Before asking for a calendar, students should give AI the brand, audience, personality, goals, pillars, platform, and things to avoid.',
+        prompt:
+          'Brand: A college-focused coffee shop. Target audience: college students aged 18-24. Brand personality: friendly, energetic, youthful, and relatable. Main goals: increase store visits and build local awareness. Content pillars: Products, Student lifestyle, Coffee education, Community, Promotions. Primary platform: Instagram. Avoid overly corporate language, repetitive promotional posts, and generic motivational quotes.',
+      },
+      {
+        heading: '15. Better Calendar Prompt',
+        body:
+          'After writing the brand context, students can ask AI for a first draft of the calendar. They should paste the brand context at the end of the prompt.',
+        prompt:
+          'Create a one-month Instagram content calendar for the brand described below. For each post provide Date, Content pillar, Topic, Content format, Short content idea, and Suggested CTA. Use a variety of content formats. Balance educational content, engagement content, product content, community content, and promotional content. Avoid repeating the same topic, hook, format, or CTA too frequently. Do not make every post promotional. Brand information: [paste brand context]',
+      },
+      {
+        heading: '16. Content Matrix Method',
+        body:
+          'A content matrix prevents repetition by combining content pillars with formats. Instead of asking for 30 random posts, students can create combinations.',
+        bullets: [
+          '5 content pillars x 4 content formats = 20 possible content combinations.',
+          'Product can become a reel, carousel, photo post, or story.',
+          'Education can become a tutorial reel, educational carousel, quick tip, or Q&A.',
+          'Community can become a customer story, poll, interview, or user-generated content.',
+          'This method creates variety naturally.',
+        ],
+      },
+      {
+        heading: '17. Do Not Let AI Write Every Post From Scratch',
+        body:
+          'The best workflow is not AI to final post. The best workflow is human idea, AI draft, human editing, final post. The human gives local knowledge and judgment.',
+        bullets: [
+          'Write what you know about the audience first.',
+          'Give that real observation to AI.',
+          'Let AI create a draft or variation.',
+          'Edit the draft so it sounds like the brand.',
+          'Check that the idea is useful, specific, and true.',
+        ],
+        example:
+          'Example: If you know students usually visit the cafe after afternoon classes, give AI that insight and ask for a reel concept around that real behavior.',
+      },
+      {
+        heading: '18. Brand Voice',
+        body:
+          'Brand voice means how the brand sounds. A luxury perfume brand, a college cafe, and a finance company should not sound the same.',
+        bullets: [
+          'A luxury perfume brand may sound refined and elegant.',
+          'A college cafe may sound short, friendly, and casual.',
+          'A financial consulting company may sound clear, practical, and trustworthy.',
+          'AI needs brand voice instructions or it will often use generic marketing language.',
+        ],
+        prompt:
+          'Write social media content using this brand voice. Tone: friendly, confident, and conversational. Audience: college students. Language: simple and relatable. Style: short sentences, natural wording, and occasional humor. Avoid corporate language, exaggerated claims, generic motivational phrases, and excessive sales language. The content should feel like it was written by a real brand team, not a generic AI marketing tool.',
+      },
+      {
+        heading: '19. AI Should Not Invent Business Claims',
+        body:
+          'AI can create convincing marketing language, but convincing does not mean true. Students must check every number, ranking, testimonial, and strong claim before using it.',
+        bullets: [
+          'Do not write "#1 student choice" unless there is real proof.',
+          'Do not write "90% of customers prefer this" unless the business has real data.',
+          'Do not invent testimonials.',
+          'Do not promise results the product cannot guarantee.',
+          'If there is no evidence, rewrite the claim in a safer way.',
+        ],
+        example:
+          'Example: Replace "Our coffee is the #1 student choice" with "A quick coffee stop for students between classes."',
+      },
+      {
+        heading: '20. The 70-20-10 Content Mix Idea',
+        body:
+          'The 70-20-10 idea is a simple way to avoid making every post promotional. It is not a fixed rule for every brand, but it helps students think about balance.',
+        bullets: [
+          '70% useful or interesting content.',
+          '20% community and brand content.',
+          '10% direct promotional content.',
+          'The exact mix can change depending on the business.',
+          'The principle is simple: if every post asks people to buy, people stop listening.',
+        ],
+      },
+      {
+        heading: '21. Improve Three AI-Generated Posts',
+        body:
+          'After AI creates the calendar, students should improve three weak posts instead of accepting the whole calendar immediately.',
+        prompt:
+          'Improve this social media idea. Keep the original business objective and facts. Make it more specific, more relatable to college students, less generic, more distinct from other posts, and consistent with the brand voice. Do not use cliches or exaggerated claims. Content idea: [paste idea]',
+      },
+      {
+        heading: '22. Common Mistakes',
+        body:
+          'These are the mistakes students should avoid when using AI for social media planning.',
+        bullets: [
+          'Choosing every platform instead of the right platforms.',
+          'Posting without a strategy or objective.',
+          'Making every post promotional.',
+          'Generating 100 posts at once and assuming more content is better.',
+          'Repeating the same idea with different words.',
+          'Using generic AI phrases such as "Unlock your potential" or "Do not miss out."',
+          'Ignoring brand voice.',
+          'Publishing AI output without checking facts and claims.',
+        ],
+      },
+      {
+        heading: '23. Human + AI Workflow',
+        body:
+          'This is the professional workflow students should remember. AI helps with volume and drafts, but humans control strategy, quality, and truth.',
+        bullets: [
+          'Understand the audience.',
+          'Choose platforms.',
+          'Define content pillars.',
+          'Plan content types.',
+          'Create the calendar.',
+          'Use AI for ideas and drafts.',
+          'Review for repetition.',
+          'Adapt to brand voice.',
+          'Verify claims.',
+          'Publish and analyze performance.',
+        ],
+      },
+      {
+        heading: '24. Final Challenge',
+        body:
+          'Imagine AI creates this month\'s calendar and it has 8 promotional posts, 7 posts about the same product, 5 generic motivational posts, 4 nearly identical captions, only 2 educational posts, and no customer stories. Students should not publish it. The question is not whether AI generated 30 posts. The question is whether AI generated 30 useful pieces of content for this specific audience and brand.',
+        bullets: [
+          'More content gives volume.',
+          'Better content gets attention.',
+          'Consistent content builds a brand.',
+          'Strategy must come before AI generation.',
+          'Human review must happen before publishing.',
+        ],
+      },
     ],
   },
   {
