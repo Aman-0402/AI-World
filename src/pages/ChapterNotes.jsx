@@ -20,11 +20,38 @@ function NoteSection({ icon: Icon, title, children }) {
   )
 }
 
-function DetailSection({ section }) {
+function isActivity(section) {
+  return /^Activity\b/.test(section.heading)
+}
+
+function DetailSection({ section, id }) {
+  const activity = isActivity(section)
   return (
-    <section className="rounded-2xl border border-slate-300/80 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.06),0_16px_34px_-22px_rgba(15,23,42,0.24)] transition hover:border-violet-300 sm:p-6">
+    <section
+      id={id}
+      className={`scroll-mt-24 rounded-2xl border bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.06),0_16px_34px_-22px_rgba(15,23,42,0.24)] transition hover:border-violet-300 sm:p-6 ${
+        activity ? 'border-violet-300 border-l-4 border-l-violet-600' : 'border-slate-300/80'
+      }`}
+    >
+      {activity && (
+        <span className="mb-2 inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-violet-800">
+          Try it yourself
+        </span>
+      )}
       <h2 className="font-display text-2xl font-semibold leading-snug text-slate-950">{section.heading}</h2>
       {section.body && <p className="mt-3 text-base leading-8 text-slate-800">{section.body}</p>}
+      {section.steps && (
+        <ol className="mt-4 flex flex-col gap-3">
+          {section.steps.map((step, i) => (
+            <li key={step} className="flex gap-3 text-base leading-7 text-slate-800">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-600 text-sm font-semibold text-white">
+                {i + 1}
+              </span>
+              <span className="pt-0.5">{step}</span>
+            </li>
+          ))}
+        </ol>
+      )}
       {section.bullets && (
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
           {section.bullets.map((bullet) => (
@@ -37,7 +64,7 @@ function DetailSection({ section }) {
       )}
       {section.example && (
         <div className="mt-4 rounded-2xl border border-cyan-200 bg-cyan-50 p-4 text-base leading-8 text-slate-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
-          <span className="font-bold text-cyan-950">Example: </span>
+          <span className="font-bold text-cyan-950">{activity ? 'Worked example: ' : 'Example: '}</span>
           {section.example.replace(/^Example: /, '')}
         </div>
       )}
@@ -152,9 +179,27 @@ export default function ChapterNotes() {
         </section>
 
         {note.sections && (
+          <nav aria-label="On this page" className="mt-6 flex flex-wrap gap-2">
+            {note.sections.map((section, i) => (
+              <a
+                key={section.heading}
+                href={`#note-section-${i + 1}`}
+                className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
+                  isActivity(section)
+                    ? 'border-violet-200 bg-violet-100 text-violet-800 hover:bg-violet-200'
+                    : 'border-slate-200/70 bg-[#FFFCF5] text-slate-600 hover:border-violet-200 hover:bg-[#F6F0FF] hover:text-violet-700'
+                }`}
+              >
+                {section.heading}
+              </a>
+            ))}
+          </nav>
+        )}
+
+        {note.sections && (
           <div className="mt-6 flex flex-col gap-4">
-            {note.sections.map((section) => (
-              <DetailSection key={section.heading} section={section} />
+            {note.sections.map((section, i) => (
+              <DetailSection key={section.heading} section={section} id={`note-section-${i + 1}`} />
             ))}
           </div>
         )}

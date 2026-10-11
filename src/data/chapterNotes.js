@@ -1509,6 +1509,403 @@ export const chapterNotes = [
       },
     ],
   },
+  {
+    chapterId: 25,
+    title: 'AI Voice Generation',
+    objective: 'Turn text into natural-sounding speech and use AI voices responsibly.',
+    topics: [
+      'Text-to-speech vs voice cloning',
+      'Business uses of AI voice',
+      'Matching voice to audience',
+      'Consent and disclosure',
+    ],
+    activity: 'Generate the same script in two voices and decide which one fits the audience.',
+    discussion: 'When is it acceptable to use a cloned voice, and what must you tell the listener?',
+    keyTakeaway: 'AI can speak any script in seconds, but the voice choice and the ethics are still your decision.',
+    sections: [
+      {
+        heading: '1. What Is AI Voice Generation?',
+        body:
+          'AI voice generation turns written text into spoken audio using a computer-generated voice. Type a script, pick a voice, and the tool reads it aloud in seconds. No microphone, no recording studio, and no voice actor are needed.',
+        bullets: [
+          'Text-to-Speech (TTS): you type text and AI speaks it in a pre-built voice.',
+          "Voice cloning: AI learns a specific real person's voice from a sample recording and can make that voice say new things it never said.",
+        ],
+        example:
+          'You type "Welcome to CampusBrew, your favourite study spot, now with faster Wi-Fi." A TTS tool reads it aloud in a warm, friendly voice in about 5 seconds, ready to drop into an Instagram Reel.',
+      },
+      {
+        heading: '2. Where Businesses Actually Use It',
+        bullets: [
+          'IVR and phone systems: "Press 1 for billing" is recorded once and updated by editing text instead of re-recording.',
+          'E-learning narration: turn a course PDF or slide deck into a narrated video without hiring a narrator.',
+          'Podcast and ad voiceovers: draft voiceovers to test an ad script before paying for a professional recording.',
+          'Multilingual dubbing: the same video narrated in Hindi, English, and Tamil without three recording sessions.',
+          'Accessibility: reading website content aloud for visually impaired users.',
+        ],
+      },
+      {
+        heading: '3. Picking the Right Voice for the Message',
+        body:
+          "The same script sounds completely different depending on the voice's tone, pace, and accent. A voice that works for one audience can feel wrong for another. This is a choice, not a default setting to ignore.",
+        example:
+          'A college coffee-shop ad read in a slow, formal, corporate voice feels out of place for 18-24 year olds, even though every word matches a version read in an upbeat, casual voice. The words did not change; the fit did.',
+      },
+      {
+        heading: '4. The Ethics Line: Consent and Disclosure',
+        body: "Voice cloning can recreate someone's voice to say things they never said. Two rules matter for business use:",
+        steps: [
+          "Consent: never clone a real person's voice (a colleague, customer, or public figure) without their explicit permission.",
+          "Disclosure: if a voice in an ad, video, or customer message is AI-generated, say so. Presenting it as a real human recording when it isn't is misleading.",
+        ],
+      },
+      {
+        heading: 'Activity 1: Match the Voice to the Audience',
+        steps: [
+          'Write a 30-second script for a business of your choice (CampusBrew, a gym, a local bakery).',
+          'Generate it in two very different voice settings: one formal and corporate, one casual and friendly.',
+          'Listen to both and decide which one fits your target audience, and why.',
+        ],
+        example:
+          'Script: "Fresh coffee, faster Wi-Fi, and a spot to actually get work done. That\'s CampusBrew." In a formal, deep, slow voice it sounds like a bank ad. In an upbeat, casual voice it sounds like it is talking to a student. Same words, two very different fits.',
+      },
+      {
+        heading: 'Activity 2: Fix a Robotic-Sounding Script',
+        steps: [
+          'Write a sentence with no punctuation cues, such as "our coffee is fresh and our staff are friendly and we are open till 10pm".',
+          'Generate the audio and notice how flat and run-on it sounds.',
+          'Rewrite it with commas, shorter sentences, and an exclamation point where it matters, then regenerate.',
+        ],
+        example:
+          'Before: "our coffee is fresh and our staff are friendly and we are open till 10pm" (one flat run-on). After: "Our coffee is fresh. Our staff are friendly. And we\'re open till 10pm!" (natural pauses and energy in the right place).',
+      },
+      {
+        heading: 'Activity 3: Draft an AI-Voice Disclosure',
+        steps: [
+          "Imagine you are using an AI voice in a customer-facing video ad.",
+          'Write one honest, short sentence disclosing that the voice is AI-generated.',
+          "Identify one scenario where you would need a real person's written consent before cloning their voice.",
+        ],
+        example:
+          'Disclosure line: "This ad features an AI-generated voice." Consent scenario: cloning your founder\'s voice for a recruiting video. Even though it is your own company, it is still that specific person\'s voice, so you need their sign-off first.',
+      },
+    ],
+  },
+  {
+    chapterId: 26,
+    title: 'AI for Branding',
+    objective: 'Use AI to draft a brand identity quickly, then judge it with human judgment.',
+    topics: ['The five parts of a brand kit', 'Taglines and palettes', 'Why AI logos look generic', 'Brand-specific prompting'],
+    activity: 'Generate five taglines and two palettes, then rewrite a generic logo prompt.',
+    discussion: 'What makes a brand look generic, and how does a more specific prompt fix it?',
+    keyTakeaway: 'AI gives fast first drafts of a brand. Specific input and human judgment make it feel real.',
+    sections: [
+      {
+        heading: '1. What Branding With AI Actually Means',
+        body:
+          'AI can draft almost anything that makes up a brand: logo concepts, color palettes, mood boards, taglines, even a description of brand voice. The key word is first draft. AI is fast at options, but a human still decides what the brand actually stands for.',
+      },
+      {
+        heading: '2. Building a Mini Brand Kit',
+        body: 'A basic brand kit that AI can help draft in minutes has five parts.',
+        bullets: [
+          'Name: what the business is called.',
+          'Tagline: a short line capturing what it does or promises.',
+          'Color palette: 3 colors, each with a reason, not just "looks nice".',
+          'Font pairing: one heading font and one body font that feel consistent.',
+          'Brand voice: one sentence describing how the brand talks, such as playful and casual vs precise and professional.',
+        ],
+        example:
+          'Name: CampusBrew. Tagline: "Your study spot, minus the silence." Colors: warm brown (coffee, comfort), cream (calm, readable), bright orange accent (energy, buttons). Fonts: a rounded friendly heading font plus a clean body font. Voice: casual, encouraging, a little playful, like a friend rather than a corporation.',
+      },
+      {
+        heading: '3. Why Every AI Logo Looks the Same',
+        body:
+          'Ask AI for "a modern logo for a tech startup" and you often get the same ingredients: a blue gradient, an abstract swirl, a shape that could belong to any company. The prompt gave AI nothing specific to work with. Vague input produces generic output. A prompt that names the personality, the audience, and one thing that makes the brand different produces a far less generic start.',
+      },
+      {
+        heading: 'Activity 1: Generate and Judge 5 Taglines',
+        steps: [
+          'Pick a real or invented business idea.',
+          'Ask AI for 5 taglines for it.',
+          'Pick the best one using 3 criteria: is it short, is it memorable, and is it honest about what the business does?',
+        ],
+        example:
+          'Business: a college food delivery startup. AI offers "Food, Fast, Fresh", "Your Campus, Your Cravings", and "Hunger Solved". Best pick: "Your Campus, Your Cravings". It is short, memorable, and specific to the audience, unlike "Hunger Solved", which could belong to any food brand.',
+      },
+      {
+        heading: 'Activity 2: Build Two Palettes for Two Personalities',
+        steps: [
+          'Pick two different personalities: trustworthy and modern (a fintech app) vs playful and bold (a snack brand).',
+          'Ask AI for a 3-color palette and a one-line reason for each.',
+          'Compare them. Do the colors match the personality, or could they be swapped without anyone noticing?',
+        ],
+        example:
+          'Fintech: navy blue (stability), white (clarity), one teal accent (modern). Snack brand: bright yellow (energy), hot pink (fun), black (bold contrast). Swapping them feels wrong immediately: navy and white would make the snack brand boring, and hot pink would undercut the fintech app\'s trustworthiness.',
+      },
+      {
+        heading: 'Activity 3: Spot and Fix a Generic Logo Prompt',
+        steps: [
+          'Read this prompt: "Design a modern logo for a tech startup."',
+          'Identify 2 cliches it will likely produce, such as a gradient or an abstract swirl.',
+          "Rewrite it with the brand's name, audience, personality, and one specific differentiator.",
+        ],
+        prompt:
+          "Design a logo for 'NoteSync', a note-taking app for college students who study in groups. Personality: friendly and collaborative, not corporate. Differentiator: the logo should hint at sharing or connection, not a generic tech swirl.",
+        example:
+          'The generic prompt would likely give a blue-to-purple gradient and a meaningless swoosh. The rewritten prompt gives AI a name, an audience, a personality, and a reason, so the result has something to say.',
+      },
+    ],
+  },
+  {
+    chapterId: 27,
+    title: 'AI for HR',
+    objective: 'Use AI to speed up HR drafting while keeping humans in charge of bias and accuracy.',
+    topics: ['Where AI helps HR', 'Bias in resume screening', 'Inclusive job descriptions', 'Fact-checking HR content'],
+    activity: 'Draft a job description with AI and audit it for biased or inflated requirements.',
+    discussion: 'Why can an AI screening tool repeat a bias nobody chose on purpose?',
+    keyTakeaway: 'AI drafts fast. Humans must check HR content for bias and invented details.',
+    sections: [
+      {
+        heading: '1. Where AI Actually Helps HR',
+        bullets: [
+          'Job description drafting: turn a rough list of duties into a polished JD.',
+          'Policy explainer drafts: a plain-language first pass of a leave or expense policy.',
+          "First-pass resume screening: check resumes against a role's stated requirements.",
+          'HR FAQ content: draft answers to common employee questions for a handbook.',
+        ],
+      },
+      {
+        heading: '2. The Bias Risk in AI Resume Screening',
+        body:
+          "AI screening tools are often trained on a company's past hiring data. If that history favors certain schools, names, or backgrounds, the AI can learn and repeat the pattern consistently and at scale, with nobody deciding it should. That is why a human must audit AI screening instead of trusting it as a neutral filter.",
+        example:
+          'A tool trained mostly on past hires from a few famous universities may keep ranking equally qualified candidates from lesser-known colleges lower. There is no real skill gap behind it, only a pattern in the training data that hardens a bias nobody chose.',
+      },
+      {
+        heading: '3. Writing an Inclusive Job Description',
+        body:
+          'Some words and requirements quietly discourage qualified people from applying. AI can repeat these patterns unless you tell it to avoid them.',
+        bullets: [
+          'Avoid exclusionary language such as "rockstar", "ninja", or "young and energetic team".',
+          'Avoid inflated requirements, such as "5+ years experience" for an entry-level role.',
+          'Separate real must-have skills from nice-to-have skills instead of one long list.',
+        ],
+      },
+      {
+        heading: 'Activity 1: Draft and Audit a Job Description',
+        steps: [
+          'Write a rough bullet list of duties for a role, such as Marketing Intern.',
+          'Ask AI to turn it into a full job description.',
+          'Read it back looking for biased or exclusionary language and fix what you find.',
+        ],
+        example:
+          'Rough bullets: "manage social media, help with events, some Excel work". If the AI draft says "looking for a young, energetic self-starter", flag "young" as age-exclusionary and change it to "motivated self-starter", which keeps the trait without excluding older candidates.',
+      },
+      {
+        heading: 'Activity 2: Separate Must-Haves From Nice-to-Haves',
+        steps: [
+          'Ask AI for 3 must-have and 3 nice-to-have skills for a role of your choice.',
+          'Review each must-have: is it truly necessary or an inflated requirement?',
+          'Move any artificially strict must-have (for example years of experience on an entry-level role) to nice-to-have.',
+        ],
+        example:
+          'Role: Junior Data Analyst. If AI lists "3+ years of SQL" as a must-have, that is inflated for a junior role. Move it to nice-to-have and make the must-have "basic understanding of SQL and willingness to learn on the job".',
+      },
+      {
+        heading: 'Activity 3: Fact-Check an AI-Drafted Policy FAQ',
+        steps: [
+          'Give AI a real or sample leave/expense policy and ask it to draft one FAQ answer from it.',
+          'Compare the answer line by line against the actual policy text.',
+          "Flag anything AI added that the policy never stated.",
+        ],
+        example:
+          'The policy says "Employees get 12 paid leave days per year." If the FAQ answer adds "and unused days carry over to next year" without the policy saying so, that is an invented detail. Remove it or confirm it with HR before publishing.',
+      },
+    ],
+  },
+  {
+    chapterId: 28,
+    title: 'AI for Recruitment',
+    objective: 'Run structured, fair interviews with AI-drafted questions and scoring rubrics.',
+    topics: ['Technical vs behavioral questions', 'Structured interviews', 'Scoring rubrics', 'Fair and relevant questions'],
+    activity: 'Generate interview questions, build a 1-5 rubric, and fix one problematic question.',
+    discussion: 'Why does asking every candidate the same questions give fairer results?',
+    keyTakeaway: 'AI drafts the questions and rubric. A human applies them consistently and judges the real answers.',
+    sections: [
+      {
+        heading: '1. From Job Description to Interview Questions',
+        body:
+          'Once a job description exists, AI can draft interview questions from it: technical questions that test a skill, and behavioral questions that test how someone handled real situations before.',
+        example:
+          'Technical: "How would you clean a dataset with duplicate customer records?" Behavioral: "Tell me about a time you fixed a mistake you made at work. What did you do?" Both are useful because they test different things.',
+      },
+      {
+        heading: '2. Structured Interviews Beat Gut Feeling',
+        body:
+          'Asking every candidate the same questions, scored against the same rubric, is fairer and more comparable than a free-flowing chat that changes with each candidate. AI is useful for drafting both the fixed question set and the rubric. Consistency is the whole point.',
+      },
+      {
+        heading: '3. Evaluating Candidates Without Over-Trusting AI Scoring',
+        body:
+          "AI can suggest a rubric showing what a 5-out-of-5 answer and a 1-out-of-5 answer look like. It cannot judge a real answer with full context such as tone, follow-ups, and situational nuance. The rubric helps a human score consistently. It does not replace the human's judgment.",
+      },
+      {
+        heading: 'Activity 1: Generate and Prioritize Interview Questions',
+        steps: [
+          "Take a job description (your own or from Chapter 27).",
+          'Ask AI for 5 interview questions, mixing technical and behavioral.',
+          "Pick the 3 you would ask first and explain why they matter most for this role.",
+        ],
+        example:
+          'Role: Marketing Intern. AI suggests questions on social media tools, a teamwork example, creativity, deadline pressure, and a campaign idea. Priority: the teamwork example and the campaign idea, because they reveal fit better than a tool-specific question that can be taught on the job.',
+      },
+      {
+        heading: 'Activity 2: Build and Apply a Scoring Rubric',
+        steps: [
+          'Pick one interview question.',
+          'Ask AI for a 1-5 scoring rubric for it (what a 5 looks like vs a 1).',
+          'Write two sample candidate answers yourself and score both with the rubric.',
+        ],
+        example:
+          'Question: "Tell me about a time you handled a difficult customer." Rubric 5: specific situation, clear action, positive resolution. Rubric 1: vague, no example, no resolution. A specific, resolved answer scores 4-5. "I\'m usually good with people" with no example scores 1-2 under the same rubric.',
+      },
+      {
+        heading: 'Activity 3: Spot and Fix a Problematic Question',
+        steps: [
+          'Review the 5 questions from Activity 1.',
+          'Find one that could be discriminatory, irrelevant, or unfair to some candidates.',
+          'Rewrite it into a fairer, more job-relevant version.',
+        ],
+        example:
+          'Original: "Do you have any commitments outside work that might affect your availability?" This can indirectly probe caregiving responsibilities, which is inappropriate. Rewritten: "This role sometimes needs weekend event coverage. Is that something you can commit to?" It asks about the actual job requirement, not personal life.',
+      },
+    ],
+  },
+  {
+    chapterId: 29,
+    title: 'AI in Finance',
+    objective: 'Use AI for budgets and forecasts while verifying every number yourself.',
+    topics: ['Where AI helps finance', 'Forecasts as guesses with a method', 'Verifying AI numbers', 'Profit margin vs cash flow'],
+    activity: 'Forecast three months, then recalculate one month by hand to verify AI.',
+    discussion: 'Why is a forecast without stated assumptions just a confident-sounding number?',
+    keyTakeaway: 'A forecast is a structured guess. State the method and assumptions, and check at least one number by hand.',
+    sections: [
+      {
+        heading: '1. Where AI Actually Helps in Finance',
+        bullets: [
+          'Budget drafting: turn a rough list of expected costs into a structured monthly budget.',
+          'Forecasting: extend past trends forward to estimate future revenue or costs.',
+          'Expense categorization: sort a messy list of transactions into categories.',
+          'Variance-analysis explanations: draft a plain-language reason why actuals differed from the budget.',
+        ],
+      },
+      {
+        heading: '2. Forecasts Are Guesses With a Method',
+        body:
+          'An AI forecast is not a fact about the future. It is a structured guess, usually extending a trend, an average, or a seasonal pattern. That is useful only when the method and assumptions are stated clearly. Without them it is just a confident-sounding number.',
+        example:
+          'Past 3 months: ₹80,000, ₹85,000, ₹90,000 (steady ₹5,000 monthly increase). Trend forecast for next month: ₹95,000, assuming the same ₹5,000 monthly growth continues with no major new factors. You can check this by hand, and it is honest about what it assumes.',
+      },
+      {
+        heading: '3. Verifying an AI-Generated Financial Number',
+        body:
+          "The rule from the Excel chapter applies even more strictly here: never use a financial number or formula you cannot explain. If AI calculates a margin, growth rate, or forecast, check it on at least one small hand-checkable example before trusting it on the real numbers.",
+      },
+      {
+        heading: 'Activity 1: Forecast and Verify by Hand',
+        steps: [
+          'Write down 6 made-up monthly revenue numbers for a small business.',
+          'Ask AI to forecast the next 3 months and explain its method (trend, average, or seasonal).',
+          "Recalculate at least one forecast month by hand using AI's stated method and see if it matches.",
+        ],
+        example:
+          'Revenue: 50k, 52k, 55k, 53k, 58k, 60k. AI forecasts month 7 at about 62k using a trend method. Manual check: the average monthly increase is roughly +2k, so 60k + 2k = 62k. It matches, so the method was applied correctly.',
+      },
+      {
+        heading: 'Activity 2: Explain Profit Margin vs Cash Flow Simply',
+        steps: [
+          'Ask AI to explain profit margin vs cash flow with a simple 3-line business example.',
+          "Rewrite the explanation in your own words, without copying AI's phrasing.",
+          'Check that your version still makes the real distinction clear.',
+        ],
+        example:
+          'A business sells ₹1,00,000 of goods that cost ₹70,000 to make (30% margin). If customers have not paid their invoices, it has ₹0 cash in hand despite being profitable on paper. Profit margin measures what you earned. Cash flow measures what you actually have.',
+      },
+      {
+        heading: 'Activity 3: Flag Unusual Budget Line Items',
+        steps: [
+          'Write an 8-10 line monthly budget for a small business, including one deliberately unusual number.',
+          'Ask AI to flag line items that look unusual compared to the rest.',
+          'For the flagged item, decide whether it is a real concern or normal seasonal variation.',
+        ],
+        example:
+          'Marketing is ₹5,000 for 11 months, then ₹50,000 in one month before a big festival sale. AI flags it. This is likely normal seasonal variation, but confirm it with whoever approved that spend before finalizing the budget.',
+      },
+    ],
+  },
+  {
+    chapterId: 30,
+    title: 'AI in Sales',
+    objective: 'Use AI to draft personalized outreach and honest lead reasoning for a sales workflow.',
+    topics: ['Where AI helps sales', 'Personalization vs spam', 'Objection handling', 'Defensible lead scoring'],
+    activity: 'Improve a cold email, rank objection responses, and defend an AI lead ranking.',
+    discussion: 'What makes a cold email feel written for one person instead of a thousand?',
+    keyTakeaway: 'Specific details and honest reasoning beat generic scripts every time.',
+    sections: [
+      {
+        heading: '1. Where AI Actually Helps Sales',
+        bullets: [
+          'CRM data summarization: turn a long lead history into a quick "what happened so far".',
+          'Lead scoring: rank which leads are most likely to close, based on given signals.',
+          'Personalized outreach drafts: a first-draft cold email or follow-up.',
+          'Objection-handling scripts: draft replies to pushback like "too expensive" or "not right now".',
+        ],
+      },
+      {
+        heading: '2. Personalization vs Generic Spam',
+        body:
+          "An AI cold email that only knows a prospect's name and industry reads like every other cold email they get that week. Real personalization needs at least one specific, verifiable detail about that prospect, proof that someone looked at who they are writing to.",
+        example:
+          'Generic: "Hi [Name], I noticed you work in retail and thought our product could help you grow." Personalized: "Hi Priya, saw that your store just expanded to a second location. Scaling inventory across two sites is exactly what our tool was built for." The second proves real attention.',
+      },
+      {
+        heading: '3. Handling Objections Without Sounding Scripted',
+        body:
+          'AI can draft a reply to "it\'s too expensive", but a reply that ignores the reason behind the objection sounds scripted and defensive. The best replies acknowledge the specific concern first, then respond to it directly, not a generic rebuttal pasted into every conversation.',
+      },
+      {
+        heading: 'Activity 1: Write and Improve a Personalized Cold Email',
+        steps: [
+          'Invent a prospect profile: industry, company size, and one specific pain point.',
+          'Ask AI to draft a personalized cold email using only that information.',
+          'Add one more real, specific detail that makes it less generic, such as a recent company milestone.',
+        ],
+        example:
+          'Prospect: a 20-person logistics company that struggled with delayed deliveries during a festival rush. A generic draft says "logistics challenges". The improved version names "the festival-season delivery delays many logistics teams faced this year", which is real, timely, and specific.',
+      },
+      {
+        heading: 'Activity 2: Draft and Rank Objection Responses',
+        steps: [
+          'Ask AI to draft replies to 3 common objections: "too expensive", "not the right time", "already using a competitor".',
+          'Read all 3 replies out loud.',
+          'Rank them from most natural to most scripted and rewrite the weakest one.',
+        ],
+        example:
+          'A scripted "too expensive" reply opens with "I understand budget is a concern...". A natural rewrite: "Totally fair. What budget range were you expecting? That will help me show you the option that actually fits." It responds to the specific concern, not a script.',
+      },
+      {
+        heading: 'Activity 3: Score Leads and Defend the Reasoning',
+        steps: [
+          'Write 3 short lead profiles (company size, engagement level, stated budget or urgency).',
+          'Ask AI to score and rank them by likelihood to close.',
+          'Imagine your manager asks "why did you rank them that way?" and check that AI\'s reasoning holds up.',
+        ],
+        example:
+          'Lead A: small company, opened every email, said "need this by next month". Lead B: large company, no opens, no reply. AI ranks A higher. Manager test: "A shows active engagement and a stated urgent timeline, stronger buying signals than B\'s silence regardless of company size." That is a real, defensible reason.',
+      },
+    ],
+  },
 ]
 
 export function getChapterNoteById(chapterId) {
