@@ -1510,6 +1510,200 @@ export const chapterNotes = [
     ],
   },
   {
+    chapterId: 23,
+    title: 'Video Script Writing',
+    objective: 'Write a short-form video script and storyboard that hooks viewers and is actually shootable.',
+    topics: ['Hook, body, and call-to-action', 'Writing for the ear, not the eye', 'Timing a 30-second script', 'Storyboards and shot lists'],
+    activity: 'Write three hooks, trim a script to 30 seconds, and turn it into a 5-shot storyboard.',
+    discussion: 'Why does a script that reads well on paper often sound wrong when spoken aloud?',
+    keyTakeaway: 'A strong video starts with a hook, fits its time limit, and has a plan for every shot.',
+    sections: [
+      {
+        heading: '1. Why Video Scripts Are Different',
+        body:
+          'A video script is written to be heard and seen, not read. Viewers decide in about 3 seconds whether to keep watching, so every line has to earn its place. AI can draft a script quickly, but it tends to write long, polished sentences that sound like an essay when spoken.',
+        example:
+          'On paper: "Our café offers an exceptional environment conducive to productive studying." Spoken in a Reel: "Need a quiet spot to actually study? We saved you a seat." Same message, but only the second sounds like a person talking.',
+      },
+      {
+        heading: '2. The Hook-Body-CTA Structure',
+        body: 'Nearly every short-form video follows the same three-part shape.',
+        steps: [
+          'Hook (first 3 seconds): a question, bold claim, or surprising visual that stops the scroll.',
+          'Body (middle): the one idea, tip, or story you are delivering. Keep it to one point.',
+          'Call-to-action (last 3-5 seconds): what the viewer should do next, such as visit, follow, save, or order.',
+        ],
+        example:
+          'Hook: "Your coffee is costing you focus." Body: "Here is why cold brew keeps your energy steadier than a sugary latte." CTA: "Try one at CampusBrew this week."',
+      },
+      {
+        heading: '3. Timing: How Long Is 30 Seconds?',
+        body:
+          'People speak about 2 to 2.5 words per second. A 30-second video therefore holds roughly 60 to 75 spoken words. If an AI script is 150 words, it is a 60-second video, not a 30-second one.',
+        bullets: [
+          '15 seconds: about 30 to 38 words.',
+          '30 seconds: about 60 to 75 words.',
+          '60 seconds: about 120 to 150 words.',
+          'Always read the script aloud with a timer. Counting is faster than guessing.',
+        ],
+      },
+      {
+        heading: '4. From Script to Storyboard',
+        body:
+          'A storyboard breaks the script into shots so you can plan what the viewer sees while each line plays. A shot list is simply the storyboard in a table: what is on screen, what is said, and how long it lasts.',
+        table: {
+          columns: ['Shot', 'What the viewer sees', 'Voiceover line', 'Length'],
+          rows: [
+            ['1', 'Close-up of a student yawning over a laptop', 'Your coffee is costing you focus.', '3 sec'],
+            ['2', 'Barista pouring cold brew over ice', 'Cold brew keeps energy steady.', '9 sec'],
+            ['3', 'Student smiling, typing quickly', 'No sugar crash, no slump.', '12 sec'],
+            ['4', 'Café logo and counter', 'Try one at CampusBrew this week.', '6 sec'],
+          ],
+        },
+      },
+      {
+        heading: '5. Where AI Scripts Go Wrong',
+        bullets: [
+          'Generic hooks like "Did you know?" that every brand already uses.',
+          'Too many ideas crammed into one short video.',
+          'Shots that are expensive or impossible to film, such as drone footage or celebrity cameos.',
+          'Invented claims or statistics that the brand cannot back up.',
+        ],
+      },
+      {
+        heading: 'Activity 1: Write and Pick the Best Hook',
+        steps: [
+          'Choose a product or message for a Reel, such as a coffee shop, a gym, or a study app.',
+          'Ask AI for 5 different hooks for it.',
+          'Pick the strongest one and explain in one sentence why it would stop the scroll.',
+        ],
+        prompt:
+          'Give me 5 different 3-second hooks for a 30-second Instagram Reel promoting cold brew at a college cafe. Each hook must use a different approach: a question, a bold claim, a relatable problem, a surprising fact, and a challenge. Do not invent statistics.',
+        example:
+          'Best pick: "Your coffee is costing you focus." It names a problem the student already feels and makes them curious about the answer, unlike a generic "Did you know?" opener.',
+      },
+      {
+        heading: 'Activity 2: Trim a Script to Exactly 30 Seconds',
+        steps: [
+          'Ask AI to write a 30-second script for your idea.',
+          'Count the words and read it aloud with a timer.',
+          'If it runs over, cut it to 60 to 75 words by removing the least important lines, then time it again.',
+        ],
+        example:
+          'The AI script is 140 words and takes about 58 seconds. Cut the second and third tips, keep only the hook, one benefit, and the CTA. The new version is 68 words and reads in 29 seconds.',
+      },
+      {
+        heading: 'Activity 3: Turn Your Script Into a 5-Shot Storyboard',
+        steps: [
+          'Break your trimmed script into 5 shots.',
+          'For each shot, write what the viewer sees, the line spoken, and the length in seconds.',
+          'Check that the lengths add up to about 30 seconds and that every shot is something you could really film.',
+        ],
+        example:
+          'Shot 1 (3 sec) shows a tired student, shot 2 (7 sec) shows the drink being poured, shot 3 (8 sec) shows the student smiling, shot 4 (7 sec) shows the menu board, shot 5 (5 sec) shows the logo and CTA. Total: 30 seconds. A drone shot was replaced with a simple phone shot of the counter because it is easier to film.',
+      },
+    ],
+  },
+  {
+    chapterId: 24,
+    title: 'AI Video Creation',
+    objective: 'Use AI tools to assemble a draft marketing video, then edit it into something accurate and publishable.',
+    topics: ['What AI video tools do', 'Writing a good video prompt', 'Captions and accuracy', 'Editing the AI first cut', 'Ethics and disclosure'],
+    activity: 'Write a video prompt, fix auto-generated captions, and audit an AI first cut.',
+    discussion: 'What should you always check before publishing an AI-generated video?',
+    keyTakeaway: 'AI makes the first cut quickly. You are responsible for accuracy, brand fit, and honesty.',
+    sections: [
+      {
+        heading: '1. What AI Video Tools Actually Do',
+        body: 'AI video tools can speed up several steps of video production. They do not replace planning or review.',
+        bullets: [
+          'Generate short clips from a text description (text-to-video).',
+          'Assemble stock footage, images, and text into a draft from your script.',
+          'Add AI voiceover and automatic captions.',
+          'Resize one video into formats for Reels, Shorts, and LinkedIn.',
+        ],
+        example:
+          'Give Canva or Pika your 30-second script and storyboard, and you can have a rough 30-second draft in minutes. The draft is a starting point, not a finished video.',
+      },
+      {
+        heading: '2. Writing a Good Video Prompt',
+        body:
+          'A vague prompt gives a generic clip. A good video prompt names the subject, the setting, the style, the camera movement, and the length.',
+        table: {
+          columns: ['Weak prompt', 'Better prompt'],
+          rows: [
+            [
+              'A video about coffee',
+              'A 5-second close-up of cold brew being poured over ice in a bright college cafe, warm natural light, slow camera push-in, no text on screen',
+            ],
+          ],
+        },
+        bullets: [
+          'Subject: what is in the shot.',
+          'Setting and lighting: where it is and how it looks.',
+          'Style and mood: realistic, playful, minimal, cinematic.',
+          'Camera: close-up, wide, slow zoom, handheld.',
+          'Length and what to avoid: for example, no text or logos in the clip.',
+        ],
+      },
+      {
+        heading: '3. Captions: Fast but Not Always Right',
+        body:
+          'Auto-captions save time and help viewers who watch with sound off, which is most people on social media. But captions are frequently wrong on brand names, numbers, and names of places.',
+        example:
+          'The voiceover says "CampusBrew". The auto-caption shows "Campus Brew" or "Campus Brow". A price of "Rs. 150" appears as "Rs. 15". Always read every caption against the script.',
+      },
+      {
+        heading: '4. Editing the AI First Cut',
+        body: 'Treat the AI draft like a junior editor wrote it. Check these things before publishing.',
+        bullets: [
+          'Accuracy: does the video say exactly what the script says, with no invented claims?',
+          'Pacing: is the hook in the first 3 seconds, and do cuts feel natural?',
+          'Brand fit: do colors, fonts, and tone match the brand?',
+          'Visual glitches: strange hands, warped text, or objects that do not make sense.',
+          'Captions and audio: correct spelling, readable size, and audio that is not clipped.',
+        ],
+      },
+      {
+        heading: '5. Ethics and Disclosure',
+        body:
+          'Never use AI to create realistic footage of a real person doing or saying something they did not do. Label AI-generated footage when it could be mistaken for real, and check licensing before using generated clips commercially.',
+      },
+      {
+        heading: 'Activity 1: Upgrade a Weak Video Prompt',
+        steps: [
+          'Start with this weak prompt: "A video about our gym."',
+          'Rewrite it to include subject, setting, style, camera movement, and length.',
+          'Generate both versions if your tool allows, and note how the results differ.',
+        ],
+        prompt:
+          'A 6-second shot of a student finishing a deadlift in a clean, bright college gym, energetic and realistic style, handheld camera moving slightly closer, no text or logos, warm morning light.',
+        example:
+          'The weak prompt produces a generic stock-style gym clip. The detailed prompt produces a shot with a clear subject, mood, and motion that actually fits an ad for a student gym.',
+      },
+      {
+        heading: 'Activity 2: Fix the Captions',
+        steps: [
+          'Generate auto-captions for your video or a sample script.',
+          'Compare every caption line against the original script.',
+          'List at least 3 errors (brand names, numbers, or punctuation) and correct them.',
+        ],
+        example:
+          'Errors found: "Campus Brow" corrected to "CampusBrew", "Rs. 15" corrected to "Rs. 150", and a missing question mark restored on the hook. Three small mistakes would have made the video look careless.',
+      },
+      {
+        heading: 'Activity 3: Audit the First Cut',
+        steps: [
+          'Watch your AI-generated draft once without pausing.',
+          'Check it against the script for accuracy, pacing, brand fit, glitches, and captions.',
+          'Write a short list of the edits you would make before publishing.',
+        ],
+        example:
+          'Audit notes: hook starts at 5 seconds instead of 3, so trim the intro. Clip 3 shows a warped cup logo, so replace it. The final claim says "best coffee in the city", which is unsupported, so remove it. Re-export after these three edits.',
+      },
+    ],
+  },
+  {
     chapterId: 25,
     title: 'AI Voice Generation',
     objective: 'Turn text into natural-sounding speech and use AI voices responsibly.',
