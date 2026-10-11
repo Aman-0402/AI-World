@@ -1,4 +1,6 @@
-export const chapterNotes = [
+import { chapterNotesBasics } from './chapterNotesBasics.js'
+
+const baseNotes = [
   {
     chapterId: 17,
     title: 'Social Media Strategy & Content Calendar',
@@ -2101,6 +2103,8 @@ export const chapterNotes = [
     ],
   },
 ]
+
+export const chapterNotes = [...chapterNotesBasics, ...baseNotes]
 
 export function getChapterNoteById(chapterId) {
   return chapterNotes.find((note) => String(note.chapterId) === String(chapterId))
