@@ -86,3 +86,13 @@ npm run build    # production build
 ```
 
 (Add lint/test scripts here once configured.)
+
+## In-Site Chapter Notes
+- Route `/chapter/:chapterId/notes` (`src/pages/ChapterNotes.jsx`); `ChapterDetails` shows "Notes (Website)" when `getChapterNoteById` finds data. Locked chapters redirect to `/explore`.
+- Data files merged in `src/data/chapterNotes.js`: `chapterNotesBasics` (1-8), `chapterNotesWork` (9-16), `baseNotes` (17-30), `chapterNotesAdvanced` (31-40), `chapterNotesCapstone` (41-48). New batch = new file + import + extend the spread.
+- Schema: `{ chapterId, title, objective, topics[], activity, discussion, keyTakeaway, sections[{ heading, body?, bullets?[], steps?[], example?, prompt?, table?{columns, rows} }] }`.
+- Headings starting with "Activity" render as violet "Try it yourself" cards with "Worked example". A TOC chip bar links to each section.
+- React keys use heading/bullet/step/cell strings: keep them unique within a section (including cells within one table row).
+- PDF notes for chapters 25-30 live in `src/assets/pdf/S<id>.pdf`.
+- Chapters unlocked through 33; 34-48 still `locked: true`. `NOTES_LOCKED = true` in `NotesGrid.jsx` hides the `/notes` grid.
+- Chapters 1-16 and 31-48 web notes are authored teaching content, not extracted from class slides.

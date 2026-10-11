@@ -1,6 +1,7 @@
 import { chapterNotesBasics } from './chapterNotesBasics.js'
 import { chapterNotesWork } from './chapterNotesWork.js'
 import { chapterNotesAdvanced } from './chapterNotesAdvanced.js'
+import { chapterNotesCapstone } from './chapterNotesCapstone.js'
 
 const baseNotes = [
   {
@@ -2106,7 +2107,7 @@ const baseNotes = [
   },
 ]
 
-export const chapterNotes = [...chapterNotesBasics, ...chapterNotesWork, ...baseNotes, ...chapterNotesAdvanced]
+export const chapterNotes = [...chapterNotesBasics, ...chapterNotesWork, ...baseNotes, ...chapterNotesAdvanced, ...chapterNotesCapstone]
 
 export function getChapterNoteById(chapterId) {
   return chapterNotes.find((note) => String(note.chapterId) === String(chapterId))
