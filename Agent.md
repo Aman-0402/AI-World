@@ -94,7 +94,7 @@ npm run build    # production build
 - Headings starting with "Activity" render as violet "Try it yourself" cards with "Worked example". A TOC chip bar links to each section.
 - React keys use heading/bullet/step/cell strings: keep them unique within a section (including cells within one table row).
 - PDF notes for chapters 25-30 live in `src/assets/pdf/S<id>.pdf`.
-- Chapters unlocked through 33; 34-48 still `locked: true`. `NOTES_LOCKED = true` in `NotesGrid.jsx` hides the `/notes` grid.
+- Chapters unlocked through 33; 34-48 still `locked: true`. `NOTES_LOCKED = false` in `NotesGrid.jsx` (the `/notes` grid is open; set it to `true` to show the "Notes Locked" screen again).
 - Chapters 1-16 and 31-48 web notes are authored teaching content, not extracted from class slides.
 
 ## Structured Task Steps

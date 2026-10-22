@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import { completeNotes } from '../data/completeNotes.js'
 
-const NOTES_LOCKED = true
+const NOTES_LOCKED = false
 
 export default function NotesGrid() {
   if (NOTES_LOCKED) {
