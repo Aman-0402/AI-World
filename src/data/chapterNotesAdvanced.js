@@ -177,61 +177,6 @@ export const chapterNotesAdvanced = [
     ],
   },
   {
-    chapterId: 34,
-    title: 'NotebookLM & Knowledge Management',
-    objective: 'Turn your own documents into a searchable, source-grounded knowledge base with NotebookLM.',
-    topics: ['What knowledge management is', 'Source-grounded AI', 'Summaries and question lists', 'Checking against the source'],
-    activity: 'Upload a business report to NotebookLM, summarize it, and ask three detailed follow-up questions.',
-    discussion: 'How is a source-grounded tool different from a general chatbot?',
-    keyTakeaway: 'A tool that answers only from your documents is easier to verify. Still check important answers against the original text.',
-    sections: [
-      {
-        heading: '1. What Is Knowledge Management?',
-        body:
-          'Knowledge management is organizing what a company knows (reports, policies, notes, past projects) so people can find and use it. Without it, the same questions are asked repeatedly and good information gets lost in folders and inboxes.',
-      },
-      {
-        heading: '2. Source-Grounded AI',
-        body:
-          'A general chatbot answers from everything it was trained on. A source-grounded tool such as NotebookLM answers from the documents you upload and can point to where in the document an answer came from. That makes errors easier to catch.',
-        table: {
-          columns: ['General chatbot', 'Source-grounded tool'],
-          rows: [
-            ['Answers from broad training data', 'Answers from your uploaded documents'],
-            ['Sources may be unclear', 'Points back to your document'],
-            ['Can invent details', 'Less likely to invent, but not immune'],
-          ],
-        },
-      },
-      {
-        heading: '3. What You Can Do With It',
-        bullets: [
-          'Summarize a long report in a few lines.',
-          'Generate a list of key questions about a document.',
-          'Compare several documents on one topic.',
-          'Create a briefing from meeting notes and reports.',
-        ],
-      },
-      {
-        heading: '4. Ask Specific Follow-Up Questions',
-        prompt:
-          'According to the uploaded report, what were the three main reasons for the sales decline? Quote the relevant lines and tell me which page or section they come from.',
-        body: 'Specific questions with a request for quotes force the tool to show its evidence.',
-      },
-      {
-        heading: 'Activity 1: Report to Insights',
-        steps: [
-          'Upload a business document or report into NotebookLM.',
-          'Generate a summary and a list of key questions.',
-          'Ask three follow-up questions about specific details.',
-          'Open the original document and verify each answer.',
-        ],
-        example:
-          'The summary says revenue fell 12%. You search the report and find 11.8%. It is close, but you use the exact figure in your own writing.',
-      },
-    ],
-  },
-  {
     chapterId: 35,
     title: 'Workflow Automation',
     objective: 'Design simple automated workflows with no-code tools and AI at one step.',

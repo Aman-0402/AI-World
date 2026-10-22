@@ -898,29 +898,6 @@ export const tasks = [
     ],
   },
   {
-    id: 34,
-    chapterId: 34,
-    title: 'Summarise Business Reports with NotebookLM',
-    question: 'How can NotebookLM help you extract key insights from a long business report?',
-    whatToDo: 'Upload a business report or long document into NotebookLM and generate a summary and key questions.',
-    steps: [
-      'Upload a business document or report into NotebookLM.',
-      'Ask NotebookLM to summarize the key findings in bullet points.',
-      'Ask NotebookLM three follow-up questions about specific details in the document.',
-      'Check one answer against the original document for accuracy.',
-    ],
-    requiredFile: null,
-    downloadUrl: null,
-    whatYouLearn: [
-      'How NotebookLM grounds its answers in the uploaded source document.',
-      'How to use a knowledge-management AI tool for faster document review.',
-    ],
-    questions: [
-      'Did the summary capture the most important point in the document?',
-      'Was the follow-up answer accurate when checked against the source?',
-    ],
-  },
-  {
     id: 35,
     chapterId: 35,
     title: 'Build an Automated Workflow',
