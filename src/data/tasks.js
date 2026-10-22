@@ -898,6 +898,37 @@ export const tasks = [
     ],
   },
   {
+    id: 34,
+    chapterId: 34,
+    title: 'Turn Three Business Reports into Insights with NotebookLM',
+    question: 'How can NotebookLM combine several long business reports into one set of grounded insights?',
+    whatToDo: 'Upload the three Greenleaf Home Essentials reports (practice data) into one NotebookLM notebook, then summarise them, ask detailed questions, and verify the answers against the source.',
+    steps: [
+      'Download the three reports below and upload all of them into one new NotebookLM notebook.',
+      { file: 'Annual_Business_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Annual_Business_Report_FY2025-26.pdf') },
+      { file: 'Customer_Feedback_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Customer_Feedback_Report_FY2025-26.pdf') },
+      { file: 'Marketing_Plan_FY2026-27.pdf', downloadUrl: getTaskFileUrl('Marketing_Plan_FY2026-27.pdf') },
+      'Ask NotebookLM to summarise each report in 5 bullet points and generate a list of key questions.',
+      'Ask: "What are the main reasons revenue fell in FY 2025-26, and does the Marketing Plan address them? Quote the relevant lines and name the report each comes from."',
+      'Ask: "What do customers complain about most, and which of those complaints does the Marketing Plan ignore?"',
+      'Ask one follow-up question of your own that compares two of the reports.',
+      'Open the original PDFs and verify at least three figures or quotes from the answers.',
+    ],
+    resources: [
+      { name: 'Annual_Business_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Annual_Business_Report_FY2025-26.pdf') },
+      { name: 'Customer_Feedback_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Customer_Feedback_Report_FY2025-26.pdf') },
+      { name: 'Marketing_Plan_FY2026-27.pdf', downloadUrl: getTaskFileUrl('Marketing_Plan_FY2026-27.pdf') },
+    ],
+    whatYouLearn: [
+      'How NotebookLM grounds its answers in uploaded source documents and cites where they come from.',
+      'How to use a knowledge-management AI tool to compare several long documents quickly.',
+    ],
+    questions: [
+      'Did every figure NotebookLM quoted match the original report?',
+      'Which gap between the reports (problem versus plan) was the most important one you found?',
+    ],
+  },
+  {
     id: 35,
     chapterId: 35,
     title: 'Build an Automated Workflow',
