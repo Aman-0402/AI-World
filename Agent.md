@@ -96,3 +96,6 @@ npm run build    # production build
 - PDF notes for chapters 25-30 live in `src/assets/pdf/S<id>.pdf`.
 - Chapters unlocked through 33; 34-48 still `locked: true`. `NOTES_LOCKED = true` in `NotesGrid.jsx` hides the `/notes` grid.
 - Chapters 1-16 and 31-48 web notes are authored teaching content, not extracted from class slides.
+
+## Structured Task Steps
+- `StepList` also renders section steps: `{ heading, intro?, files?[{file, downloadUrl}], links?[{label, href}], actions?[], prompt?, promptLabel?, purpose?, table?{columns, rows}, checks?[], tip?, warning? }`. Used by task 34. Prompts use the copy-protected `.prompt-text` box; links open in a new tab. Plain strings, `{file}` and `{intro, checklist, outro}` steps still work.

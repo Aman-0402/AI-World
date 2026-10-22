@@ -904,36 +904,328 @@ export const tasks = [
     question: 'How can you turn three company reports into useful, verified insights for management using NotebookLM?',
     whatToDo: 'Act as a business analyst: upload three Greenleaf Home Essentials reports (practice data) into NotebookLM, ask it five questions, check its answers against the originals, and write a one-page management briefing.',
     steps: [
-      'The case: Greenleaf Home Essentials is a fictional online home-goods retailer. Management wants to know how the business performed, why customers are unhappy, and what to do next. All figures are practice data. You will act as a business analyst: upload three company reports into NotebookLM, ask it five questions, check its answers against the originals, and write a one-page briefing for management. Allow about 50 minutes.',
-      'Before you start: NotebookLM is a free Google tool where you upload your own documents and chat with an AI that answers only from those documents. Every answer comes with small numbered links called citations that point to the exact passage it used. This is called source-grounded AI. You need a laptop or phone with internet, a Google account (a personal Gmail account is fine), the three practice PDF files, and a Word or Google Docs file for your briefing.',
-      'Step 1: Get the three practice files. Download the three PDF files below and save them in one folder on your device so they are easy to find. Annual Business Report FY2025-26 shows how the business performed. Customer Feedback Report FY2025-26 shows why customers are unhappy. Marketing Plan FY2026-27 shows what management plans to do next.',
-      { file: 'Annual_Business_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Annual_Business_Report_FY2025-26.pdf') },
-      { file: 'Customer_Feedback_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Customer_Feedback_Report_FY2025-26.pdf') },
-      { file: 'Marketing_Plan_FY2026-27.pdf', downloadUrl: getTaskFileUrl('Marketing_Plan_FY2026-27.pdf') },
-      { intro: 'Check before moving on:', checklist: ['All three files open on your device and you can read them', 'Each file shows the red Practice Data note on page 1', 'You know where the folder is saved'], outro: 'Tip: Skim each file for two minutes first. It makes the answers easier to judge later.' },
-      'Step 2: Open NotebookLM and create a notebook. Open your browser and go to notebooklm.google.com. Sign in with your Google account if asked. Click Create new notebook (the button may show a plus sign or the word New). A window asking you to add sources may open straight away; leave it open for Step 3. Click the notebook title at the top (it may say Untitled notebook) and rename it to Business Performance Analysis. You should see a sources area on the left, a chat box in the middle, and tools on the right. If you cannot sign in, your school account may block the tool, so use a personal Google account instead.',
-      'Step 3: Upload the sources. Click Add sources (or the plus sign in the sources area) and choose Upload files. Select the Annual Business Report PDF; you can pick all three files at once by holding Ctrl (Windows) or Cmd (Mac). Wait while NotebookLM processes the files. When the loading circles disappear, all three files should be listed under Sources. Do not start asking questions until all three files have finished loading. Never upload confidential company files or personal information about students or customers without permission. The practice files are safe to use.',
-      { intro: 'Check each source before you continue:', checklist: ['Are all three documents listed with the right names?', 'Click one source: can you read its text on screen?', 'Is every document about the same company and the same period?', 'Does anything look outdated or contradict another document? Note it down. You will need it later.'] },
-      'Step 4: Understand the documents first (Prompt 1). Before asking for findings, find out what is actually inside the files. Click the chat box at the bottom of the notebook, paste the prompt below, and press Enter.',
-      'Prompt 1: "Using only the documents in this notebook, explain the purpose of each document. Summarize the main topics, important business metrics, and any limitations in the information provided. Clearly distinguish information stated in the documents from information that is missing."',
-      { intro: 'How to read the answer:', checklist: ['Look for the small numbers (citations) after each sentence. Hover over one to preview the passage it comes from.', 'Write a two-line summary of each document in your own words.', 'Note anything the AI says is missing. These are your first information gaps.'], outro: 'You should find that the Annual Report covers money and sales, the Feedback Report covers complaints and satisfaction, and the Marketing Plan covers budget and campaigns. Check this against the real files and do not assume it. What you learn: you cannot judge an answer until you know what information exists.' },
-      'Step 5: Ask the five business questions. Paste the prompts one at a time, in this order. Wait for each answer, read it, and save the useful parts in your notes (question number, key points and citation numbers) before moving to the next. Paste the whole prompt exactly as written, including the words using only the documents. If an answer is too long or unclear, ask a follow-up such as Explain that in simpler words and cite the source. Do not copy every answer blindly; the next step is to test them.',
-      'Question 1 (Summarize the business): "Summarize the five most important findings across the business documents. Include relevant figures where available and cite the sources that support each finding." Purpose: get the big picture. Expect points on falling revenue, rising costs, lower satisfaction and delivery problems.',
-      'Question 2 (Business performance): "What do the documents say about revenue, expenses, sales performance, and business targets? Compare periods only where comparable data is available. Cite the evidence and state when a comparison cannot be made." Purpose: understand the numbers. Write down revenue, profit or loss, and the gap to target.',
-      'Question 3 (Customer problems): "Analyze the customer feedback report. Identify the most frequently mentioned customer problems, provide counts or percentages only when the data supports them, and cite the relevant evidence. If the report does not provide enough information to rank the problems, explain why." Purpose: find what customers complain about most, with numbers.',
-      'Question 4 (Business risks): "Identify the three most important business risks supported by these documents. For each risk, explain the evidence, possible business impact, and what additional information management would need before acting." Purpose: spot problems that could hurt future performance.',
-      'Question 5 (Recommend actions): "Based only on the evidence in the documents, recommend three practical actions management could consider. For each action, state which finding supports it, the expected benefit, and any assumption or missing information. Do not present assumptions as established facts." Purpose: turn the analysis into next steps.',
-      'Step 6: Verify at least three answers using citations. AI can sound confident and still be wrong. A citation lets you check, but it is not proof that the answer is correct. Do this for each of three claims: choose a claim from the AI answers, one with a number or a clear statement; click the citation number after that sentence so NotebookLM jumps to the passage in your source; read the original passage yourself instead of relying on the AI summary; compare the numbers, dates, category and wording with what the AI said; then record the result as Supported, Partly supported, Unsupported or Unclear.',
-      'Worked example (your answers may differ). Claim 1: Delivery delays are the biggest complaint, about 40 percent. Source checked: Customer Feedback Report, section 4, which says 312 of 780 complaints are delivery delays, 40 percent. Result: Supported. Claim 2: Revenue fell because of weak consumer demand. Source checked: Annual Report, chairman\'s message, where management says this but the report gives no evidence for it. Result: Partly supported. The second example shows an important skill: the AI repeated what a document said, but the document itself offered no proof. Say so in your briefing.',
-      { intro: 'Copy this verification table into your notes and fill it in for Claim 1, Claim 2 and Claim 3. Columns: AI claim, Source checked (document and section), Result. Look out for these:', checklist: ['Numbers that do not match the source, or a percentage the AI calculated itself', 'A claim that blends two documents without saying so', 'Advice presented as fact', 'Two documents that disagree. This is a strong finding, so write it down.'], outro: 'If the source contradicts the AI, correct the claim or leave it out of your briefing.' },
-      'Step 7: Write the one-page management briefing. Open Google Docs or Word and write a briefing a busy manager can read in two minutes. Use your verified findings, not a paste of the whole AI chat. Stay within one page. Put your name, group name and date at the top.',
-      { intro: 'Use these six headings:', checklist: ['1. Business objective: the problem or decision you investigated (1 to 2 sentences)', '2. Key findings: three to five findings, each with a figure and its source document (3 to 5 bullets)', '3. Evidence and citations: the document and section that supports each important claim (one line per finding)', '4. Main business risks: up to three risks and why they matter (3 bullets)', '5. Recommended actions: three practical next steps, each linked to a finding (3 bullets)', '6. Limitations and information gaps: what is missing, uncertain or contradictory (2 to 4 bullets)'] },
-      'Example of a good finding. Weak: Customers are unhappy with delivery. Strong: Delivery delays are the largest complaint, 312 of 780 complaints (40 percent). Source: Customer Feedback Report, section 4. Example of a good recommendation. Weak: Improve delivery. Strong: Review the courier contract, because delivery time rose from 4.1 to 6.8 days after the July 2025 courier change. Assumption: the courier change caused the delay. More data on courier performance is needed.',
-      { intro: 'Writing rules:', checklist: ['Every number needs a source in brackets.', 'Use short sentences and plain words.', 'Keep facts and opinions apart. Words like may and suggests mark opinions.', 'Never present an assumption as a fact.', 'Put your name, group name and date at the top.'] },
-      { intro: 'Step 8: Present your findings in two minutes. Each group presents its briefing to the class. Use this order and keep to two minutes:', checklist: ['The problem you investigated (15 seconds)', 'Two or three key findings with figures (45 seconds)', 'One citation you verified: say what the AI claimed and what the source really said (30 seconds)', 'One limitation or information gap (15 seconds)', 'Your main recommendation (15 seconds)'], outro: 'Discussion question for the class: if NotebookLM gives a confident answer but the source does not support it, what should the analyst do? Good answer: check the original document, correct or remove the unsupported claim, and say clearly when information is missing or uncertain.' },
-      { intro: 'Common problems and fixes:', checklist: ['Cannot open NotebookLM: try a personal Google account, a different browser, or a private window', 'A file will not upload: check that it is a PDF under the size limit, then try again. Ask your teacher for a fresh copy', 'The AI says it cannot find the information: the documents may not contain it. This is a valid finding. Write it under information gaps', 'No citation numbers appear: re-ask the question and add: cite the source for every point', 'The answer looks wrong: open the citation and read the original. Correct the claim or leave it out', 'The answer is too long: ask it to summarize in five bullet points with citations', 'Two documents disagree: do not choose one silently. Report the contradiction in your briefing', 'Your briefing is longer than one page: cut to the strongest three findings and shorten each to one line'] },
-      { intro: 'Final checklist. Tick each item before you submit:', checklist: ['Created a NotebookLM notebook named Business Performance Analysis', 'Added at least two relevant business documents (three recommended)', 'Asked the five business questions', 'Verified at least three answers using citations', 'Prepared a one-page management briefing', 'Included recommendations and information gaps'], outro: 'How you will be marked (10 marks): Notebook setup and document selection 2, Quality and relevance of questions 2, Verification of three answers 3, Quality of briefing and recommendations 2, Identification of limitations 1. Marks are given for evidence and reasoning, not for a polished AI answer. If you find an unsupported claim and say so, that earns marks.' },
-      { file: 'Student Guide NotebookLM Business Analysis Activity.pdf', downloadUrl: getTaskFileUrl('Student Guide NotebookLM Business Analysis Activity.pdf') },
+      {
+        heading: 'The case: you are the business analyst',
+        intro: 'Greenleaf Home Essentials is a fictional online home-goods retailer. Management wants to know how the business performed, why customers are unhappy, and what to do next. All figures are practice data. You will upload three reports into NotebookLM, ask it five questions, check its answers against the originals, and write a one-page briefing. Allow about 50 minutes.',
+        checks: [
+          'You have a laptop or phone with internet',
+          'You have a Google account (a personal Gmail account is fine)',
+          'You have a Word or Google Docs file ready for your briefing',
+        ],
+        tip: 'NotebookLM answers only from the documents you upload, and every answer has small numbered links called citations that point to the exact passage used. That is why you can check every claim.',
+      },
+      {
+        heading: 'Step 1: Get the three practice files',
+        intro: 'Download the three PDF files and save them in one folder on your device so they are easy to find.',
+        files: [
+          { file: 'Annual_Business_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Annual_Business_Report_FY2025-26.pdf') },
+          { file: 'Customer_Feedback_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Customer_Feedback_Report_FY2025-26.pdf') },
+          { file: 'Marketing_Plan_FY2026-27.pdf', downloadUrl: getTaskFileUrl('Marketing_Plan_FY2026-27.pdf') },
+        ],
+        table: {
+          columns: ['File', 'What it contains', 'Why you need it'],
+          rows: [
+            [
+              'Annual Business Report FY2025-26',
+              'Revenue, costs, profit, targets, sales by month and category',
+              'Shows how the business performed',
+            ],
+            [
+              'Customer Feedback Report FY2025-26',
+              'Survey scores, complaints, delivery and support data, comments',
+              'Shows why customers are unhappy',
+            ],
+            [
+              'Marketing Plan FY2026-27',
+              'Budget, campaigns, targets, competitors',
+              'Shows what management plans to do next',
+            ],
+          ],
+        },
+        checks: [
+          'All three files open on your device and you can read them',
+          'Each file shows the red Practice Data note on page 1',
+          'You know where the folder is saved',
+        ],
+        tip: 'Skim each file for two minutes first. It makes the answers easier to judge later.',
+      },
+      {
+        heading: 'Step 2: Open NotebookLM and create a notebook',
+        links: [
+          {
+            label: 'Open NotebookLM',
+            href: 'https://notebooklm.google.com',
+          },
+          {
+            label: 'Open Google Docs (new document)',
+            href: 'https://docs.new',
+          },
+        ],
+        actions: [
+          'Click Open NotebookLM above (or go to notebooklm.google.com) and sign in with your Google account if asked.',
+          'Click Create new notebook. The button may show a plus sign or the word New.',
+          'If a window asking you to add sources opens, leave it open for Step 3.',
+          'Click the notebook title at the top (it may say Untitled notebook) and rename it to Business Performance Analysis.',
+        ],
+        intro: 'What you should see: a sources area on the left, a chat box in the middle, and tools on the right. Menu names can change slightly when Google updates the app, so look for the closest match.',
+        warning: 'If you cannot sign in, your school account may block the tool. Use a personal Google account instead.',
+      },
+      {
+        heading: 'Step 3: Upload the sources and check them',
+        actions: [
+          'Click Add sources (or the plus sign in the sources area).',
+          'Choose Upload files.',
+          'Select the Annual Business Report PDF. You can pick all three files at once by holding Ctrl (Windows) or Cmd (Mac).',
+          'Wait while NotebookLM processes the files. A small loading circle shows next to each file.',
+          'When the circles disappear, all three files should be listed under Sources.',
+        ],
+        checks: [
+          'Are all three documents listed with the right names?',
+          'Click one source: can you read its text on screen?',
+          'Is every document about the same company and the same period?',
+          'Does anything look outdated or contradict another document? Note it down. You will need it later.',
+        ],
+        warning: 'Do not start asking questions until all three files have finished loading. Never upload confidential company files or personal information about students or customers without permission. The practice files are safe to use.',
+      },
+      {
+        heading: 'Step 4: Understand the documents first (Prompt 1)',
+        intro: 'Before asking for findings, find out what is actually inside the files. Click the chat box at the bottom of the notebook, type the prompt below, and press Enter.',
+        prompt: 'Using only the documents in this notebook, explain the purpose of each document. Summarize the main topics, important business metrics, and any limitations in the information provided. Clearly distinguish information stated in the documents from information that is missing.',
+        promptLabel: 'Prompt 1: type this in NotebookLM',
+        actions: [
+          'Look for the small numbers (citations) after each sentence. Hover over one to preview the passage it comes from.',
+          'Write a two-line summary of each document in your own words.',
+          'Note anything the AI says is missing. These are your first information gaps.',
+        ],
+        tip: 'You should find that the Annual Report covers money and sales, the Feedback Report covers complaints and satisfaction, and the Marketing Plan covers budget and campaigns. Check this against the real files and do not assume it. You cannot judge an answer until you know what information exists.',
+      },
+      {
+        heading: 'Step 5: Ask the five business questions',
+        intro: 'Type the prompts one at a time, in the order shown in the next five steps. Wait for each answer, read it, and save the useful parts in your notes (question number, key points and citation numbers) before moving to the next.',
+        tip: 'Use the whole prompt exactly as written, including the words using only the documents. If an answer is too long or unclear, ask a follow-up such as: Explain that in simpler words and cite the source. Do not copy every answer blindly. The next step is to test them.',
+      },
+      {
+        heading: 'Question 1: Summarize the business',
+        prompt: 'Summarize the five most important findings across the business documents. Include relevant figures where available and cite the sources that support each finding.',
+        promptLabel: 'Question 1: type this in NotebookLM',
+        purpose: 'Get the big picture. Expect points on falling revenue, rising costs, lower satisfaction and delivery problems.',
+      },
+      {
+        heading: 'Question 2: Business performance',
+        prompt: 'What do the documents say about revenue, expenses, sales performance, and business targets? Compare periods only where comparable data is available. Cite the evidence and state when a comparison cannot be made.',
+        promptLabel: 'Question 2: type this in NotebookLM',
+        purpose: 'Understand the numbers. Write down revenue, profit or loss, and the gap to target.',
+      },
+      {
+        heading: 'Question 3: Customer problems',
+        prompt: 'Analyze the customer feedback report. Identify the most frequently mentioned customer problems, provide counts or percentages only when the data supports them, and cite the relevant evidence. If the report does not provide enough information to rank the problems, explain why.',
+        promptLabel: 'Question 3: type this in NotebookLM',
+        purpose: 'Find what customers complain about most, with numbers.',
+      },
+      {
+        heading: 'Question 4: Business risks',
+        prompt: 'Identify the three most important business risks supported by these documents. For each risk, explain the evidence, possible business impact, and what additional information management would need before acting.',
+        promptLabel: 'Question 4: type this in NotebookLM',
+        purpose: 'Spot problems that could hurt future performance.',
+      },
+      {
+        heading: 'Question 5: Recommend actions',
+        prompt: 'Based only on the evidence in the documents, recommend three practical actions management could consider. For each action, state which finding supports it, the expected benefit, and any assumption or missing information. Do not present assumptions as established facts.',
+        promptLabel: 'Question 5: type this in NotebookLM',
+        purpose: 'Turn the analysis into next steps.',
+      },
+      {
+        heading: 'Step 6: Verify at least three answers using citations',
+        intro: 'AI can sound confident and still be wrong. A citation lets you check, but it is not proof that the answer is correct. Do this for each of three claims.',
+        actions: [
+          'Choose a claim from the AI answers, one with a number or a clear statement.',
+          'Click the citation number after that sentence. NotebookLM jumps to the passage in your source.',
+          'Read the original passage yourself. Do not rely on the AI summary.',
+          'Compare: do the numbers, dates, category and wording match what the AI said?',
+          'Record the result as Supported, Partly supported, Unsupported or Unclear.',
+        ],
+        table: {
+          columns: ['AI claim', 'Source checked', 'What the source says', 'Result'],
+          rows: [
+            [
+              'Delivery delays are the biggest complaint, about 40 percent',
+              'Customer Feedback Report, section 4',
+              '312 of 780 complaints are delivery delays, which is 40 percent',
+              'Supported',
+            ],
+            [
+              'Revenue fell because of weak consumer demand',
+              'Annual Report, chairman message',
+              'Management says this, but the report gives no evidence for it',
+              'Partly supported',
+            ],
+          ],
+        },
+        tip: 'The table above is a worked example, and your answers may differ. The second row shows an important skill: the AI repeated what a document said, but the document itself offered no proof. Say so in your briefing.',
+        checks: [
+          'Copy a table into your notes with the columns AI claim, Source checked (document and section), and Result, then fill in Claim 1, Claim 2 and Claim 3',
+          'Look out for numbers that do not match the source, or a percentage the AI calculated itself',
+          'Look out for a claim that blends two documents without saying so',
+          'Look out for advice presented as fact',
+          'Two documents that disagree is a strong finding, so write it down',
+        ],
+        warning: 'If the source contradicts the AI, correct the claim or leave it out of your briefing.',
+      },
+      {
+        heading: 'Step 7: Write the one-page management briefing',
+        links: [
+          {
+            label: 'Open Google Docs (new document)',
+            href: 'https://docs.new',
+          },
+        ],
+        intro: 'Write a briefing a busy manager can read in two minutes. Use your verified findings, not a paste of the whole AI chat. Stay within one page, and put your name, group name and date at the top.',
+        table: {
+          columns: ['Heading', 'What to write', 'Length'],
+          rows: [
+            [
+              '1. Business objective',
+              'The problem or decision you investigated',
+              '1 to 2 sentences',
+            ],
+            [
+              '2. Key findings',
+              'Three to five findings, each with a figure and its source document',
+              '3 to 5 bullets',
+            ],
+            [
+              '3. Evidence and citations',
+              'The document and section that supports each important claim',
+              'One line per finding',
+            ],
+            ['4. Main business risks', 'Up to three risks and why they matter', '3 bullets'],
+            [
+              '5. Recommended actions',
+              'Three practical next steps, each linked to a finding',
+              '3 bullets',
+            ],
+            [
+              '6. Limitations and information gaps',
+              'What is missing, uncertain or contradictory',
+              '2 to 4 bullets',
+            ],
+          ],
+        },
+      },
+      {
+        heading: 'Step 7 (continued): Writing rules and examples',
+        checks: [
+          'Every number needs a source in brackets',
+          'Use short sentences and plain words',
+          'Keep facts and opinions apart. Words like may and suggests mark opinions',
+          'Never present an assumption as a fact',
+        ],
+        table: {
+          columns: ['', 'Weak', 'Strong'],
+          rows: [
+            [
+              'Finding',
+              'Customers are unhappy with delivery.',
+              'Delivery delays are the largest complaint, 312 of 780 complaints (40 percent). Source: Customer Feedback Report, section 4.',
+            ],
+            [
+              'Recommendation',
+              'Improve delivery.',
+              'Review the courier contract, because delivery time rose from 4.1 to 6.8 days after the July 2025 courier change. Assumption: the courier change caused the delay. More data on courier performance is needed.',
+            ],
+          ],
+        },
+      },
+      {
+        heading: 'Step 8: Present your findings in two minutes',
+        intro: 'Each group presents its briefing to the class. Use this order and keep to two minutes.',
+        table: {
+          columns: ['Order', 'What to say', 'Time'],
+          rows: [
+            ['1', 'The problem you investigated', '15 seconds'],
+            ['2', 'Two or three key findings with figures', '45 seconds'],
+            [
+              '3',
+              'One citation you verified: say what the AI claimed and what the source really said',
+              '30 seconds',
+            ],
+            ['4', 'One limitation or information gap', '15 seconds'],
+            ['5', 'Your main recommendation', '15 seconds'],
+          ],
+        },
+        tip: 'Discussion question for the class: if NotebookLM gives a confident answer but the source does not support it, what should the analyst do? Good answer: check the original document, correct or remove the unsupported claim, and say clearly when information is missing or uncertain.',
+      },
+      {
+        heading: 'If something goes wrong',
+        table: {
+          columns: ['Problem', 'What to do'],
+          rows: [
+            [
+              'Cannot open NotebookLM',
+              'Try a personal Google account, a different browser, or a private window',
+            ],
+            [
+              'A file will not upload',
+              'Check that it is a PDF under the size limit, then try again. Ask your teacher for a fresh copy',
+            ],
+            [
+              'The AI says it cannot find the information',
+              'The documents may not contain it. This is a valid finding. Write it under information gaps',
+            ],
+            [
+              'No citation numbers appear',
+              'Re-ask the question and add: cite the source for every point',
+            ],
+            [
+              'The answer looks wrong',
+              'Open the citation and read the original. Correct the claim or leave it out',
+            ],
+            [
+              'The answer is too long',
+              'Ask it to summarize in five bullet points with citations',
+            ],
+            [
+              'Two documents disagree',
+              'Do not choose one silently. Report the contradiction in your briefing',
+            ],
+            [
+              'Your briefing is longer than one page',
+              'Cut to the strongest three findings and shorten each to one line',
+            ],
+          ],
+        },
+      },
+      {
+        heading: 'Final checklist and marking',
+        intro: 'Tick each item before you submit.',
+        checks: [
+          'Created a NotebookLM notebook named Business Performance Analysis',
+          'Added at least two relevant business documents (three recommended)',
+          'Asked the five business questions',
+          'Verified at least three answers using citations',
+          'Prepared a one-page management briefing',
+          'Included recommendations and information gaps',
+        ],
+        table: {
+          columns: ['Criterion', 'Marks'],
+          rows: [
+            ['Notebook setup and document selection', '2'],
+            ['Quality and relevance of questions', '2'],
+            ['Verification of three answers', '3'],
+            ['Quality of briefing and recommendations', '2'],
+            ['Identification of limitations', '1'],
+            ['Total', '10'],
+          ],
+        },
+        tip: 'Marks are given for evidence and reasoning, not for a polished AI answer. If you find an unsupported claim and say so, that earns marks.',
+      },
+      {
+        heading: 'Full student guide',
+        intro: 'The complete guide is attached if you want to read it all in one place.',
+        files: [
+          { file: 'Student Guide NotebookLM Business Analysis Activity.pdf', downloadUrl: getTaskFileUrl('Student Guide NotebookLM Business Analysis Activity.pdf') },
+        ],
+      },
     ],
     resources: [
       { name: 'Annual_Business_Report_FY2025-26.pdf', downloadUrl: getTaskFileUrl('Annual_Business_Report_FY2025-26.pdf') },
